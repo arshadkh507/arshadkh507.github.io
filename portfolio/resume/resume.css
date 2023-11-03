@@ -1,0 +1,372 @@
+/* ==========================================================
+                      Hero Section
+   ========================================================== */
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.resume {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resume-title {
+  text-align: center;
+}
+
+.resume-title .name {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e45a84;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: "Pacifico", cursive;
+}
+
+.resume-title .resume-job-title {
+  font-size: 1.8rem;
+  color: #6175ff;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: var(--ff-raleway);
+}
+
+/* Section Styles */
+.resume section {
+    max-width: 1200px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 10px auto;
+}
+
+.resume section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e45a84;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* List Styles */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+/* Skills List Styles */
+.skills-list {
+  list-style: disc inside;
+  padding-left: 20px;
+}
+
+/* Experience and Education Styles */
+.resume .education-item {
+  border-left: 2px solid #e45a84;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* Projects Styles */
+.resume .project-item {
+  background: rgba(45, 45, 45, 0.6);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.49);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.resume .project-item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e45a84;
+  margin-bottom: 5px;
+}
+
+
+
+/* Summary Section Styles */
+.summary {
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.summary h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.summary p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+.summary ul {
+    list-style: none;
+    padding: 0;
+    display: block !important;
+}
+
+.summary ul li {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.summary ul li::before {
+    content: "•"; 
+    color: #E45A84; 
+    margin-right: 10px;
+    font-size: 2rem;
+}
+
+.summary ul a {
+    text-decoration: none;
+    color: #FFACAC;
+    transition: color 0.3s;
+}
+
+.summary ul a:hover {
+    color: #E45A84;
+}
+
+/* Styling the email link */
+.summary ul a[href^="mailto:"]::before {
+    content: "\f0e0"; /* Unicode for email icon () using a suitable font */
+    margin-right: 5px;
+    font-family: "Font Awesome"; /* You may need to include Font Awesome or a similar icon font */
+}
+
+
+/* Objective Section Styles */
+.objective {
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Education Section Styles */
+.education {
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, #E45A84, #583C87); /* Gradient background with your palette colors */
+}
+
+.education h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-item h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #E45A84; /* Title color */
+}
+
+.education-item p {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 5px;
+}
+
+/* Add hover effect for the items */
+.education-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+
+
+/* Skills Section Styles */
+.skills {
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, #E45A84, #583C87); /* Gradient background with your palette colors */
+}
+
+.skills h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills li {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.skills li::before {
+    content: '\f005'; /* Font Awesome icon code for a star */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: 10px;
+    color: #E45A84; /* Icon color */
+}
+
+.skills h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #E45A84; /* Title color */
+    margin-top: 20px;
+}
+
+
+
+/* Projects Section Styles */
+.projects {
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, #E45A84, #583C87); /* Gradient background with your palette colors */
+}
+
+.projects h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.project-item {
+    margin-bottom: 20px;
+}
+
+.project-item h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #E45A84; /* Title color */
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Optional: Add a hover effect for the project items */
+.project-item:hover {
+    background: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Education Section Styles */
+.education {
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(90deg, #E45A84, #583C87); /* Gradient background with your palette colors */
+}
+
+.education h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.education-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.education-item h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #E45A84; /* Title color */
+    margin-bottom: 5px;
+}
+
+.education-item p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #E45A84; /* Timeline color */
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -7px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #E45A84; /* Timeline dot color */
+    background: #fff;
+    border-radius: 50%;
+}
+
+/* Optional: Add hover effects for the education items */
+.education-item:hover {
+    background: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+
+/* ==========================================================
+                      Hero Section
+   ========================================================== */

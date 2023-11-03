@@ -1,0 +1,72 @@
+/* Contact Page CSS */
+
+
+
+
+
+.contact-title-section h1 {
+    font-size: 2rem;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact .contact-details, .contact-form {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    flex-basis: calc(50% - 20px);
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e45a84;
+    margin-bottom: 20px;
+}
+
+.contact .form-group {
+    margin: 10px 0;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 5px;
+    resize: none;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #e45a84;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #c8436f;
+}
+

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My React Learning Journey</title>
+  <link rel="stylesheet" href="../../assets/css/index.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <link rel="stylesheet" href="./react.css">
+
+
+</head>
+
+<body>
+
+
+
+  <main class="react">
+
+    <!-- ==============  Header/ Top Navbar ============================ -->
+    <header>
+      <nav class="navbar">
+        <div id="logo">
+          <span>Arshad Khan</span>
+        </div>
+        <ul>
+          <li class="active">
+            <a href="../../index.html">
+              <span class="icon"><i class="fas fa-home"></i></span>
+              <span class="text">Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../about/about.html">
+              <span class="icon"><i class="fas fa-info-circle"></i></span>
+              <span class="text">About</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../contact/contact.html">
+              <span class="icon"><i class="fas fa-envelope"></i></span>
+              <span class="text">Contact</span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="../projects/projects.html">
+              <span class="icon"><i class="fas fa-briefcase"></i></span>
+              <span class="text">Projects</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="../resume/resume.html">
+              <span class="icon"><i class="far fa-file-alt"></i></span>
+              <span class="text">Resume</span>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fa-brands fa-react"></i></span>
+              <span class="text">Reactjs</span>
+            </a>
+          </li>
+
+          </div>
+    </header>
+    <!-- ==============  End! of Header/ Top Navbar ================ -->
+
+
+
+
+
+
+    <div class="container">
+        <h1>My React Learning Journey</h1>
+        <div class="topic" id="topic1">
+            <div class="topic-title">
+                <span>React Basics</span>
+                <span>+</span>
+            </div>
+            <div class="topic-content">
+                <p>I started my React journey by learning the fundamentals, including:</p>
+                <ul>
+                    <li>Components</li>
+                    <li>Props</li>
+                    <li>State</li>
+                </ul>
+                <p>I practiced by creating simple React components and understanding how to pass data through props and manage component state.</p>
+            </div>
+        </div>
+        <div class="topic" id="topic2">
+            <div class="topic-title">
+                <span>React Router</span>
+                <span>+</span>
+            </div>
+            <div class="topic-content">
+                <p>Next, I delved into React Router to create a single-page application with multiple views. I covered topics like:</p>
+                <ul>
+                    <li>Routing</li>
+                    <li>Route Parameters</li>
+                    <li>Navigation</li>
+                </ul>
+                <p>I applied this knowledge by building a multi-page React app with navigation.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const topics = document.querySelectorAll('.topic');
+        topics.forEach((topic) => {
+            topic.addEventListener('click', () => {
+                topic.classList.toggle('active');
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+  </main>
+
+  <!-- ==============  Footer  Section ============================ -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>Arshad Khan</h3>
+        <p>Connect with me on social media:</p>
+        <div class="social-icons">
+          <a href="https://github.com/arshadkh507" target="_blank" class="fab fa-github"></a>
+          <a href="https://www.linkedin.com/in/arshad-khan-2a6923213/" target="_blank" class="fab fa-linkedin"></a>
+          <a href="https://www.facebook.com/code.master.arshad/" target="_blank" class="fab fa-facebook"></a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p>&copy; 2023 Arshad Khan. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- ==============  Footer  Section End! ============================ -->
+
+
+
+
+
+
+  <!-- ============ Background Animation Section  ================  -->
+  <div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- ============ Background Animation Section End!  ============  -->
+
+  <!-- index.js file -->
+  <script src="../../assets/js/index.js"></script>
+</body>
+
+</html>

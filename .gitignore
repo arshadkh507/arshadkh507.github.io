@@ -1,0 +1,46 @@
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE and editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore compiled files
+*.class
+*.jar
+*.war
+*.ear
+*.pyc
+*.pyo
+*.exe
+*.dll
+*.obj
+*.o
+
+# Ignore dependencies and build output
+/node_modules/
+/dist/
+/build/
+/out/
+
+# Ignore log files and debugging data
+/logs/
+/debug.log
+/coverage/
+
+# Ignore package manager files
+npm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json
+
+# Ignore environment files
+.env
+
+# Ignore sensitive or personal information
+.secret
+config.js
+credentials.json

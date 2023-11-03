@@ -1,0 +1,51 @@
+- index.html
+- about.html
+- resume.pdf
+- projects.html
+- dsa.html
+- courses.html
+- guides.html
+
+
+- dsa/
+  - problem1/
+    - problem1.html
+    - problem1.png
+    - problem1.txt
+    - solution1.cpp
+  - problem2/
+    - problem2.html
+    - problem2.png
+    - problem2.txt
+    - solution2.cpp
+  - ...
+
+
+
+Midnight-Blue
+#41729 F
+Blue_Gray
+#5885AF
+Dark Blue
+#274472
+Baby Blue
+#C3EOE5s
+
+Baby Blue
+#68BBE3
+Blue Grotto
+#OE86D4
+Blue
+#055C9D
+Navy Blue
+#003060
+
+
+003060
+000f1f
+002852
+004f9f
+0069d2
+0069d2
+003060
+34b7f1
