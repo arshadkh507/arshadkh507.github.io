@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
       navList.style.right = "-300px"; // Slide out to the right
       burgerIcon.querySelector("i").classList.remove("fa-xmark");
       burgerIcon.querySelector("i").classList.add("fa-bars");
+      // Add class to hide horizontal scroll
+      // document.body.classList.add("menu-closed");
     } else {
       navList.style.right = "0"; // Slide in from the right
       burgerIcon.querySelector("i").classList.remove("fa-bars");
@@ -26,22 +28,21 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
 /*
 ==========================================================
  Active li on clicking
 ==========================================================*/
 
-const listItem = document.querySelectorAll(".sidebar_inner li");
+// const listItem = document.querySelectorAll("#header .navbar li");
 
-listItem.forEach((li) => {
-  li.addEventListener("click", () => {
-    listItem.forEach((li) => {
-      li.classList.remove("active");
-    });
-    li.classList.add("active");
-  });
-});
+// listItem.forEach((li) => {
+//   li.addEventListener("click", () => {
+//     listItem.forEach((li) => {
+//       li.classList.remove("active");
+//     });
+//     li.classList.add("active");
+//   });
+// });
 
 /*======== JavaScript for smooth scroll effect =================*/
 
@@ -68,3 +69,23 @@ document.addEventListener('DOMContentLoaded', function () {
       contactForm.reset();
   });
 });
+
+
+/*
+==========================================================
+ About Tabs opening and closing
+==========================================================*/
+const tabs = document.querySelectorAll('.about-tabs li');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      // Remove the 'active' class from all tabs and tab contents
+      tabs.forEach((tab) => tab.classList.remove('active'));
+      tabContents.forEach((content) => content.classList.remove('active'));
+
+      // Add the 'active' class to the clicked tab and corresponding tab content
+      tab.classList.add('active');
+      tabContents[index].classList.add('active');
+    });
+  });

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Me</title>
+  <title>My React Learning Journey</title>
   <link rel="stylesheet" href="../../assets/css/index.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,7 +18,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-  <link rel="stylesheet" href="./contact.css">
+  <link rel="stylesheet" href="./react.css">
 
 
 </head>
@@ -26,9 +26,10 @@
 <body>
 
 
-  <main class="contact">
 
-    <!-- ==============  Header/ Top Navbar ================ -->
+  <main class="react">
+
+    <!-- ==============  Header/ Top Navbar ============================ -->
     <header>
       <nav class="navbar">
         <div id="logo">
@@ -50,7 +51,7 @@
           </li>
 
           <li>
-            <a href="#">
+            <a href="../contact/contact.html">
               <span class="icon"><i class="fas fa-envelope"></i></span>
               <span class="text">Contact</span>
             </a>
@@ -73,7 +74,7 @@
 
 
           <li>
-            <a href="../react/react.html">
+            <a href="#">
               <span class="icon"><i class="fa-brands fa-react"></i></span>
               <span class="text">Reactjs</span>
             </a>
@@ -84,64 +85,63 @@
     <!-- ==============  End! of Header/ Top Navbar ================ -->
 
 
-    <!-- ==============  Contact Setion ================ -->
-    <section class="contact-title-section">
-      <h1>Contact Me</h1>
-    </section>
-    <section class="contact-details">
-      <div class="address">
-        <h2>Address</h2>
-        <p>Karak, KPK, Pakistan 27600</p>
-      </div>
-      <div class="phone">
-        <h2>Phone</h2>
-        <p>+92 316 1812133</p>
-      </div>
-      <div class="email">
-        <h2>Email</h2>
-        <p><a href="mailto:arshadkh507@gmail.com">arshadkh507@gmail.com</a></p>
-      </div>
-    </section>
-    <section class="contact-form">
-      <h2>Get In Touch</h2>
-      <form action="contact.php" method="post">
-        <div class="form-group">
-          <input type="text" name="name" placeholder="Your Name" required>
+
+
+
+
+    <div class="container">
+        <h1>My React Learning Journey</h1>
+        <div class="topic" id="topic1">
+            <div class="topic-title">
+                <span>React Basics</span>
+                <span>+</span>
+            </div>
+            <div class="topic-content">
+                <p>I started my React journey by learning the fundamentals, including:</p>
+                <ul>
+                    <li>Components</li>
+                    <li>Props</li>
+                    <li>State</li>
+                </ul>
+                <p>I practiced by creating simple React components and understanding how to pass data through props and manage component state.</p>
+            </div>
         </div>
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Your Email" required>
+        <div class="topic" id="topic2">
+            <div class="topic-title">
+                <span>React Router</span>
+                <span>+</span>
+            </div>
+            <div class="topic-content">
+                <p>Next, I delved into React Router to create a single-page application with multiple views. I covered topics like:</p>
+                <ul>
+                    <li>Routing</li>
+                    <li>Route Parameters</li>
+                    <li>Navigation</li>
+                </ul>
+                <p>I applied this knowledge by building a multi-page React app with navigation.</p>
+            </div>
         </div>
-        <div class="form-group">
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Send Message</button>
-      </form>
-    </section>
-    <!-- ==============  End! of Contact Section ================ -->
+    </div>
+
+    <script>
+        const topics = document.querySelectorAll('.topic');
+        topics.forEach((topic) => {
+            topic.addEventListener('click', () => {
+                topic.classList.toggle('active');
+            });
+        });
+    </script>
 
 
 
-    <!-- =========  Linkedin Profile Badge White =============== -->
-    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light"
-      data-type="HORIZONTAL" data-vanity="arshad-khan-2a6923213" data-version="v1"><a
-        class="badge-base__link LI-simple-link"
-        href="https://pk.linkedin.com/in/arshad-khan-2a6923213?trk=profile-badge">Arshad Khan</a></div>
-
-    <!-- ============ Linkedin Profile Badge End! =============== -->
 
 
-    <!-- ========= Linkedin Profile Badge Black ================ -->
-    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark"
-      data-type="HORIZONTAL" data-vanity="arshad-khan-2a6923213" data-version="v1"><a
-        class="badge-base__link LI-simple-link"
-        href="https://pk.linkedin.com/in/arshad-khan-2a6923213?trk=profile-badge">Arshad Khan</a></div>
-    <!-- ======== Linkedin Profile Badge End! ============== -->
 
 
 
   </main>
 
-  <!-- ==============  Footer  Section ======================= -->
+  <!-- ==============  Footer  Section ============================ -->
   <footer>
     <div class="footer-container">
       <div class="footer-left">
@@ -158,9 +158,7 @@
       </div>
     </div>
   </footer>
-  <!-- ==============  Footer  Section End! ===================== -->
-
-
+  <!-- ==============  Footer  Section End! ============================ -->
 
 
 
@@ -194,7 +192,6 @@
 
   <!-- index.js file -->
   <script src="../../assets/js/index.js"></script>
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </body>
 
 </html>

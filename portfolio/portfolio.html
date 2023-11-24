@@ -1,11 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio-Arshad codeMaster</title>
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <h1>Porfolio HomePage</h1>
+    <main class="portfolio-page">
+        <!-- ==============  Header/ Top Navbar ============================ -->
+        <header id="header">
+            <nav class="navbar">
+                <div id="logo">
+                    <span>Arshad Khan</span>
+                </div>
+                <ul>
+                    <li>
+                        <a href="../index.html">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="text">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./about/about.html">
+                            <span class="icon"><i class="fas fa-info-circle"></i></span>
+                            <span class="text">About</span>
+                        </a>
+                    </li>
+                 
+                    <li class="active">
+                        <a  href="#" >
+                            <span class="icon"><i class="fas fa-briefcase"></i></span>
+                            <span class="text">Portfolio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./resume/resume.html">
+                            <span class="icon"><i class="far fa-file-alt"></i></span>
+                            <span class="text">Resume</span>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="./blogs/blogs.html"> 
+                          <span class="icon"><i class="far fa-newspaper"></i></span>
+                          <span class="text">Blogs</span> 
+                        </a>
+                      </li>
+                    <li>
+                        <a href="../index.html#contact">
+                            <span class="icon"><i class="fas fa-envelope"></i></span>
+                            <span class="text">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <input type="checkbox" id="menu-toggle" aria-label="Toggle menu" />
+                <label for="menu-toggle" id="burger-menu">
+                    <span id="burger-icon"><i class="fa-solid fa-bars"></i></span>
+                </label>
+            </nav>
+        </header>
+        <!-- ======  End! of Header/ Top Navbar ======== -->
+
+        <section class="complete-portfolio-container">
+
+            <div class="portfolio-heading">
+                <h1>My Portfolio</h1>
+                <p>Welcome to my portfolio, where creativity meets innovation. I am passionate about crafting delightful
+                    user experiences through web development. Explore my projects below and discover the journey of
+                    turning ideas into reality.</p>
+            </div>
+
+            <!-- Tabs for different project categories -->
+            <nav id="project-tabs-nav">
+                <ul id="project-tabs">
+                    <li data-tab="all" class="active">All</li>
+                    <li data-tab="web-design">Web Design</li>
+                    <li data-tab="react">React</li>
+                    <li data-tab="mern-stack">MERN Stack</li>
+                </ul>
+            </nav>
+
+            <section id="projects" class="projects">
+                <div class="section-container projects-container">
+
+                    <!-- Web Design Projects -->
+                    <div class="projects-list">
+                        <div class="project-item web-design">
+                            <img src="./projects/images/roadmap-codecamp-project.png" alt="Project 1">
+                            <div class="portfolio-project-details">
+                                <h3>Roadmap Codecamp</h3>
+                                <p>Roadmap CodeCamp: Interactive learning platform with diverse roadmaps, progress tracking, and engaging content for skill development.</p>
+                                <div class="portfolio-project-links">
+                                    <a href="https://github.com/arshadkh507/roadmapcodecampDeployed" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                    <a href="https://roadmapcodecamp-frontend.netlify.app/" target="_blank"> <i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-item web-design">
+                            <img src="./projects/images/image-gallery-project.png" alt="Project 1">
+                            <div class="portfolio-project-details">
+                                <h3>Image Gallery</h3>
+                                <p>Responsive ReactJS Image Gallery with Pixabay API, Tailwind CSS, and dynamic UI features.</p>
+                                <div class="portfolio-project-links">
+                                    <a href="https://github.com/arshadkh507/Image-gallery" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                    <a href="https://image-gallery-arshadkh507.netlify.app/" target="_blank"> <i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- React Projects -->
+                        <div class="project-item react">
+                            <img src="./projects/images/image-gallery-project.png" alt="Project 1">
+                            <div class="portfolio-project-details">
+                                <h3>Image Gallery</h3>
+                                <p>Responsive ReactJS Image Gallery with Pixabay API, Tailwind CSS, and dynamic UI features.</p>
+                                <div class="portfolio-project-links">
+                                    <a href="https://github.com/arshadkh507/Image-gallery" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                    <a href="https://image-gallery-arshadkh507.netlify.app/" target="_blank"> <i class="fa fa-external-link" aria-hidden="true"></i> </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MERN Stack Projects -->
+                        <div class="project-item mern-stack">
+                            <img src="./projects/images/roadmap-codecamp-project.png" alt="Project 1">
+                            <div class="portfolio-project-details">
+                                <h3>Roadmap Codecamp</h3>
+                                <p>Roadmap CodeCamp: Interactive learning platform with diverse roadmaps, progress tracking, and engaging content for skill development.</p>
+                                <div class="portfolio-project-links">
+                                    <a href="https://github.com/arshadkh507/roadmapcodecampDeployed" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                    <a href="https://roadmapcodecamp-frontend.netlify.app/" target="_blank"> <i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- ==============  Footer  Section ============================ -->
+        <footer id="footer">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <h3>Arshad Khan</h3>
+                    <p>Connect with me on social media:</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/arshadkh507" target="_blank" class="fab fa-github"></a>
+                        <a href="https://www.linkedin.com/in/arshad-khan-2a6923213/" target="_blank"
+                            class="fab fa-linkedin"></a>
+                        <a href="https://www.facebook.com/code.master.arshad/" target="_blank"
+                            class="fab fa-facebook"></a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <p>&copy; 2023 Arshad Khan. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- ==============  Footer  Section End! ============================ -->
+    </main>
+
+    <!-- ============ Background Animation Section  ================  -->
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- ============ Background Animation Section End!  ============  -->
+
+    <!-- index.js file -->
+    <script src="../assets/js/index.js"></script>
+    <script src="../assets/js/portfolio.js"></script>
 </body>
+
 </html>
