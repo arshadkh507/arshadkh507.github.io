@@ -6,15 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", function () {
-      // Remove active class from all tabs
       tabs.forEach((t) => t.classList.remove("active"));
-      // Add active class to the clicked tab
       this.classList.add("active");
 
-      // Get the data-tab attribute value
       const tabName = this.getAttribute("data-tab");
 
-      // Toggle the .open class based on the selected tab
       projectItems.forEach((item) => {
         if (tabName === "all" || item.classList.contains(tabName)) {
           item.classList.remove("hide");
