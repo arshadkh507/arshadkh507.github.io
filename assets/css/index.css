@@ -65,12 +65,18 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* For removing horizental scroll of toggle right side menu */
-body {
+/* body,
+.hero,
+.about,
+.portfolio,
+.contact,
+#footer {
   overflow-x: hidden;
-}
+} */
 
 main {
   width: 100%;
@@ -95,7 +101,7 @@ ul {
 }
 
 .section-container {
-  background: rgba(45, 45, 45, 0.4);
+  background: rgba(45, 45, 45, 0.2);
   border-radius: 16px;
   box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(12.4px);
@@ -217,7 +223,7 @@ li.active a {
 #burger-menu span {
   position: absolute;
   top: 15px;
-  right: 20px;
+  right: 15px;
   z-index: 10;
 }
 
@@ -227,6 +233,7 @@ li.active a {
   transition: all 0.8s; /* Adjust the duration as needed */
 }
 
+
 #menu-toggle {
   display: none;
 }
@@ -234,6 +241,7 @@ li.active a {
 @media screen and (max-width: 900px) {
   #burger-menu {
     display: flex;
+    /* position: relative; */
   }
 
   .navbar ul {
@@ -257,13 +265,9 @@ li.active a {
 
   /* Link Styles */
   .navbar a {
-    text-decoration: none;
     display: flex;
     flex-direction: row;
-    align-items: center;
     padding: 9px 27px;
-    color: var(--light-gray-color);
-    transition: background-color 0.3s ease;
   }
 
   .navbar .icon {
@@ -309,6 +313,14 @@ li.active a {
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
 }
 
@@ -396,7 +408,6 @@ li.active a {
 }
 
 /* Media Query for Responsiveness */
-
 @media (max-width: 992px) {
   .hero {
     padding: 10px 0;
@@ -409,6 +420,7 @@ li.active a {
   .job-title {
     font-size: 1.5rem;
   }
+
   .hero-subtitle {
     font-size: 1.5rem;
   }
@@ -416,15 +428,16 @@ li.active a {
   .hero-image img {
     width: 90%;
     margin: 0 auto;
-    border-radius: 50%;
-    border: 5px solid #e45a84;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   }
 }
 
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
     padding: 10px 0;
   }
 
@@ -434,6 +447,11 @@ li.active a {
     max-width: 100%;
     text-align: center;
     margin-bottom: 20px;
+  }
+
+  .hero-image img {
+    width: 60%;
+    margin: 0 auto;
   }
 
   .hero-title {
@@ -456,6 +474,13 @@ li.active a {
 
   .hero-image img {
     width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .hero-image img {
+    width: 90%;
   }
 }
 
@@ -572,7 +597,7 @@ li.active a {
 
 .tab-content.active {
   display: block;
-  background-color: rgba(45, 45, 45, 0.47);
+  background-color: rgba(45, 45, 45, 0.2);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -754,6 +779,11 @@ li.active a {
     padding: 5px;
     margin-bottom: 5px;
   }
+
+  .tab-content.active {
+    padding: 5px;
+    border-radius: 5px;
+}
 }
 
 /* ==========================================================
@@ -808,6 +838,7 @@ li.active a {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  min-height: 240px;
 }
 
 .portfolio-item:hover {
@@ -970,7 +1001,8 @@ li.active a {
 
 .contact-item a {
   text-decoration: none;
-  color: #007bff;
+  /* color: #007bff; */
+  color: #25d366;
   transition: color 0.3s ease;
 }
 .contact-item:hover {
@@ -982,7 +1014,7 @@ li.active a {
   color: #000;
 }
 
-.contact-form {
+/* .contact-form {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 30px;
   border-radius: 5px;
@@ -1039,7 +1071,7 @@ li.active a {
 
 .contact-form .submit-btn:hover {
   background-color: #e45a84;
-}
+} */
 
 /* contact whatsapp button */
 .contact-whatsapp {
@@ -1457,7 +1489,7 @@ footer {
   width: 100%;
   max-width: 1200px;
   margin: 30px auto;
-  background: rgba(45, 45, 45, 0.4);
+  background: rgba(45, 45, 45, 0.2);
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
@@ -1546,7 +1578,7 @@ footer {
   width: 100%;
   max-width: 1200px;
   margin: 30px auto;
-  background: rgba(45, 45, 45, 0.4);
+  background: rgba(45, 45, 45, 0.2);
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
@@ -1598,7 +1630,7 @@ footer {
   width: 100%;
   max-width: 1200px;
   margin: 30px auto;
-  background: rgba(45, 45, 45, 0.4);
+  background: rgba(45, 45, 45, 0.2);
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
@@ -1718,7 +1750,7 @@ footer {
   width: 100%;
   max-width: 1200px;
   margin: 30px auto;
-  background: rgba(45, 45, 45, 0.4);
+  background: rgba(45, 45, 45, 0.2);
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
@@ -1761,7 +1793,7 @@ footer {
 
 .about-me-experience-list li span {
   padding-left: 10px;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 /* CSS for the LinkedIn Profile Badge */
@@ -1774,11 +1806,19 @@ footer {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   padding: 20px;
 }
+.profile-badge--width-330 , .badge-base ,
+.badge-base iframe , .profile-badge{
+  max-width: 330px !important;
+  width: 100% !important;
+  margin: 10px;
+}
 .profile-badge-content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+
 
 .linkedin-badge {
   background-color: var(--background-color);
@@ -1914,7 +1954,7 @@ footer {
   }
 
   .about-me-skills-content li {
-    font-size: 40px;
+    font-size: 50px;
   }
   .about-me-experience-list li {
     line-height: 1.4;
@@ -2034,10 +2074,26 @@ footer {
   transition: background-color 0.3s, box-shadow 0.3s;
 }
 
+
+/* Project-tabs Reponsiveness */
+@media screen and (max-width: 520px) {
+  #project-tabs {
+    gap: 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #project-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+  }
+}
+
 /* Projects section styling */
 .projects {
   width: 100%;
-  background: rgba(45, 45, 45, 0.4);
+  background: rgba(45, 45, 45, 0.2);
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
@@ -2058,6 +2114,7 @@ footer {
   background: #fff;
   position: relative;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  min-height: 240px;
 }
 
 .projects-list .project-item::before {
@@ -2189,4 +2246,3 @@ footer {
     transform: scale(0.8);
   }
 }
-

@@ -72,9 +72,9 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   background: linear-gradient(
     90deg,
-    #e45a84,
+    #e32a62,
     #583c87
-  ); /* Gradient background with your palette colors */
+   ); /* e45a84 */
 }
 
 /* Responsive styles */
@@ -93,7 +93,8 @@
 .resume section h2 {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #e45a84;
+  /* color: #e45a84; */
+  color: white;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -211,8 +212,11 @@ ul li {
 .education-item h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #e45a84; /* Title color */
+  /* color: #e45a84;  */
+  color: #ffc107;
+  margin-bottom: 5px;
 }
+
 
 .education-item p {
   font-size: 1rem;
@@ -266,7 +270,8 @@ ul li {
 .skills h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #e45a84;
+  /* color: #e45a84; */
+  color: #ffc107;
   margin-top: 20px;
 }
 
@@ -327,12 +332,7 @@ ul li {
   position: relative;
 }
 
-.education-item h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #e45a84; /* Title color */
-  margin-bottom: 5px;
-}
+
 
 .education-item p {
   font-size: 1rem;
