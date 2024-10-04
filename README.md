@@ -1,6 +1,6 @@
 # Arshad Khan - Frontend Web Developer (ReactJs)
 
-![Arshad Khan](./assets/images/Copy%20of%20Frontend%20Web%20Developer%20(ReactJS).png)
+![Arshad Khan](./assets/images/github background v3.jpg)
 
 ## Introduction
 
