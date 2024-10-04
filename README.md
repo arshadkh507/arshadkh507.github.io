@@ -1,6 +1,6 @@
 # Arshad Khan - Frontend Web Developer (ReactJs)
 
-![Arshad Khan](./assets/images/github background v3.jpg)
+![Arshad Khan](./assets/images/github%20background%20v3.jpg)
 
 ## Introduction
 
@@ -25,6 +25,7 @@ My objective is to secure a challenging position as an intern developer where I 
 ## Education
 
 - **Bachelor in Computer Science**
+
   - Khushal Khan Khattak University, Karak
   - August/2019 - October/2023
   - GPA: 3.74/4.0
@@ -67,10 +68,12 @@ My objective is to secure a challenging position as an intern developer where I 
 ## Projects
 
 1. **Portal of Programming Roadmaps and Career Paths**
+
    - Technologies Used: HTML, CSS, JavaScript, Figma, Git and Github, MongoDB, Node.js, ReactJS
    - [Project Link](project_link_1)
 
 2. **Image Gallery**
+
    - Technologies Used: ReactJS, Pixabay API, Tailwind CSS
    - [Project Link](project_link_2)
 
