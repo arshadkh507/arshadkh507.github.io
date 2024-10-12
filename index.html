@@ -1,482 +1,753 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arshad codeMaster</title>
-  <link rel="stylesheet" href="./assets/css/index.css" />
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arshad codeMaster</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" /> -->
-  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    /> -->
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- JetBrains Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
+  <body>
+    <main>
+      <!-- ==============  Header/ Top Navbar ============================ -->
+      <header id="header">
+        <nav class="navbar">
+          <div id="logo">
+            <span><code>&lt;</code>Arshad<code>/&gt;</code></span>
+          </div>
 
-</head>
-
-<body>
-
-
-
-  <main>
-
-    <!-- ==============  Header/ Top Navbar ============================ -->
-    <header id="header">
-      <nav class="navbar">
-
-        <div id="logo">
-          <span>Arshad Khan</span>
-        </div>
-
-        <ul>
-          <li class="active">
-            <a href="#">
-              <span class="icon"><i class="fas fa-home"></i></span>
-              <span class="text">Home</span>
-            </a>
-          </li>
-          <li>
-            <a href="./portfolio/about/about.html">
-              <span class="icon"><i class="fas fa-info-circle"></i></span>
-              <span class="text">About</span>
-            </a>
-          </li>
-          <li>
-            <a href="./portfolio/portfolio.html">
-              <span class="icon"><i class="fas fa-briefcase"></i></span>
-              <span class="text">Portfolio</span>
-            </a>
-          </li>
-          <li>
-            <a href="./portfolio/resume/resume.html">
-              <span class="icon"><i class="far fa-file-alt"></i></span>
-              <span class="text">Resume</span>
-            </a>
-          </li>
-          <!-- <li>
+          <ul>
+            <li class="active">
+              <a href="#">
+                <span class="icon"><i class="fas fa-home"></i></span>
+                <span class="text">Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="./portfolio/about/about.html">
+                <span class="icon"><i class="fas fa-info-circle"></i></span>
+                <span class="text">About</span>
+              </a>
+            </li>
+            <li>
+              <a href="./portfolio/portfolio.html">
+                <span class="icon"><i class="fas fa-briefcase"></i></span>
+                <span class="text">Portfolio</span>
+              </a>
+            </li>
+            <li>
+              <a href="./portfolio/resume/resume.html">
+                <span class="icon"><i class="far fa-file-alt"></i></span>
+                <span class="text">Resume</span>
+              </a>
+            </li>
+            <!-- <li>
             <a href="./portfolio/react/react.html">
               <span class="icon"><i class="fa-brands fa-react"></i></span>
               <span class="text">Reactjs</span>
             </a>
           </li> -->
-          <li>
-            <a href="./portfolio/blogs/blogs.html"> 
-              <span class="icon"><i class="far fa-newspaper"></i></span>
-              <span class="text">Blogs</span> 
-            </a>
-          </li>
-          <li>
-            <a href="#contact">
-              <span class="icon"><i class="fas fa-envelope"></i></span>
-              <span class="text">Contact</span>
-            </a>
-          </li>
-        </ul>
+            <li>
+              <a href="./portfolio/blogs/blogs.html">
+                <span class="icon"><i class="far fa-newspaper"></i></span>
+                <span class="text">Blogs</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                <span class="icon"><i class="fas fa-envelope"></i></span>
+                <span class="text">Contact</span>
+              </a>
+            </li>
+          </ul>
 
-         <input type="checkbox" id="menu-toggle" aria-label="Toggle menu" />
-        <label for="menu-toggle" id="burger-menu">
-          <span id="burger-icon"><i class="fas fa-bars"></i></span>
-        </label>
-       
-   
+          <input type="checkbox" id="menu-toggle" aria-label="Toggle menu" />
+          <label for="menu-toggle" id="burger-menu">
+            <span id="burger-icon"><i class="fas fa-bars"></i></span>
+          </label>
+
           <!-- <span><i class="fas fa-bars"></i></span> -->
- 
-      </nav>
-    </header>
-    <!-- ======  End! of Header/ Top Navbar ======== -->
+        </nav>
+      </header>
+      <!-- ======  End! of Header/ Top Navbar ======== -->
 
-
-    <!-- ======== Hero Section ================== -->
-    <section id="hero" class="hero">
-      <div class="section-container">
-        <div class="hero-content">
-        <div class="hero-left">
-          <div class="hero-left-content">
-            <h1 class="hero-title">I'm Arshad Khan</h1>
-            <h2 class="hero-subtitle">
-              <span>A</span>
-              <span class="job-title">Frontend Web And ReactJS Developer</span>
-              <span>from Pakistan.</span>
-            </h2>
-            <div class="hero-buttons">
-              <a href="./assets/Arshad-Khan-Resume.pdf" class="btn hire-btn"><i class="fas fa-download"></i> Resume</a>
-              <a href="https://wa.me/+923435439569" target="_blank" class="btn whatsapp-btn">WhatsApp</a>
+      <!-- ======== Hero Section ================== -->
+      <section id="hero" class="hero">
+        <div class="section-container">
+          <div class="hero-content">
+            <div class="hero-left">
+              <div class="hero-left-content">
+                <h1 class="hero-title">
+                  Hello I'm <br />
+                  <span> Arshad Khan</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                  <span>A</span>
+                  <span class="job-title"
+                    >Frontend Web And ReactJS Developer</span
+                  >
+                  <span>from Pakistan.</span>
+                </h2>
+                <!-- New Subtitle for MERN Stack -->
+                <h3 class="hero-subtitle mern-title">
+                  <span>Currently improving my skills in</span>
+                  <span class="mern-stack">MERN Stack</span>
+                </h3>
+                <div class="hero-buttons">
+                  <a
+                    href="./assets/Arshad-Khan-Resume.pdf"
+                    target="_blank"
+                    class="btn hire-btn"
+                    >Download CV
+                    <svg
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="text-xl"
+                      height="1em"
+                      width="1em"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line></svg
+                  ></a>
+                  <div class="social-icons">
+                    <a
+                      href="https://github.com/arshadkh507"
+                      target="_blank"
+                      class="hero-social-icons"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                    <a
+                      href="https://www.linkedin.com/in/arshadkh507/"
+                      target="_blank"
+                      class="hero-social-icons"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </div>
+                  <!-- <a
+                    href="https://wa.me/+923435439569"
+                    target="_blank"
+                    class="btn whatsapp-btn"
+                    >WhatsApp</a
+                  > -->
+                </div>
+                <!-- <div class="hero-social-icons">
+                  <a
+                    href="https://github.com/arshadkh507"
+                    target="_blank"
+                    class="social-icon"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/in/arshadkh507/"
+                    target="_blank"
+                    class="social-icon"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                  <a
+                    href="https://www.facebook.com/code.master.arshad/"
+                    target="_blank"
+                    class="social-icon"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                </div> -->
+              </div>
             </div>
-            <div class="hero-social-icons">
-              <a href="https://github.com/arshadkh507" target="_blank" class="social-icon"><i
-                  class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/arshad-khan-2a6923213/" target="_blank" class="social-icon"><i
-                  class="fab fa-linkedin"></i></a>
-              <a href="https://www.facebook.com/code.master.arshad/" target="_blank" class="social-icon"><i
-                  class="fab fa-facebook"></i></a>
+            <div class="hero-right">
+              <div class="hero-image">
+                <img src="./assets/images/hero-image.png" alt="Arshad Khan" />
+              </div>
             </div>
           </div>
         </div>
-        <div class="hero-right">
-          <div class="hero-image">
-            <img src="./assets/images/hero-image.png" alt="Arshad Khan" />
+      </section>
+      <!-- ==============   End! of Hero Section ============================ -->
+
+      <section class="statistics-section" id="project-stats">
+        <div class="section-container">
+          <div class="section-content">
+            <div class="stats-item">
+              <span>1</span>
+              <p>
+                Year <br />
+                Experience
+              </p>
+            </div>
+            <div class="stats-item">
+              <span>5</span>
+              <p>
+                Projects <br />
+                Completed
+              </p>
+            </div>
+            <div class="stats-item">
+              <span>24</span>
+              <p>
+                Github <br />
+                Repository
+              </p>
+            </div>
+            <div class="stats-item">
+              <span>1</span>
+              <p>
+                Open Source <br />
+                Contribution
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      </div>
-    </section>
-    <!-- ==============   End! of Hero Section ============================ -->
+      </section>
 
-
-    <!-- ==============  About Section ============================ -->
-    <section id="about" class="about">
-      <div class="section-container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-
-          <div class="about-image">
-            <img src="./assets/images/1.png" alt="Arshad Khan" />
-          </div>
-
-          <div class="about-right">
+      <!-- ==============  About Section ============================ -->
+      <section id="about" class="about">
+        <div class="section-container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content">
             <div class="about-tabs">
               <ul>
                 <li class="active">About</li>
                 <li>Skills</li>
-                <li>Experience</li>
                 <li>Education</li>
               </ul>
             </div>
-            <!-- About Tab -->
-            <div class="about-text">
-              <div class="about-tab tab-content active">
-                <h3 class="tab-heading">Frontend Web & ReactJS Developer</h3>
-                <p>Passionate about crafting user-friendly web applications using HTML5, CSS3, JavaScript, and ReactJS.
-                  Experienced in developing responsive interfaces and integrating third-party APIs. Proficient with
-                  tools like Git, Redux, Bootstrap, React Router, Styled-components, and Material UI for efficient web
-                  app development.</p>
 
-                <p>Using these technologies, I have designed and developed a Portal of Programming Roadmaps and Career
-                  Paths(<a href="https://roadmapcodecamp-frontend.netlify.app/" target="_blank"
-                    class="roadmapcodecamp-link">Roadmap codecamp</a> ).</p>
+            <div class="about-image">
+              <img
+                src="./assets/images/picture-1-protait.jpg"
+                alt="Arshad Khan October 2024 Image"
+              />
+            </div>
 
-                <p>Currently, I am looking for a junior or intermediate frontend web or ReactJS developer position, and
-                  I am open to internship opportunities. Feel free to contact me.</p>
+            <div class="about-right">
+              <!-- <div class="about-tabs">
+                <ul>
+                  <li class="active">About</li>
+                  <li>Skills</li>
+                  <li>Education</li>
+                </ul>
+              </div> -->
+              <!-- About Tab -->
+              <div class="about-text">
+                <div class="about-tab tab-content active">
+                  <h3 class="tab-heading">Frontend Web & ReactJS Developer</h3>
+                  <p>
+                    Passionate about crafting user-friendly web applications
+                    using <strong>HTML5, CSS3, JavaScript,</strong> and
+                    <strong>ReactJS</strong>. Experienced in developing
+                    responsive interfaces and integrating third-party APIs.
+                    Proficient with tools like
+                    <strong
+                      >Git, Redux, Bootstrap, React Router,
+                      Styled-components,</strong
+                    >
+                    for efficient web app development. Experienced in
+                    <strong>Express API creation, MongoDB,</strong> and backend
+                    <strong>CRUD operations</strong>.
+                  </p>
 
-                <div class="about-social-icons">
-                  <a href="https://github.com/arshadkh507" target="_blank" class="about-social-icon"><i
-                      class="fab fa-github"></i></a>
-                  <a href="https://www.linkedin.com/in/arshad-khan-2a6923213/" target="_blank"
-                    class="about-social-icon"><i class="fab fa-linkedin"></i></a>
-                  <a href="https://www.facebook.com/code.master.arshad/" target="_blank" class="about-social-icon"><i
-                      class="fab fa-facebook"></i></a>
-                  <a href="https://wa.me/+923435439569" target="_blank" class="about-social-icon"><i
-                      class="fab fa-whatsapp"></i></a>
+                  <p>
+                    Using these technologies, I have designed and developed a
+                    Portal of Programming Roadmaps and Career Paths(<a
+                      href="https://roadmapcodecamp-frontend.netlify.app/"
+                      target="_blank"
+                      class="roadmapcodecamp-link"
+                      >Roadmap codecamp</a
+                    >
+                    ).
+                  </p>
+
+                  <p>
+                    Currently, I am looking for a junior or intermediate
+                    frontend web or ReactJS developer position, and I am open to
+                    internship opportunities. Feel free to contact me.
+                  </p>
+
+                  <div class="about-social-icons">
+                    <a
+                      href="https://github.com/arshadkh507"
+                      target="_blank"
+                      class="about-social-icon"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                    <a
+                      href="https://www.linkedin.com/in/arshad-khan-2a6923213/"
+                      target="_blank"
+                      class="about-social-icon"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                    <!-- <a
+                      href="https://www.facebook.com/code.master.arshad/"
+                      target="_blank"
+                      class="about-social-icon"
+                      ><i class="fab fa-facebook"></i
+                    ></a> -->
+                    <a
+                      href="https://wa.me/+923435439569"
+                      target="_blank"
+                      class="about-social-icon"
+                      ><i class="fab fa-whatsapp"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Skills Tab -->
+              <div class="tab-content">
+                <h3 class="tab-heading">Skills</h3>
+
+                <h4 class="skills-subheading">Proficient In</h4>
+                <ul class="skills-list">
+                  <li>
+                    <i
+                      class="fab fa-html5 html5-icon"
+                      style="color: #e34f26"
+                    ></i>
+                    HTML5
+                  </li>
+                  <li>
+                    <i class="fab fa-css3 css3-icon" style="color: #2965f1"></i>
+                    CSS3
+                  </li>
+                  <li>
+                    <i class="fab fa-js js-icon" style="color: #f0db4f"></i>
+                    JavaScript
+                  </li>
+                  <li>
+                    <i
+                      class="fab fa-bootstrap bootstrap-icon"
+                      style="color: #7952b3"
+                    ></i>
+                    Bootstrap
+                  </li>
+                  <li>
+                    <i class="fab fa-git git-icon" style="color: #f1502f"></i>
+                    Git & Github
+                  </li>
+                  <li>
+                    <i
+                      class="fab fa-react react-icon"
+                      style="color: #61dafb"
+                    ></i>
+                    ReactJS
+                  </li>
+                  <li>
+                    <i class="fab fa-figma" style="color: #f24e1e"></i> Figma
+                  </li>
+                </ul>
+
+                <h4 class="skills-subheading">Basic Knowledge Of</h4>
+                <ul class="skills-list">
+                  <li>
+                    <i class="fas fa-check" style="color: #4caf50"></i> Node.js
+                    (Can create simple APIs)
+                  </li>
+                  <li>
+                    <i class="fas fa-check" style="color: #4caf50"></i> API
+                    Testing: Postman (Familiar)
+                  </li>
+                  <li>
+                    <i class="fas fa-check" style="color: #4caf50"></i> REST API
+                    Concepts (Understanding)
+                  </li>
+                  <li>
+                    <i class="fas fa-check" style="color: #4caf50"></i>
+                    Databases: MongoDB (Basics), SQL (Basics)
+                  </li>
+                </ul>
+
+                <h4 class="skills-subheading">Programming Languages</h4>
+                <ul class="skills-list">
+                  <li>
+                    <i class="fab fa-js js-icon" style="color: #f0db4f"></i>
+                    JavaScript
+                  </li>
+                  <li>
+                    <i
+                      class="fab fa-python python-icon"
+                      style="color: #3776ab"
+                    ></i>
+                    Python
+                  </li>
+                  <li>
+                    <i class="fab fa-java java-icon" style="color: #007396"></i>
+                    Java
+                  </li>
+                  <li>
+                    <i
+                      class="fab fa-cuttlefish cplusplus-icon"
+                      style="color: #1e90ff"
+                    ></i>
+                    C++
+                  </li>
+                </ul>
+
+                <h4 class="quick-learner-line">
+                  Quickly adaptable to new Skills.
+                </h4>
+              </div>
+
+              <!-- Education Tab -->
+              <div class="tab-content education-tab">
+                <h3 class="tab-heading">Education</h3>
+                <p>
+                  I hold a Bachelor's degree in Computer Science from Khushal
+                  Khan Khattak University, Karak, Pakistan, from 2019 to 2023,
+                  with a <strong>GPA of 3.75/4.0</strong>.
+                </p>
+                <h4>Coursework</h4>
+                <p>
+                  Introduction to Computer Programming, Calculus & Analytical
+                  Geometry, Statistics and Probability, Multivariate Calculus,
+                  Object-Oriented Programming, Data Structures and Algorithms,
+                  Database Systems, Differential Equations, Design and Analysis
+                  of Algorithms, Linear Algebra, Numerical Computing, Artificial
+                  Intelligence.
+                </p>
+                <p class="education-programing-lang">
+                  C++, Java, Self-learned Python, JavaScript
+                </p>
+
+                <p>
+                  Intermediate (Pre-Engineering) from 2017 to 2019 with a score
+                  of <b>895/1100</b>.
+                </p>
+                <p class="education-ielts">
+                  <b>IELTS 6.5 bands overall:</b> Writing and Speaking 6 bands,
+                  Listening and Reading 6.5 bands.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==============  About Section End! ============================ -->
+
+      <!-- ============== Work Experience Section ============================ -->
+      <section id="work-experience" class="work-experience">
+        <div class="section-container">
+          <h2 class="section-title">Work Experience</h2>
+
+          <!-- Introduction to Journey -->
+          <p class="journey-introduction">
+            Since 2019, my journey has been a thrilling ride of continuous skill
+            improvement and exploration. Along the way, I've undertaken an array
+            of exciting projects, ranging from crafting a calculator, building a
+            YouTube clone, to creating a movie website powered by the IMDb API.
+            My skill set has evolved across various technologies, from the
+            fundamentals of HTML, CSS, and JavaScript to the robust and
+            versatile ReactJS framework.
+          </p>
+
+          <div class="experience-content">
+            <div class="experience-timeline">
+              <div class="experience-item">
+                <div class="timeline-ring"></div>
+                <!-- Add this ring -->
+                <h4><i class="fas fa-code"></i> Software Engineer</h4>
+                <p>
+                  <i class="fas fa-building"></i> Mindgigs Software House •
+                  Peshawar, Pakistan • 09/2023 — 09/2024
+                </p>
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-star list-icon"></i> Improved skills
+                    in ReactJS within the MERN stack, working on various
+                    projects.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-star list-icon"></i> Developed
+                    applications using ReactJS, Bootstrap, Redux, RTK Query, and
+                    RESTful APIs.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-star list-icon"></i> Conducted web
+                    development classes, teaching HTML, CSS, Bootstrap, and
+                    JavaScript.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-star list-icon"></i> Worked on Loan
+                    Management, Asset Management, and Point of Sale systems.
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-star list-icon"></i> Developed
+                    features like customer creation, loan payment tracking, and
+                    report generation using the MERN stack.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="experience-item">
+                <div class="timeline-ring"></div>
+                <!-- Add this ring -->
+                <h4><i class="fas fa-code"></i> Frontend Web Developer</h4>
+                <p>
+                  <i class="fas fa-building"></i> Khushal Khan Khattak
+                  University • Karak • 2019-2023
+                </p>
+                <ul>
+                  <li>
+                    <i class="fa-solid fa-star list-icon"></i> Crafting
+                    user-friendly interfaces and responsive designs. Utilizing
+                    Figma since 2022 to transform design concepts into stunning
+                    prototypes and web designs. Exploring Node.js for API
+                    development, seamlessly integrated with ReactJS. Proudly
+                    developing Roadmap CodeCamp, a ReactJS platform that serves
+                    as a guiding light for beginners on their path to skill
+                    development and proficiency.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Certificate -->
+            <div class="experience-certificate">
+              <img
+                src="./assets/images/Arshad_certificate_img.jpg"
+                alt="Certificate"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============== End! of Work Experience Section ============================ -->
+
+      <!-- ==============  Portfolio  Section ============================ -->
+      <section id="portfolio" class="portfolio">
+        <div class="section-container">
+          <h2>Portfolio</h2>
+          <p>
+            Check out some of my latest Projects.
+            <a
+              href="./portfolio/portfolio.html"
+              target="_blank"
+              class="profolio-see-all"
+              >See All</a
+            >
+          </p>
+          <div class="portfolio-items">
+            <div class="portfolio-item">
+              <img
+                src="./portfolio/projects/images/roadmap-codecamp-project.png"
+                alt="Project 1"
+              />
+              <div class="project-details">
+                <h3>Roadmap Codecamp</h3>
+                <p>
+                  Roadmap CodeCamp: Interactive learning platform with diverse
+                  roadmaps, progress tracking, and engaging content for skill
+                  development.
+                </p>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/arshadkh507/roadmapcodecampDeployed"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    href="https://roadmapcodecamp-frontend.netlify.app/"
+                    target="_blank"
+                  >
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                  </a>
                 </div>
               </div>
             </div>
 
-            <!-- Skills Tab -->
-            <div class="tab-content">
-              <h3 class="tab-heading">Skills</h3>
-
-              <h4 class="skills-subheading">Proficient In</h4>
-              <ul class="skills-list">
-                <li>
-                  <i class="fab fa-html5 html5-icon" style="color: #E34F26;"></i> HTML5
-                </li>
-                <li>
-                  <i class="fab fa-css3 css3-icon" style="color: #2965F1;"></i> CSS3
-                </li>
-                <li>
-                  <i class="fab fa-js js-icon" style="color: #F0DB4F;"></i> JavaScript
-                </li>
-                <li>
-                  <i class="fab fa-bootstrap bootstrap-icon" style="color: #7952B3;"></i> Bootstrap
-                </li>
-                <li>
-                  <i class="fab fa-git git-icon" style="color: #F1502F;"></i> Git & Github
-                </li>
-                <li>
-                  <i class="fab fa-react react-icon" style="color: #61DAFB;"></i> ReactJS
-                </li>
-                <li>
-                  <i class="fab fa-figma" style="color: #F24E1E;"></i> Figma
-                </li>
-
-              </ul>
-
-              <h4 class="skills-subheading">Basic Knowledge Of</h4>
-              <ul class="skills-list">
-                <li>
-                  <i class="fas fa-check" style="color: #4CAF50;"></i> Node.js (Can create simple APIs)
-                </li>
-                <li>
-                  <i class="fas fa-check" style="color: #4CAF50;"></i> API Testing: Postman (Familiar)
-                </li>
-                <li>
-                  <i class="fas fa-check" style="color: #4CAF50;"></i> REST API Concepts (Understanding)
-                </li>
-                <li>
-                  <i class="fas fa-check" style="color: #4CAF50;"></i> Databases: MongoDB (Basics), SQL (Basics)
-                </li>
-              </ul>
-
-
-              <h4 class="skills-subheading">Programming Languages</h4>
-              <ul class="skills-list">
-                <li>
-                  <i class="fab fa-js js-icon" style="color: #F0DB4F;"></i> JavaScript
-                </li>
-                <li>
-                  <i class="fab fa-python python-icon" style="color: #3776AB;"></i> Python
-                </li>
-                <li>
-                  <i class="fab fa-java java-icon" style="color: #007396;"></i> Java
-                </li>
-                <li>
-                  <i class="fab fa-cuttlefish cplusplus-icon" style="color: #1E90FF;"></i> C++
-                </li>
-              </ul>
-
-
-              <h4 class="quick-learner-line">Quickly adaptable to new Skills.</h4>
+            <div class="portfolio-item">
+              <img
+                src="./portfolio/projects/images/image-gallery-project.png"
+                alt="Project 2"
+              />
+              <div class="project-details">
+                <h3>Image Gallery</h3>
+                <p>
+                  Responsive ReactJS Image Gallery with Pixabay API, Tailwind
+                  CSS, and dynamic UI features.
+                </p>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/arshadkh507/Image-gallery"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    href="https://image-gallery-arshadkh507.netlify.app/"
+                    target="_blank"
+                  >
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
             </div>
-
-            <!-- Experience Tab -->
-            <div class="tab-content">
-              <h3 class="tab-heading">Experience</h3>
-              <p class="experience-paragraph">
-                Since 2019, my journey has been a thrilling ride of continuous skill improvement and exploration. Along
-                the way,
-                I've undertaken an array of exciting projects, ranging from crafting a calculator, building a YouTube
-                clone, to
-                creating a movie website powered by the IMDb API. My skill set has evolved across various technologies,
-                from the
-                fundamentals of HTML, CSS, and JavaScript to the robust and versatile ReactJS framework.
-              </p>
-
-              <ul class="experience-list">
-                <li>
-                  <i class="fas fa-check experience-icon" style="color: #4CAF50;"></i>Crafting user-friendly interfaces
-                  and responsive designs.
-                </li>
-                <li>
-                  <i class="fas fa-check experience-icon" style="color: #4CAF50;"></i> Utilizing Figma since 2022 to
-                  transform design concepts into stunning prototypes
-                  and web designs.
-                </li>
-                <li>
-                  <i class="fas fa-check experience-icon" style="color: #4CAF50;"></i> Exploring Node.js for API
-                  development, seamlessly integrated with ReactJS.
-                </li>
-                <li>
-                  <i class="fas fa-check experience-icon" style="color: #4CAF50;"></i> Proudly developing
-                  <a href="https://roadmapcodecamp-frontend.netlify.app/" target="_blank"
-                    class="roadmapcodecamp-link">Roadmap CodeCamp</a>, a ReactJS platform that serves as a guiding light
-                  for beginners on their path to skill development
-                  and proficiency.
-                </li>
-              </ul>
+            <div class="portfolio-item">
+              <img
+                src="./portfolio/projects/images/todo-app-react-project.jpg"
+                alt="todo app reacjs"
+              />
+              <div class="project-details">
+                <h3>Taskmate-Todo App</h3>
+                <p>
+                  TaskMate, a powerful ReactJS Todo App with key CRUD
+                  functionalities & LocalStorage integration for anytime access.
+                </p>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/arshadkh507/Todo-App-in-ReactJS"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    href="https://arshadkh507-todo-app.netlify.app/"
+                    target="_blank"
+                  >
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
             </div>
-
-            <!-- Education Tab -->
-            <div class="tab-content education-tab">
-              <h3 class="tab-heading">Education</h3>
-              <p>I hold a Bachelor's degree in Computer Science from Khushal Khan Khattak University, Karak, Pakistan,
-                from 2019 to 2023, with a <b>GPA of 3.74/4.0</b>.</p>
-              <h4>Coursework</h4>
-              <ul class="education-list">
-                <li>Introduction to Computer Programming</li>
-                <li>Calculus & Analytical Geometry</li>
-                <li>Statistics and Probability</li>
-                <li>Multivariate Calculus</li>
-                <li>Object-Oriented Programming</li>
-                <li>Data Structures and Algorithms</li>
-                <li>Database Systems</li>
-                <li>Differential Equations</li>
-                <li>Design and Analysis of Algorithms</li>
-                <li>Linear Algebra</li>
-                <li>Numerical Computing</li>
-                <li>Artificial Intelligence</li>
-                <li class="education-programing-lang">
-                  C++, Java, Self-learned Python, JavaScript
-                </li>
-              </ul>
-              <p>Intermediate (Pre-Engineering) from 2017 to 2019 with a score of <b>895/1100</b>.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      </div>
-    </section>
-    <!-- ==============  About Section End! ============================ -->
-
-
-    <!-- ==============  Portfolio  Section ============================ -->
-    <section id="portfolio" class="portfolio">
-      <div class="section-container">
-        <h2>Portfolio</h2>
-        <p>Check out some of my latest Projects. <a href="./portfolio/portfolio.html" target="_blank"
-            class="profolio-see-all">See All</a></p>
-        <div class="portfolio-items">
-          <div class="portfolio-item">
-            <img src="./portfolio/projects/images/roadmap-codecamp-project.png" alt="Project 1">
-            <div class="project-details">
-              <h3>Roadmap Codecamp</h3>
-              <p>Roadmap CodeCamp: Interactive learning platform with diverse roadmaps, progress tracking, and engaging content for skill development.</p>
-              <div class="project-links">
-                <a  href="https://github.com/arshadkh507/roadmapcodecampDeployed" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://roadmapcodecamp-frontend.netlify.app/" target="_blank"> <i class="fa fa-external-link" aria-hidden="true"></i>
+            <div class="portfolio-item">
+              <img
+                src="./portfolio/projects/images/lms-project.png"
+                alt="Loan Management System"
+              />
+              <div class="project-details">
+                <h3>Loan Management System</h3>
+                <p>
+                  A web-based loan management system for customer creation, loan
+                  payments, installment tracking, and report generation.
+                </p>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/arshadkh507/Loan-Management-System/tree/master"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    href="https://github.com/arshadkh507/Loan-Management-System/tree/master"
+                    target="_blank"
+                  >
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          
-          <div class="portfolio-item">
-            <img src="./portfolio/projects/images/image-gallery-project.png" alt="Project 2">
-            <div class="project-details">
-              <h3>Image Gallery</h3>
-              <p>Responsive ReactJS Image Gallery with Pixabay API, Tailwind CSS, and dynamic UI features.</p>
-              <div class="project-links">
-                <a href="https://github.com/arshadkh507/Image-gallery" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://image-gallery-arshadkh507.netlify.app/" target="_blank"> <i class="fa fa-external-link" aria-hidden="true"></i> </a>
+        </div>
+      </section>
+
+      <!-- ==============  Portfolio  Section End! ============================ -->
+
+      <!-- ==============  Contact Section ============================ -->
+      <section id="contact" class="contact">
+        <div class="section-container">
+          <div class="contact-info">
+            <h2>Contact Me</h2>
+            <p>
+              Feel free to reach out to me using the contact information below:
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>
+                  <a href="tel:+923435439569" target="_blank">+92 3435439569</a>
+                </p>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Karak, Khyber Pakhtunkhwa, Pakistan</p>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>
+                  <a href="mailto:arshadkh507@gmail.com" target="_blank"
+                    >arshadkh507@gmail.com</a
+                  >
+                </p>
               </div>
             </div>
-          </div>
-          <div class="portfolio-item">
-            <img src="./portfolio/projects/images/todo-app-react-project.jpg" alt="todo app reacjs">
-            <div class="project-details">
-              <h3>Taskmate-Todo App</h3>
-              <p>TaskMate, a powerful ReactJS Todo App with key CRUD functionalities &  LocalStorage integration for anytime access.</p>
-              <div class="project-links">
-                <a href="https://github.com/arshadkh507/Todo-App-in-ReactJS" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://arshadkh507-todo-app.netlify.app/" target="_blank"> <i class="fa fa-external-link" aria-hidden="true"></i> </a>
-              </div>
+            <div class="contact-whatsapp">
+              <i class="fab fa-whatsapp"></i>
+              <a href="https://wa.link/miycpm" target="_blank">WhatsApp me</a>
             </div>
           </div>
-          <div class="portfolio-item">
-            <img src="./portfolio/projects/images/roadmap-codecamp-project.png" alt="Project 1">
-            <div class="project-details">
-              <h3>Roadmap Codecamp</h3>
-              <p>Roadmap CodeCamp: Interactive learning platform with diverse roadmaps, progress tracking, and engaging content for skill development.</p>
-              <div class="project-links">
-                <a href="https://github.com/arshadkh507/roadmapcodecampDeployed"><i class="fa-brands fa-github" target="_blank"></i></a>
-                <a href="https://roadmapcodecamp-frontend.netlify.app/" target="_blank"> <i class="fa fa-external-link" aria-hidden="true"></i> </a>
-              </div>
-            </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ==============  Portfolio  Section End! ============================ -->
-
-
-    <!-- ==============  Contact Section ============================ -->
-    <section id="contact" class="contact">
-      <div class="section-container">
-        <div class="contact-info">
-          <h2>Contact Me</h2>
-          <p>Feel free to reach out to me using the contact information below:</p>
-          <div class="contact-details">
-            <div class="contact-item">
-              <i class="fas fa-phone"></i>
-              <p><a href="tel:+923435439569" target="_blank">+92 3435439569</a></p>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <p>Karak, Khyber Pakhtunkhwa, Pakistan</p>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <p><a href="mailto:arshadkh507@gmail.com" target="_blank">arshadkh507@gmail.com</a></p>
-            </div>
-          </div>
-          <div class="contact-whatsapp">
-            <i class="fab fa-whatsapp"></i>
-            <a href="https://wa.link/miycpm" target="_blank">WhatsApp me</a>
+          <div class="contact-social-icons">
+            <a href="https://github.com/arshadkh507" target="_blank">
+              <i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/arshadkh507/" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <!-- <a
+              href="https://www.facebook.com/code.master.arshad/"
+              target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a> -->
           </div>
         </div>
-        <!-- <div class="contact-form">
-          <h3>Get In Touch</h3>
-          <form action="contact.php" method="post">
-            <div class="form-group">
-              <input type="text" name="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-          </form>
-        </div> -->
-        <div class="social-icons">
-          <a href="https://github.com/arshadkh507" target="_blank" > <i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/arshad-khan-2a6923213/" target="_blank" ><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.facebook.com/code.master.arshad/" target="_blank" ><i class="fab fa-facebook"></i></a>
-        </div>
-      </div>
-    </section>
-    <!-- ==============  Contact Section End! ============================ -->
+      </section>
+      <!-- ==============  Contact Section End! ============================ -->
 
-
-
-    <!-- ==============  Footer  Section ============================ -->
-    <footer id="footer">
-      <div class="footer-container">
-        <div class="footer-left">
-          <h3>Arshad Khan</h3>
-          <p>Connect with me on social media:</p>
-          <div class="social-icons">
-            <a href="https://github.com/arshadkh507" target="_blank" > <i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/arshad-khan-2a6923213/" target="_blank" ><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.facebook.com/code.master.arshad/" target="_blank" ><i class="fab fa-facebook"></i></a>
+      <!-- ==============  Footer  Section ============================ -->
+      <footer id="footer">
+        <div class="footer-container">
+          <div class="footer-left">
+            <h3>Arshad Khan</h3>
+            <p>Connect with me on social media:</p>
+            <div class="footer-social-icons">
+              <a href="https://github.com/arshadkh507" target="_blank">
+                <i class="fab fa-github"></i
+              ></a>
+              <a href="https://www.linkedin.com/in/arshadkh507/" target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/code.master.arshad/"
+                target="_blank"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-right">
+            <p>&copy; 2023 Arshad Khan. All rights reserved.</p>
           </div>
         </div>
-        <div class="footer-right">
-          <p>&copy; 2023 Arshad Khan. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-    <!-- ==============  Footer  Section End! ============================ -->
+      </footer>
+      <!-- ==============  Footer  Section End! ============================ -->
+    </main>
 
-
-
-  </main>
-
-
-  <!-- ============ Background Animation Section  ================  -->
-  <div class="background">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <!-- ============ Background Animation Section End!  ============  -->
-
-  <!-- index.js file -->
-  <script src="./assets/js/index.js"></script>
-</body>
-
+    <!-- index.js file -->
+    <script src="./assets/js/index.js"></script>
+  </body>
 </html>
