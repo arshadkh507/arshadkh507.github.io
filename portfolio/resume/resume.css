@@ -133,3 +133,20 @@ footer p {
   font-size: 1.2rem;
   letter-spacing: 1px;
 }
+
+@media screen and (max-width: 500px) {
+  #resume-page section {
+    padding: 20px 10px;
+  }
+  .resume-title .name {
+    font-size: 3rem;
+  }
+  .resume-title .resume-job-title {
+    font-size: 1.2rem;
+    font-weight: bolder;
+  }
+  .section-container ul li,
+  .section-container p {
+    font-size: 1rem;
+  }
+}
