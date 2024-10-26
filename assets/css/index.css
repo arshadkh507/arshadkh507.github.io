@@ -83,7 +83,6 @@ main {
   /* background-color: var(--body-bg-color); */
   /* Background Pattern */
   background-color: #000000;
-  opacity: 0.8;
   background-image: radial-gradient(#ffffff33 1px, #00091d 0);
   background-size: 10px 10px;
 }
