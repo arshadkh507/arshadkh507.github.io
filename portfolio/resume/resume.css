@@ -37,6 +37,11 @@ body {
 
 #resume-page .resume-title .section-container {
   background-color: transparent;
+  border: none;
+}
+
+#resume-page .section-container {
+  border: none;
 }
 
 .resume-title {
@@ -73,6 +78,12 @@ body {
 .resume-title .download-button:hover {
   background-color: var(--secondary-color);
 }
+
+/* summary start */
+.summary ul li .email:hover {
+  color: var(--primary-color);
+}
+/* summary end */
 
 section h2 {
   font-size: 2rem;
@@ -111,16 +122,42 @@ section h2::after {
   color: var(--secondary-color);
 }
 
+/* Projects */
+
+.project-item {
+  background-color: #222;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item h3 {
+  color: #f8c202;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  color: #aaa;
+  font-size: 1em;
+}
+
 .resume-project-links a {
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  margin-right: 15px;
-  transition: all 0.3s ease;
+  color: var(--on-surface-color);
+  font-size: 1.2em;
+  transition: color 0.3s ease;
 }
 
 .resume-project-links a:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
+
+.resume-project-links i {
+  margin-right: 5px;
+}
+
+/* Footer */
 
 footer {
   text-align: center;

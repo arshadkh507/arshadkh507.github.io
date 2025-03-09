@@ -21,6 +21,7 @@
   --on-surface-color: #ffffff;
   --light-gray-color: #bdbdbd;
   --section-black-transparent: #00000000;
+  --gold-color: #f8c202;
 
   --primary-color-2: #000000;
   --secondary-color-2: #1e90ff;
@@ -1088,16 +1089,21 @@ li.active a {
 }
 .portfolio-item {
   flex-basis: calc(50% - 30px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   transition: transform 0.2s ease;
   background: #fff;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   min-height: 240px;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
 }
 .portfolio-item:hover {
   transform: scale(1.05);
+  border-radius: 10px;
+  border-bottom: 3px solid var(--yellow-border);
+  border-top: 3px solid var(--yellow-border);
 }
 .portfolio-item:before {
   content: "";
@@ -1480,7 +1486,7 @@ footer {
 }
 .about-me-text {
   width: 100%;
-  max-width: 560px;
+  max-width: 865px;
   margin: 2rem auto;
   color: #fff;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.7);
