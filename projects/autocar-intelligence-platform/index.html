@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Resolve the theme before first paint so there's no flash of the wrong
+         theme. Dark is the default; light is opt-in and persisted. -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var theme =
+          saved ||
+          (matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="description" content="Operational intelligence for a 9+ shop auto repair group: multi-shop data, historical snapshots, aging WIP and audit-ready profit figures in one view." />
+    <meta name="keywords" content="React, Supabase, PostgreSQL, Tekmetric API, Chrome Extension, Arshad Khan, Case Study" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <title>AutoCar Intelligence Platform — Case Study | Arshad Khan</title>
+    <link rel="canonical" href="https://arshadkh507.github.io/projects/autocar-intelligence-platform/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="article:modified_time" content="2026-10-10" />
+    <meta property="article:author" content="Arshad Khan" />
+    <meta property="og:title" content="AutoCar Intelligence Platform — Case Study" />
+    <meta property="og:description" content="Operational intelligence for a 9+ shop auto repair group: multi-shop data, historical snapshots, aging WIP and audit-ready profit figures in one view." />
+    <meta property="og:url" content="https://arshadkh507.github.io/projects/autocar-intelligence-platform/" />
+    <meta property="og:image" content="https://arshadkh507.github.io/assets/images/og/autocar-intelligence-platform.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="AutoCar Intelligence Platform — case study by Arshad Khan" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AutoCar Intelligence Platform — Case Study | Arshad Khan" />
+    <meta name="twitter:description" content="Operational intelligence for a 9+ shop auto repair group: multi-shop data, historical snapshots, aging WIP and audit-ready profit figures in one view." />
+    <meta name="twitter:image" content="https://arshadkh507.github.io/assets/images/og/autocar-intelligence-platform.jpg" />
+
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/project-detail.css" />
+    <!-- Space Grotesk (headings) · JetBrains Mono (UI) · Fira Code (code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "AutoCar Intelligence Platform",
+      "headline": "AutoCar Intelligence Platform — Case Study",
+      "description": "Operational intelligence for a 9+ shop auto repair group: multi-shop data, historical snapshots, aging WIP and audit-ready profit figures in one view.",
+      "url": "https://arshadkh507.github.io/projects/autocar-intelligence-platform/",
+      "keywords": "React, Supabase, PostgreSQL, Tekmetric API, Chrome Extension",
+      "author": {
+        "@type": "Person",
+        "@id": "https://arshadkh507.github.io/#person",
+        "name": "Arshad Khan",
+        "url": "https://arshadkh507.github.io/"
+      },
+      "image": "https://arshadkh507.github.io/assets/images/og/autocar-intelligence-platform.jpg",
+      "abstract": "Operational intelligence for a 9+ shop auto repair group: multi-shop data, historical snapshots, aging WIP and audit-ready profit figures in one view.",
+      "dateModified": "2026-10-10",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://arshadkh507.github.io/#website",
+        "url": "https://arshadkh507.github.io/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arshadkh507.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://arshadkh507.github.io/portfolio/portfolio.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AutoCar Intelligence Platform"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+
+  <body data-active-nav="portfolio">
+    <a class="skip-to-main" href="#project-main">Skip to main content</a>
+    <main>
+      <!-- ==============  Header / Top Navbar ============================ -->
+      <div data-include="header"></div>
+      <!-- ======  End! of Header / Top Navbar ======== -->
+
+      <nav class="project-breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/index.html">Home</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li><a href="/portfolio/portfolio.html">Portfolio</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li><span aria-current="page">AutoCar Intelligence Platform</span></li>
+        </ol>
+      </nav>
+
+      <div id="project-main">
+        <!-- ==============  Project Header ============================ -->
+        <section class="project-hero">
+          <div class="section-container">
+            <img
+              class="project-logo"
+              src="/assets/logos/projects/autocar-intelligence-platform.svg"
+              alt="AutoCar Intelligence Platform logo"
+              width="256"
+              height="256"
+            />
+            <p class="project-eyebrow">
+              Full Stack
+            </p>
+            <h1 class="project-title">AutoCar Intelligence Platform</h1>
+            <p class="project-tagline">Operational intelligence giving multi-shop auto repair owners one source of truth.</p>
+            <dl class="project-meta">
+            <div>
+              <dt>Role</dt>
+              <dd>Frontend / Full Stack Developer</dd>
+            </div>
+            <div>
+              <dt>Timeline</dt>
+              <dd>Nov 2025 — Jan 2026</dd>
+            </div>
+            <div>
+              <dt>Category</dt>
+              <dd>Full Stack</dd>
+            </div>
+            <div>
+              <dt>Case study</dt>
+              <dd><a href="https://techemulsion.com/case-studies/autosync-intelligence" target="_blank" rel="noopener">techemulsion.com</a></dd>
+            </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ==============  Gallery ============================ -->
+        <section class="project-section" aria-label="Screenshots">
+          <div class="section-container">
+        <div class="gallery" data-gallery aria-label="AutoCar Intelligence Platform screenshots">
+          <div class="gallery-viewport" data-gallery-viewport>
+            <ul class="gallery-track" data-gallery-track>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/autocar-intelligence-platform/01-company-dashboard.webp"
+                  alt="AutoCar Intelligence company dashboard with at-risk parts and returns, missing invoices and questionable spends"
+                  width="1600"
+                  height="900"
+                  fetchpriority="high"
+                />
+                <figcaption>Company dashboard: parts at risk, uncredited returns, missing invoices and questionable spends across every shop, each one drillable to its location.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/autocar-intelligence-platform/02-historical-performance.webp"
+                  alt="AutoCar Intelligence historical performance chart of monthly gross, profit, margin and repair-order count over 36 months"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+                <figcaption>Thirty-six months of gross, profit, margin and repair-order count per shop, read from stored historical snapshots rather than the vendor&rsquo;s live aggregates.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/autocar-intelligence-platform/03-month-to-date.webp"
+                  alt="AutoCar Intelligence month-to-date table comparing parts, labour and sublet sales per location against prior years"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+                <figcaption>Month to date against the same days in earlier years, split into parts, labour and sublet per location.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/autocar-intelligence-platform/04-aging-wip.webp"
+                  alt="AutoCar Intelligence aging work-in-progress view listing open repair orders with deposits and amount owed"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+                <figcaption>Aging work in progress: every open repair order across nine locations, deposits set against the amount owed. Customer names blurred.</figcaption>
+              </figure>
+            </li>
+            </ul>
+          </div>
+        </div>
+          </div>
+        </section>
+
+        <!-- ==============  Overview ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Overview</h2>
+            <div class="project-prose">
+              <p>A centralised operational intelligence platform for owners running several auto repair shops. Before it, answering &quot;how did we do this month?&quot; meant logging into each shop's system separately and reconciling the numbers by hand.</p>
+            </div>
+
+            <h2 style="margin-top: 32px">My Role</h2>
+            <div class="project-prose">
+              <p>I built the aggregation layer and the analytics surfaces on top of it, including the hybrid data pipeline needed to reach metrics the vendor API does not expose.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Features ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Key Features</h2>
+            <p class="project-section-lead">What the system actually does.</p>
+            <dl class="feature-grid">
+              <div class="feature-item">
+                <dt>Multi-shop data aggregation</dt>
+                <dd>Normalises inconsistent fields across shops into one comparable dataset.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Historical snapshots</dt>
+                <dd>Month-over-month and year-over-year comparison from point-in-time snapshots.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Auditable calculations</dt>
+                <dd>Sales and profit figures computed deterministically, so an owner can trace any number back to its inputs.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Aging work-in-progress tracking</dt>
+                <dd>Flags high-dollar repair orders sitting without a deposit.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Hybrid data pipeline</dt>
+                <dd>Combines the Tekmetric API with a Chrome extension for metrics the API does not expose.</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ==============  Tech Stack ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Tech Stack</h2>
+            <p class="project-section-lead">What it's built with.</p>
+            <div class="stack-list">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Tekmetric API</span>
+              <span class="tech-tag">Chrome Extension</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Challenges & Solutions ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Challenges &amp; Solutions</h2>
+            <p class="project-section-lead">
+              The problems that shaped the build, and what I did about them.
+            </p>
+            <div class="challenge-list">
+              <div class="challenge-item">
+                <h3>Challenge</h3>
+                <p>Each shop entered the same concepts differently, so naively combining their data produced totals that did not match any individual shop's own reporting.</p>
+                <p class="solution"><strong>Solution:</strong> Built a normalisation layer that maps each shop's field variants onto one canonical schema before any aggregation happens.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Challenge</h3>
+                <p>Several metrics owners most wanted were visible in the vendor's own interface but absent from its API.</p>
+                <p class="solution"><strong>Solution:</strong> Paired the API with a Chrome extension that captures the missing metrics from the authenticated session, feeding both into the same pipeline.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Challenge</h3>
+                <p>Owners will not trust a dashboard whose profit figure they cannot reproduce.</p>
+                <p class="solution"><strong>Solution:</strong> Made the sales and profit calculations deterministic and inspectable rather than opaque aggregates, so every figure can be audited.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Results ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Results</h2>
+            <p class="project-section-lead">What shipped, and what changed because of it.</p>
+            <!-- TODO (Arshad): add concrete metrics here where you have them —
+                 user counts, time saved, revenue, load times. Qualitative
+                 outcomes only for now, so nothing here overstates the result. -->
+            <ul class="results-list">
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Multi-shop performance readable from one dashboard instead of separate per-shop logins.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Month-over-month and year-over-year comparison available from historical snapshots.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>High-dollar repair orders without deposits surfaced automatically rather than found by chance.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ==============  Prev / Next ============================ -->
+        <section class="project-section" aria-label="More projects">
+          <div class="section-container">
+            <nav class="project-pager">
+              <a class="prev" href="/projects/auto-repair-shop-management/">
+                <span class="dir">← Previous</span>
+                <span class="name">Auto Repair Shop Management Platform</span>
+              </a>
+              <a class="next" href="/projects/linkedin-connection-automation/">
+                <span class="dir">Next →</span>
+                <span class="name">LinkedIn Connection Automation</span>
+              </a>
+            </nav>
+          </div>
+        </section>
+
+        <!-- ==============  CTA ============================ -->
+        <section class="cta-section">
+          <div class="section-container">
+            <div class="cta-content">
+              <h2>Interested in work like this?</h2>
+              <div class="cta-buttons">
+                <a href="/index.html#contact" class="btn-cta-primary">
+                  <i class="fas fa-envelope" aria-hidden="true"></i> Get In Touch
+                </a>
+                <a href="/portfolio/portfolio.html" class="btn-cta-secondary">
+                  <i class="fas fa-briefcase" aria-hidden="true"></i> All Projects
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div data-include="footer"></div>
+    </main>
+
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/theme-toggle.js"></script>
+    <script src="/assets/js/quick-nav.js"></script>
+    <script src="/assets/js/projects-data.js"></script>
+    <script src="/assets/js/slider.js"></script>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>

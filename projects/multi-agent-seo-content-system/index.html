@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Resolve the theme before first paint so there's no flash of the wrong
+         theme. Dark is the default; light is opt-in and persisted. -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var theme =
+          saved ||
+          (matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="description" content="Specialised AI agents on a Hermes runtime research keywords, analyse competitors and draft articles, with Multica orchestration and a human approval gate." />
+    <meta name="keywords" content="Hermes, Multica, MCP, DataForSEO, Supabase, Slack, Multi-Agent Systems, Agent Orchestration, LLM Observability, Arshad Khan, Case Study" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <title>Multi-Agent SEO Content System — Case Study | Arshad Khan</title>
+    <link rel="canonical" href="https://arshadkh507.github.io/projects/multi-agent-seo-content-system/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="article:modified_time" content="2026-10-10" />
+    <meta property="article:author" content="Arshad Khan" />
+    <meta property="og:title" content="Multi-Agent SEO Content System — Case Study" />
+    <meta property="og:description" content="Specialised AI agents on a Hermes runtime research keywords, analyse competitors and draft articles, with Multica orchestration and a human approval gate." />
+    <meta property="og:url" content="https://arshadkh507.github.io/projects/multi-agent-seo-content-system/" />
+    <meta property="og:image" content="https://arshadkh507.github.io/assets/images/og/multi-agent-seo-content-system.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Multi-Agent SEO Content Generation System — case study by Arshad Khan" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Multi-Agent SEO Content System — Case Study | Arshad Khan" />
+    <meta name="twitter:description" content="Specialised AI agents on a Hermes runtime research keywords, analyse competitors and draft articles, with Multica orchestration and a human approval gate." />
+    <meta name="twitter:image" content="https://arshadkh507.github.io/assets/images/og/multi-agent-seo-content-system.jpg" />
+
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/project-detail.css" />
+    <!-- Space Grotesk (headings) · JetBrains Mono (UI) · Fira Code (code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "Multi-Agent SEO Content Generation System",
+      "headline": "Multi-Agent SEO Content System — Case Study",
+      "description": "Specialised AI agents on a Hermes runtime research keywords, analyse competitors and draft articles, with Multica orchestration and a human approval gate.",
+      "url": "https://arshadkh507.github.io/projects/multi-agent-seo-content-system/",
+      "keywords": "Hermes, Multica, MCP, DataForSEO, Supabase, Slack, Multi-Agent Systems, Agent Orchestration, LLM Observability",
+      "author": {
+        "@type": "Person",
+        "@id": "https://arshadkh507.github.io/#person",
+        "name": "Arshad Khan",
+        "url": "https://arshadkh507.github.io/"
+      },
+      "image": "https://arshadkh507.github.io/assets/images/og/multi-agent-seo-content-system.jpg",
+      "abstract": "Specialised AI agents on a Hermes runtime research keywords, analyse competitors and draft articles, with Multica orchestration and a human approval gate.",
+      "dateModified": "2026-10-10",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://arshadkh507.github.io/#website",
+        "url": "https://arshadkh507.github.io/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arshadkh507.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://arshadkh507.github.io/portfolio/portfolio.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Multi-Agent SEO Content Generation System"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+
+  <body data-active-nav="portfolio">
+    <a class="skip-to-main" href="#project-main">Skip to main content</a>
+    <main>
+      <!-- ==============  Header / Top Navbar ============================ -->
+      <div data-include="header"></div>
+      <!-- ======  End! of Header / Top Navbar ======== -->
+
+      <nav class="project-breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/index.html">Home</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li><a href="/portfolio/portfolio.html">Portfolio</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li><span aria-current="page">Multi-Agent SEO Content Generation System</span></li>
+        </ol>
+      </nav>
+
+      <div id="project-main">
+        <!-- ==============  Project Header ============================ -->
+        <section class="project-hero">
+          <div class="section-container">
+            <img
+              class="project-logo"
+              src="/assets/logos/projects/multi-agent-seo-content-system.svg"
+              alt="Multi-Agent SEO Content Generation System logo"
+              width="256"
+              height="256"
+            />
+            <p class="project-eyebrow">
+              AI &amp; Agents
+            </p>
+            <h1 class="project-title">Multi-Agent SEO Content Generation System</h1>
+            <p class="project-tagline">Specialised agents on a Hermes runtime that research, plan and draft publishable articles.</p>
+            <dl class="project-meta">
+            <div>
+              <dt>Role</dt>
+              <dd>AI Engineer</dd>
+            </div>
+            <div>
+              <dt>Organisation</dt>
+              <dd>Tech Emulsion</dd>
+            </div>
+            <div>
+              <dt>Category</dt>
+              <dd>AI &amp; Agents</dd>
+            </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ==============  Gallery ============================ -->
+        <section class="project-section" aria-label="Screenshots">
+          <div class="section-container">
+        <div class="gallery" data-gallery aria-label="Multi-Agent SEO Content Generation System screenshots">
+          <div class="gallery-viewport" data-gallery-viewport>
+            <ul class="gallery-track" data-gallery-track>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/_placeholder/01.svg"
+                  alt="Multi-Agent SEO Content Generation System — screenshot 1"
+                  width="1600"
+                  height="900"
+                  fetchpriority="high"
+                />
+                <figcaption>Placeholder — replace with a real screenshot</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/_placeholder/02.svg"
+                  alt="Multi-Agent SEO Content Generation System — screenshot 2"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+                <figcaption>Placeholder — replace with a real screenshot</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/_placeholder/03.svg"
+                  alt="Multi-Agent SEO Content Generation System — screenshot 3"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+                <figcaption>Placeholder — replace with a real screenshot</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/_placeholder/04.svg"
+                  alt="Multi-Agent SEO Content Generation System — screenshot 4"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+                <figcaption>Placeholder — replace with a real screenshot</figcaption>
+              </figure>
+            </li>
+            </ul>
+          </div>
+        </div>
+          </div>
+        </section>
+
+        <!-- ==============  Overview ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Overview</h2>
+            <div class="project-prose">
+              <p>A content automation system built for a marketing content agency that needed to publish articles capable of ranking, at a volume no writer could sustain by hand.</p>
+              <p>Rather than one model asked to do everything, the work is split across specialised agents — research, keyword analysis, content generation — running on the <strong>Hermes</strong> agent runtime, with <strong>Multica</strong> providing the orchestration and the observability over what each agent actually did. Live SEO data reaches the agents through the <strong>DataForSEO MCP server</strong>, generated articles and workflow outputs persist in <strong>Supabase</strong>, and <strong>Slack</strong> is where a human starts a run and approves what comes out of it.</p>
+            </div>
+
+            <h2 style="margin-top: 32px">My Role</h2>
+            <div class="project-prose">
+              <p>I built the orchestration layer: how the agents are specialised, how work passes between them on the Hermes runtime, what Multica surfaces about a run while it is happening, where results are durably stored, and where a human is required to approve before anything reaches publication.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Features ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Key Features</h2>
+            <p class="project-section-lead">What the system actually does.</p>
+            <dl class="feature-grid">
+              <div class="feature-item">
+                <dt>Hermes agent runtime</dt>
+                <dd>Each specialised agent runs on Hermes rather than as an ad hoc script, so they share one execution model instead of one integration per agent.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Multica orchestration &amp; observability</dt>
+                <dd>Multica coordinates the handoffs and makes a run legible while it is happening — which agent ran, on what input, and what it returned.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>SEO research and keyword analysis</dt>
+                <dd>Live keyword and competitive data gathered as input to drafting.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>DataForSEO MCP integration</dt>
+                <dd>SEO data reaches the agents through MCP rather than bespoke glue per agent.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Durable outputs on Supabase</dt>
+                <dd>Intermediate and final results persist, so a long run is inspectable and resumable.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Human approval workflow</dt>
+                <dd>A required review gate before anything is treated as publishable.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Slack triggering</dt>
+                <dd>Runs kick off from Slack, where the team already works.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Specialised agent roles</dt>
+                <dd>Research, keyword analysis and content generation are separate agents with narrow briefs, not one prompt asked to do all three.</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ==============  Tech Stack ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Tech Stack</h2>
+            <p class="project-section-lead">What it's built with.</p>
+            <div class="stack-list">
+              <span class="tech-tag">Hermes</span>
+              <span class="tech-tag">Multica</span>
+              <span class="tech-tag">MCP</span>
+              <span class="tech-tag">DataForSEO MCP</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">Slack</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Challenges & Solutions ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Challenges &amp; Solutions</h2>
+            <p class="project-section-lead">
+              The problems that shaped the build, and what I did about them.
+            </p>
+            <div class="challenge-list">
+              <div class="challenge-item">
+                <h3>One model doing three jobs does all three badly</h3>
+                <p>A single model asked to research, plan and write at once produces shallow work on all three.</p>
+                <p class="solution"><strong>Solution:</strong> Split the work across specialised agents with narrow responsibilities and orchestrated the handoffs between them.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Unattended publishing is how bad content ships</h3>
+                <p>Generation at volume with no gate is exactly how off-brand or factually wrong content reaches a client’s live site.</p>
+                <p class="solution"><strong>Solution:</strong> Made human approval a required stage rather than an optional review, so automation ends at the draft and a person decides what ships.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>A long multi-agent run is opaque while it is running</h3>
+                <p>Multi-agent runs take a long time, and losing every intermediate result to one failed step makes them impractical. Worse, with no view into the run there is no way to tell a slow agent from a stuck one.</p>
+                <p class="solution"><strong>Solution:</strong> Persisted agent outputs durably in Supabase so runs are inspectable during execution and recoverable after a failure, and used Multica’s observability so progress is visible per agent rather than inferred from the final output.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Results ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Results</h2>
+            <p class="project-section-lead">What shipped, and what changed because of it.</p>
+            <!-- TODO (Arshad): add concrete metrics here where you have them —
+                 user counts, time saved, revenue, load times. Qualitative
+                 outcomes only for now, so nothing here overstates the result. -->
+            <ul class="results-list">
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Keyword research through to draft article runs as one automated pipeline.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Content generation triggers from Slack without anyone opening the tooling.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Nothing publishes without passing an explicit human approval gate.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ==============  Prev / Next ============================ -->
+        <section class="project-section" aria-label="More projects">
+          <div class="section-container">
+            <nav class="project-pager">
+              <a class="prev" href="/projects/linkedin-connection-automation/">
+                <span class="dir">← Previous</span>
+                <span class="name">LinkedIn Connection Automation</span>
+              </a>
+              <a class="next" href="/projects/art-gola-artist-platform/">
+                <span class="dir">Next →</span>
+                <span class="name">Art Gola — Artist Platform</span>
+              </a>
+            </nav>
+          </div>
+        </section>
+
+        <!-- ==============  CTA ============================ -->
+        <section class="cta-section">
+          <div class="section-container">
+            <div class="cta-content">
+              <h2>Interested in work like this?</h2>
+              <div class="cta-buttons">
+                <a href="/index.html#contact" class="btn-cta-primary">
+                  <i class="fas fa-envelope" aria-hidden="true"></i> Get In Touch
+                </a>
+                <a href="/portfolio/portfolio.html" class="btn-cta-secondary">
+                  <i class="fas fa-briefcase" aria-hidden="true"></i> All Projects
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div data-include="footer"></div>
+    </main>
+
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/theme-toggle.js"></script>
+    <script src="/assets/js/quick-nav.js"></script>
+    <script src="/assets/js/projects-data.js"></script>
+    <script src="/assets/js/slider.js"></script>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>

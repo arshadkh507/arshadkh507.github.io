@@ -3,9 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arshad codeMaster</title>
+    <!-- Resolve the theme before first paint so there's no flash of the wrong
+         theme. Dark is the default; light is opt-in and persisted. -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var theme =
+          saved ||
+          (matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta
+      name="description"
+      content="Arshad Khan is a Full Stack Software Engineer in Peshawar building AI agent systems, LLM integrations and automation with React, Next.js, Node and Supabase."
+    />
+    <meta
+      name="keywords"
+      content="AI Engineer, LLM Engineer, Agent Engineering, Multi-Agent Systems, Model Context Protocol, MCP, n8n, LLM Observability, Full Stack Software Engineer, MERN Stack, React Developer, Next.js, Node.js, TypeScript, Supabase, Gemini API, ElevenLabs, Pakistan, Remote"
+    />
+    <meta name="author" content="Arshad Khan" />
+    <meta
+      property="og:title"
+      content="Arshad Khan — Full Stack Engineer, AI &amp; Agent Systems"
+    />
+    <meta
+      property="og:description"
+      content="3+ years shipping production software: multi-agent AI pipelines, LLM integrations, workflow automation, e-commerce and operational dashboards."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arshadkh507.github.io/" />
+    <meta property="og:image" content="https://arshadkh507.github.io/assets/images/og-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Arshad Khan — Full Stack Software Engineer" />
+    <meta name="twitter:image" content="https://arshadkh507.github.io/assets/images/og-card.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Arshad Khan — Full Stack Engineer, AI &amp; Agent Systems" />
+    <meta
+      name="twitter:description"
+      content="Multi-agent pipelines, LLM integration and workflow automation, on a full-stack React/Node foundation."
+    />
+    <link rel="canonical" href="https://arshadkh507.github.io/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <title>Arshad Khan — Full Stack Engineer, AI &amp; Agent Systems</title>
     <link rel="stylesheet" href="./assets/css/index.css" />
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -13,101 +59,182 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- JetBrains Font Family -->
+    <!-- Space Grotesk (headings) · JetBrains Mono (UI) · Fira Code (code) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Fira+Code:wght@400;500&display=swap"
       rel="stylesheet"
     />
   </head>
 
-  <body>
+  <body data-active-nav="home">
+    <!-- Mark sprite. Ten hand-drawn marks on one 24x24 grid at a single
+         1.75px stroke, all in currentColor so they inherit the theme and
+         whatever accent their container sets. Defined once, referenced by
+         <use>; nothing here paints until it is referenced. -->
+<svg width="0" height="0" style="position: absolute" aria-hidden="true">
+    <defs>
+      <g
+      id="m-base"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.75"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      ></g>
+    </defs>
+
+    <symbol id="mk-agents" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="4" r="2.4" fill="currentColor" stroke="none" />
+      <path d="M12 6.4V11" />
+      <path d="M5 11h14" />
+      <path d="M5 11v5.6M12 11v5.6M19 11v5.6" />
+      <circle cx="5" cy="19" r="2.4" />
+      <circle cx="12" cy="19" r="2.4" />
+      <circle cx="19" cy="19" r="2.4" />
+      </g>
+    </symbol>
+
+    <symbol id="mk-interface" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2.6" y="4" width="18.8" height="16" rx="2" />
+      <path d="M2.6 8.4h18.8" />
+      <rect x="5.6" y="11.4" width="6.4" height="5.6" rx="1" />
+      <path d="M15 12.6h3.6M15 15.8h3.6" />
+      </g>
+    </symbol>
+
+    <symbol id="mk-data" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2.6 20.4 7.3v9.4L12 21.4 3.6 16.7V7.3L12 2.6Z" />
+      <path d="M8.4 9.6h7.2M8.4 12h7.2M8.4 14.4h7.2" />
+      </g>
+    </symbol>
+
+    <symbol id="mk-live" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2.6" y="5" width="18.8" height="14" rx="2" />
+      <path d="M6 12.2h3l1.9-3.4 2.4 6.4 1.6-3h3.1" />
+      </g>
+    </symbol>
+
+    <symbol id="mk-merge" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="5.6" cy="5" r="2.2" />
+      <circle cx="5.6" cy="19" r="2.2" />
+      <circle cx="18.4" cy="12" r="2.2" />
+      <path d="M5.6 7.2v2.9a1.9 1.9 0 0 0 1.9 1.9h8.7" />
+      <path d="M5.6 16.8v-2.9a1.9 1.9 0 0 1 1.9-1.9h8.7" />
+      </g>
+    </symbol>
+
+    <symbol id="mk-peers" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="4.6" r="2.3" />
+      <circle cx="4.8" cy="18" r="2.3" />
+      <circle cx="19.2" cy="18" r="2.3" />
+      <path d="M10.9 6.6 5.9 15.9M13.1 6.6l5 9.3M7.1 18h9.8" />
+      </g>
+    </symbol>
+
+    <symbol id="mk-tenure" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6.5 19v-4.5M12 19v-9M17.5 19v-13.5" />
+      </g>
+    </symbol>
+
+    <symbol id="mk-own" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 3.6H4.6v16.8H9" />
+      <path d="M15 3.6h4.4v16.8H15" />
+      <circle cx="12" cy="12" r="2.6" fill="currentColor" stroke="none" />
+      </g>
+    </symbol>
+
+    <symbol id="mk-together" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="4.6" cy="12" r="2.4" />
+      <circle cx="19.4" cy="12" r="2.4" />
+      <circle cx="12" cy="12" r="3" fill="currentColor" stroke="none" />
+      <path d="M7 12h2M15 12h2" />
+      </g>
+    </symbol>
+
+    <symbol id="mk-detail" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="5.2" cy="5.2" r="1.5" />
+      <circle cx="18.8" cy="5.2" r="1.5" />
+      <circle cx="5.2" cy="18.8" r="1.5" />
+      <circle cx="18.8" cy="18.8" r="1.5" />
+      <circle cx="12" cy="12" r="1.9" fill="currentColor" stroke="none" />
+      <circle cx="12" cy="12" r="5" />
+      </g>
+    </symbol>
+    </svg>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#hero" class="skip-to-main">Skip to main content</a>
+
     <main>
       <!-- ==============  Header/ Top Navbar ============================ -->
-      <header id="header">
-        <nav class="navbar">
-          <div id="logo">
-            <span><code>&lt;</code>Arshad<code>/&gt;</code></span>
-          </div>
-
-          <ul>
-            <li class="active">
-              <a href="#">
-                <span class="icon"><i class="fas fa-home"></i></span>
-                <span class="text">Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="./portfolio/about/about.html">
-                <span class="icon"><i class="fas fa-info-circle"></i></span>
-                <span class="text">About</span>
-              </a>
-            </li>
-            <li>
-              <a href="./portfolio/portfolio.html">
-                <span class="icon"><i class="fas fa-briefcase"></i></span>
-                <span class="text">Portfolio</span>
-              </a>
-            </li>
-            <li>
-              <a href="./portfolio/resume/resume.html">
-                <span class="icon"><i class="far fa-file-alt"></i></span>
-                <span class="text">Resume</span>
-              </a>
-            </li>
-            <li>
-              <a href="./portfolio/blogs/blogs.html">
-                <span class="icon"><i class="far fa-newspaper"></i></span>
-                <span class="text">Blogs</span>
-              </a>
-            </li>
-            <li>
-              <a href="#contact">
-                <span class="icon"><i class="fas fa-envelope"></i></span>
-                <span class="text">Contact</span>
-              </a>
-            </li>
-          </ul>
-
-          <input type="checkbox" id="menu-toggle" aria-label="Toggle menu" />
-          <label for="menu-toggle" id="burger-menu">
-            <span id="burger-icon"><i class="fas fa-bars"></i></span>
-          </label>
-
-          <!-- <span><i class="fas fa-bars"></i></span> -->
-        </nav>
-      </header>
+      <div data-include="header"></div>
       <!-- ======  End! of Header/ Top Navbar ======== -->
 
       <!-- ======== Hero Section ================== -->
-      <section id="hero" class="hero">
+      <section id="hero" class="hero" aria-label="Hero section">
         <div class="section-container">
           <div class="hero-content">
             <div class="hero-left">
               <div class="hero-left-content">
                 <h1 class="hero-title">
-                  Hello I'm <br />
-                  <span> Arshad Khan</span>
+                  Full Stack Software Engineer
+                  <span class="hero-highlight">building AI &amp; agent systems</span>
                 </h1>
-                <h2 class="hero-subtitle">
-                  <span>A</span>
-                  <span class="job-title"
-                    >Frontend Web And ReactJS Developer</span
-                  >
-                  <span>from Pakistan.</span>
-                </h2>
-                <!-- New Subtitle for MERN Stack -->
-                <h3 class="hero-subtitle mern-title">
-                  <span>Currently improving my skills in</span>
-                  <span class="mern-stack">MERN Stack</span>
-                </h3>
+                <p class="hero-lede">
+                  I ship AI into production, not into demos — multi-agent content
+                  pipelines, LLM integrations that stay inside a budget, and
+                  automations that keep running when I am not watching them.
+                </p>
+                <div class="hero-tech-stack">
+                  <div class="tech-icon-large">
+                    <svg class="mark mark-lg" aria-hidden="true"><use href="#mk-agents" /></svg>
+                    <span>AI &amp; Agents</span>
+                  </div>
+                  <div class="tech-icon-large">
+                    <svg class="mark mark-lg" aria-hidden="true"><use href="#mk-interface" /></svg>
+                    <span>React &amp; Next.js</span>
+                  </div>
+                  <div class="tech-icon-large">
+                    <svg class="mark mark-lg" aria-hidden="true"><use href="#mk-data" /></svg>
+                    <span>Node &amp; Supabase</span>
+                  </div>
+                </div>
+                <div class="hero-value-props">
+                  <div class="value-prop">
+                    <svg class="mark" aria-hidden="true"><use href="#mk-live" /></svg>
+                    <span>Production-Ready</span>
+                  </div>
+                  <div class="value-prop">
+                    <svg class="mark" aria-hidden="true"><use href="#mk-merge" /></svg>
+                    <span>Team Leader</span>
+                  </div>
+                  <div class="value-prop">
+                    <svg class="mark" aria-hidden="true"><use href="#mk-peers" /></svg>
+                    <span>Multi-Agent</span>
+                  </div>
+                  <div class="value-prop">
+                    <svg class="mark" aria-hidden="true"><use href="#mk-tenure" /></svg>
+                    <span>3+ Years</span>
+                  </div>
+                </div>
                 <div class="hero-buttons">
                   <a
-                    href="./assets/Arshad-Khan-Resume.pdf"
+                    href="./assets/Full-Stack-Software-Engineer-v1-july-2026.pdf"
                     target="_blank"
                     class="btn hire-btn"
-                    >Download CV
+                    aria-label="Download Arshad Khan's Resume"
+                    >Download Resume
                     <svg
                       stroke="currentColor"
                       fill="none"
@@ -118,6 +245,7 @@
                       class="text-xl"
                       height="1em"
                       width="1em"
+                      aria-hidden="true"
                     >
                       <path
                         d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
@@ -125,36 +253,75 @@
                       <polyline points="7 10 12 15 17 10"></polyline>
                       <line x1="12" y1="15" x2="12" y2="3"></line></svg
                   ></a>
-                  <div class="social-icons">
+                  <div class="social-icons" role="list">
                     <a
                       href="https://github.com/arshadkh507"
                       target="_blank"
                       class="hero-social-icons"
-                      ><i class="fab fa-github"></i
+                      aria-label="Visit Arshad Khan's GitHub profile"
+                      role="listitem"
+                      ><i class="fab fa-github" aria-hidden="true"></i
                     ></a>
                     <a
                       href="https://www.linkedin.com/in/arshadkh507/"
                       target="_blank"
                       class="hero-social-icons"
-                      ><i class="fab fa-linkedin"></i
+                      aria-label="Visit Arshad Khan's LinkedIn profile"
+                      role="listitem"
+                      ><i class="fab fa-linkedin" aria-hidden="true"></i
                     ></a>
                   </div>
-                  <!-- <a
-                    href="https://wa.me/+923435439569"
-                    target="_blank"
-                    class="btn whatsapp-btn"
-                    >WhatsApp</a
-                  > -->
                 </div>
               </div>
             </div>
             <div class="hero-right">
-              <div class="hero-image">
-                <img
-                  src="./assets/images/profile-pic-4.png"
-                  alt="Arshad Khan"
-                />
-              </div>
+              <!-- The terminal chrome the boot animation used to wear, reused for
+                   the facts a recruiter opens this page to find. Static markup,
+                   not JS-injected, so it is crawlable and readable by AT — which
+                   the animated version, being aria-hidden, was not. -->
+              <section class="hero-status" aria-label="Current status">
+                <div class="hero-status-bar" aria-hidden="true">
+                  <span class="hero-status-dot red"></span>
+                  <span class="hero-status-dot yellow"></span>
+                  <span class="hero-status-dot green"></span>
+                  <span class="hero-status-file">~/arshad/status.json</span>
+                </div>
+                <div class="hero-status-body">
+                  <p class="hero-status-cmd" aria-hidden="true">
+                    <span class="hero-status-prompt">$</span> cat status.json
+                  </p>
+                  <dl class="hero-status-out">
+                    <div class="hero-status-row">
+                      <dt>role</dt>
+                      <dd>Software Engineer @ Tech Emulsion</dd>
+                    </div>
+                    <div class="hero-status-row">
+                      <dt>focus</dt>
+                      <dd>AI / LLM / agent engineering</dd>
+                    </div>
+                    <div class="hero-status-row">
+                      <dt>stack</dt>
+                      <dd>React · Next.js · TypeScript · Node · Supabase</dd>
+                    </div>
+                    <div class="hero-status-row">
+                      <dt>agent_tooling</dt>
+                      <dd>MCP · n8n · Hermes · Gemini · ElevenLabs · OpenRouter</dd>
+                    </div>
+                    <div class="hero-status-row">
+                      <dt>certified</dt>
+                      <dd><a href="#certifications">Anthropic · Claude Code · Claude API</a></dd>
+                    </div>
+                    <div class="hero-status-row">
+                      <dt>location</dt>
+                      <dd>Peshawar, Pakistan</dd>
+                    </div>
+                    <div class="hero-status-row">
+                      <dt>open_to</dt>
+                      <dd class="ok">remote · hybrid · on-site · relocation</dd>
+                    </div>
+                  </dl>
+                </div>
+              </section>
             </div>
           </div>
         </div>
@@ -163,33 +330,37 @@
 
       <section class="statistics-section" id="project-stats">
         <div class="section-container">
+          <h2 class="stats-heading">Proven Track Record</h2>
+          <p class="stats-subheading">
+            Every number below traces to a project you can open on this site
+          </p>
           <div class="section-content">
             <div class="stats-item">
-              <span>1.5+</span>
+              <span>1.4M+</span>
               <p>
-                Year <br />
-                Experience
+                Repair-order records <br />
+                analyzed
               </p>
             </div>
             <div class="stats-item">
-              <span>5+</span>
+              <span>13</span>
               <p>
-                Projects <br />
-                Completed
+                Phase AI content <br />
+                pipeline shipped
               </p>
             </div>
             <div class="stats-item">
-              <span>40+</span>
+              <span>7+</span>
               <p>
-                Github <br />
-                Repository
+                Juniors &amp; interns <br />
+                mentored
               </p>
             </div>
             <div class="stats-item">
-              <span>1</span>
+              <span>3 yrs</span>
               <p>
-                Open Source <br />
-                Contribution
+                Shipping production <br />
+                software
               </p>
             </div>
           </div>
@@ -199,7 +370,7 @@
       <!-- ==============  About Section ============================ -->
       <section id="about" class="about">
         <div class="section-container">
-          <h2 class="section-title">About Me</h2>
+          <h2 class="section-title">Who I Am & What I Bring</h2>
           <div class="about-content">
             <div class="about-tabs">
               <ul>
@@ -211,8 +382,12 @@
 
             <div class="about-image">
               <img
-                src="./assets/images/picture-1-protait.jpg"
-                alt="Arshad Khan October 2024 Image"
+                src="./assets/images/arshad-khan-portrait.webp"
+                alt="Arshad Khan in a navy sweater, smiling, in a bright office"
+                width="896"
+                height="1200"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -227,51 +402,51 @@
               <!-- About Tab -->
               <div class="about-text">
                 <div class="about-tab tab-content active">
-                  <h3 class="tab-heading">Frontend Web & ReactJS Developer</h3>
-                  <p>
-                    Passionate about crafting user-friendly web applications
-                    using <strong>HTML5, CSS3, JavaScript,</strong> and
-                    <strong>ReactJS</strong>. Experienced in developing
-                    responsive interfaces and integrating third-party APIs.
-                    Proficient with tools like
-                    <strong
-                      >Git, Redux, Bootstrap, React Router,
-                      Styled-components,</strong
-                    >
-                    for efficient web app development. Experienced in
-                    <strong>Express API creation, MongoDB,</strong> and backend
-                    <strong>CRUD operations</strong>.
-                  </p>
-
-                  <p>
-                    Using these technologies, I have designed and developed a
-                    Portal of Programming Roadmaps and Career Paths(<a
-                      href="https://roadmapcodecamp-frontend.netlify.app/"
-                      target="_blank"
-                      class="roadmapcodecamp-link"
-                      >Roadmap codecamp</a
-                    >
-                    ).
-                  </p>
-
-                  <p>
-                    Currently, I am looking for a junior or intermediate
-                    frontend web or ReactJS developer position, and I am open to
-                    internship opportunities. Feel free to contact me.
-                  </p>
+                  <div class="about-visual-grid">
+                    <div class="about-visual-card">
+                      <div class="visual-icon-large">
+                        <i class="fas fa-user-tie"></i>
+                      </div>
+                      <h3>Software Engineer</h3>
+                      <p>Tech Emulsion • 3+ Years</p>
+                    </div>
+                    <div class="about-visual-card">
+                      <div class="visual-icon-large">
+                        <i class="fas fa-building"></i>
+                      </div>
+                      <h3>Production Apps</h3>
+                      <p>POS • E-commerce • AI Platforms</p>
+                    </div>
+                    <div class="about-visual-card">
+                      <div class="visual-icon-large">
+                        <i class="fas fa-users-cog"></i>
+                      </div>
+                      <h3>Team Leadership</h3>
+                      <p>Mentoring • Best Practices</p>
+                    </div>
+                    <div class="about-visual-card">
+                      <div class="visual-icon-large">
+                        <i class="fas fa-rocket"></i>
+                      </div>
+                      <h3>Full-Stack</h3>
+                      <p>Supabase • Docker • CI/CD</p>
+                    </div>
+                  </div>
 
                   <div class="about-social-icons">
                     <a
                       href="https://github.com/arshadkh507"
                       target="_blank"
                       class="about-social-icon"
-                      ><i class="fab fa-github"></i
+                      aria-label="Arshad Khan on GitHub"
+                      ><i class="fab fa-github" aria-hidden="true"></i
                     ></a>
                     <a
-                      href="https://www.linkedin.com/in/arshad-khan-2a6923213/"
+                      href="https://www.linkedin.com/in/arshadkh507/"
                       target="_blank"
                       class="about-social-icon"
-                      ><i class="fab fa-linkedin"></i
+                      aria-label="Arshad Khan on LinkedIn"
+                      ><i class="fab fa-linkedin" aria-hidden="true"></i
                     ></a>
                     <!-- <a
                       href="https://www.facebook.com/code.master.arshad/"
@@ -283,7 +458,8 @@
                       href="https://wa.me/+923435439569"
                       target="_blank"
                       class="about-social-icon"
-                      ><i class="fab fa-whatsapp"></i
+                      aria-label="Message Arshad Khan on WhatsApp"
+                      ><i class="fab fa-whatsapp" aria-hidden="true"></i
                     ></a>
                   </div>
                 </div>
@@ -293,95 +469,106 @@
               <div class="tab-content">
                 <h3 class="tab-heading">Skills</h3>
 
-                <h4 class="skills-subheading">Proficient In</h4>
+                <h4 class="skills-subheading">Frontend</h4>
                 <ul class="skills-list">
-                  <li>
-                    <i
-                      class="fab fa-html5 html5-icon"
-                      style="color: #e34f26"
-                    ></i>
-                    HTML5
-                  </li>
-                  <li>
-                    <i class="fab fa-css3 css3-icon" style="color: #2965f1"></i>
-                    CSS3
-                  </li>
-                  <li>
-                    <i class="fab fa-js js-icon" style="color: #f0db4f"></i>
-                    JavaScript
-                  </li>
-                  <li>
-                    <i
-                      class="fab fa-bootstrap bootstrap-icon"
-                      style="color: #7952b3"
-                    ></i>
-                    Bootstrap
-                  </li>
-                  <li>
-                    <i class="fab fa-git git-icon" style="color: #f1502f"></i>
-                    Git & Github
-                  </li>
-                  <li>
-                    <i
-                      class="fab fa-react react-icon"
-                      style="color: #61dafb"
-                    ></i>
-                    ReactJS
-                  </li>
-                  <li>
-                    <i class="fab fa-figma" style="color: #f24e1e"></i> Figma
-                  </li>
+                  <li><i class="fab fa-react" aria-hidden="true"></i> React.js</li>
+                  <li><i class="fas fa-n" aria-hidden="true"></i> Next.js</li>
+                  <li><i class="fas fa-code" aria-hidden="true"></i> TypeScript</li>
+                  <li><i class="fab fa-js" aria-hidden="true"></i> JavaScript (ES6+)</li>
+                  <li><i class="fas fa-arrows-rotate" aria-hidden="true"></i> Redux Toolkit</li>
+                  <li><i class="fas fa-arrow-right-arrow-left" aria-hidden="true"></i> RTK Query</li>
+                  <li><i class="fas fa-layer-group" aria-hidden="true"></i> Zustand</li>
+                  <li><i class="fas fa-sitemap" aria-hidden="true"></i> Context API</li>
+                  <li><i class="fas fa-wind" aria-hidden="true"></i> Tailwind CSS</li>
+                  <li><i class="fas fa-cube" aria-hidden="true"></i> Material UI</li>
+                  <li><i class="fas fa-shapes" aria-hidden="true"></i> ShadCN UI</li>
+                  <li><i class="fab fa-bootstrap" aria-hidden="true"></i> Bootstrap</li>
+                  <li><i class="fab fa-html5" aria-hidden="true"></i> HTML5</li>
+                  <li><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS3</li>
+                  <li><i class="fas fa-mobile-screen-button" aria-hidden="true"></i> Capacitor</li>
+                  <li><i class="fas fa-clipboard-list" aria-hidden="true"></i> React Hook Form</li>
+                  <li><i class="fas fa-shield-halved" aria-hidden="true"></i> Zod</li>
                 </ul>
 
-                <h4 class="skills-subheading">Basic Knowledge Of</h4>
+                <h4 class="skills-subheading">Backend &amp; Data</h4>
                 <ul class="skills-list">
-                  <li>
-                    <i class="fas fa-check" style="color: #4caf50"></i> Node.js
-                    (Can create simple APIs)
-                  </li>
-                  <li>
-                    <i class="fas fa-check" style="color: #4caf50"></i> API
-                    Testing: Postman (Familiar)
-                  </li>
-                  <li>
-                    <i class="fas fa-check" style="color: #4caf50"></i> REST API
-                    Concepts (Understanding)
-                  </li>
-                  <li>
-                    <i class="fas fa-check" style="color: #4caf50"></i>
-                    Databases: MongoDB (Basics), SQL (Basics)
-                  </li>
+                  <li><i class="fab fa-node-js" aria-hidden="true"></i> Node.js</li>
+                  <li><i class="fas fa-server" aria-hidden="true"></i> Express.js</li>
+                  <li><i class="fas fa-database" aria-hidden="true"></i> MongoDB</li>
+                  <li><i class="fas fa-database" aria-hidden="true"></i> PostgreSQL</li>
+                  <li><i class="fas fa-bolt" aria-hidden="true"></i> Supabase</li>
+                  <li><i class="fas fa-code-branch" aria-hidden="true"></i> REST APIs</li>
+                  <li><i class="fas fa-cloud-bolt" aria-hidden="true"></i> Edge Functions</li>
+                  <li><i class="fas fa-user-lock" aria-hidden="true"></i> Row Level Security</li>
+                  <li><i class="fab fa-php" aria-hidden="true"></i> PHP</li>
+                  <li><i class="fab fa-wordpress" aria-hidden="true"></i> WordPress</li>
+                  <li><i class="fas fa-server" aria-hidden="true"></i> FastAPI (collaboration)</li>
                 </ul>
 
-                <h4 class="skills-subheading">Programming Languages</h4>
+                <h4 class="skills-subheading">AI &amp; LLM</h4>
                 <ul class="skills-list">
-                  <li>
-                    <i class="fab fa-js js-icon" style="color: #f0db4f"></i>
-                    JavaScript
-                  </li>
-                  <li>
-                    <i
-                      class="fab fa-python python-icon"
-                      style="color: #3776ab"
-                    ></i>
-                    Python
-                  </li>
-                  <li>
-                    <i class="fab fa-java java-icon" style="color: #007396"></i>
-                    Java
-                  </li>
-                  <li>
-                    <i
-                      class="fab fa-cuttlefish cplusplus-icon"
-                      style="color: #1e90ff"
-                    ></i>
-                    C++
-                  </li>
+                  <li><i class="fas fa-robot" aria-hidden="true"></i> Gemini API</li>
+                  <li><i class="fas fa-brain" aria-hidden="true"></i> OpenAI API</li>
+                  <li><i class="fas fa-message" aria-hidden="true"></i> Claude API</li>
+                  <li><i class="fas fa-microphone-lines" aria-hidden="true"></i> ElevenLabs</li>
+                  <li><i class="fas fa-route" aria-hidden="true"></i> AI Gateway</li>
+                  <li><i class="fas fa-coins" aria-hidden="true"></i> LLM Cost Tracking</li>
+                  <li><i class="fas fa-chart-line" aria-hidden="true"></i> AI Observability</li>
+                  <li><i class="fas fa-volume-high" aria-hidden="true"></i> Text-to-Speech</li>
+                  <li><i class="fas fa-wave-square" aria-hidden="true"></i> Voice Cloning</li>
                 </ul>
 
-                <h4 class="quick-learner-line">
-                  Quickly adaptable to new Skills.
-                </h4>
+                <h4 class="skills-subheading">AI Agents &amp; Automation</h4>
+                <ul class="skills-list">
+                  <li><i class="fas fa-terminal" aria-hidden="true"></i> Claude Code</li>
+                  <li><i class="fas fa-plug" aria-hidden="true"></i> MCP</li>
+                  <li><i class="fas fa-diagram-project" aria-hidden="true"></i> n8n</li>
+                  <li><i class="fas fa-network-wired" aria-hidden="true"></i> Hermes</li>
+                  <li><i class="fas fa-sitemap" aria-hidden="true"></i> Multica</li>
+                  <li><i class="fas fa-shuffle" aria-hidden="true"></i> OpenRouter</li>
+                  <li><i class="fas fa-spider" aria-hidden="true"></i> Apify</li>
+                </ul>
+
+                <h4 class="skills-subheading">Payments &amp; Integrations</h4>
+                <ul class="skills-list">
+                  <li><i class="fab fa-stripe-s" aria-hidden="true"></i> Stripe</li>
+                  <li><i class="fas fa-cart-shopping" aria-hidden="true"></i> WooCommerce</li>
+                  <li><i class="fas fa-credit-card" aria-hidden="true"></i> Peach Payments</li>
+                  <li><i class="fas fa-video" aria-hidden="true"></i> Zoom SDK</li>
+                  <li><i class="fas fa-car" aria-hidden="true"></i> Tekmetric API</li>
+                  <li><i class="fas fa-address-book" aria-hidden="true"></i> GoHighLevel CRM</li>
+                  <li><i class="fas fa-print" aria-hidden="true"></i> Lulu Print API</li>
+                </ul>
+
+                <h4 class="skills-subheading">Cloud &amp; DevOps</h4>
+                <ul class="skills-list">
+                  <li><i class="fab fa-git-alt" aria-hidden="true"></i> Git</li>
+                  <li><i class="fab fa-github" aria-hidden="true"></i> GitHub</li>
+                  <li><i class="fab fa-docker" aria-hidden="true"></i> Docker</li>
+                  <li><i class="fas fa-gears" aria-hidden="true"></i> GitHub Actions</li>
+                  <li><i class="fas fa-infinity" aria-hidden="true"></i> CI/CD</li>
+                  <li><i class="fab fa-cloudflare" aria-hidden="true"></i> Cloudflare</li>
+                  <li><i class="fab fa-digital-ocean" aria-hidden="true"></i> DigitalOcean</li>
+                  <li><i class="fas fa-cloud" aria-hidden="true"></i> Cloudways</li>
+                  <li><i class="fab fa-cpanel" aria-hidden="true"></i> cPanel</li>
+                  <li><i class="fas fa-globe" aria-hidden="true"></i> DNS</li>
+                  <li><i class="fas fa-lock" aria-hidden="true"></i> SSL</li>
+                  <li><i class="fas fa-key" aria-hidden="true"></i> SSH</li>
+                  <li><i class="fas fa-envelope-circle-check" aria-hidden="true"></i> DMARC</li>
+                </ul>
+
+                <h4 class="skills-subheading">Engineering Practices</h4>
+                <ul class="skills-list">
+                  <li><i class="fas fa-code-pull-request" aria-hidden="true"></i> Code Review</li>
+                  <li><i class="fas fa-list-check" aria-hidden="true"></i> QA &amp; Test Planning</li>
+                  <li><i class="fas fa-universal-access" aria-hidden="true"></i> Accessibility (WCAG)</li>
+                  <li><i class="fas fa-gauge-high" aria-hidden="true"></i> Performance &amp; Lighthouse</li>
+                  <li><i class="fab fa-chrome" aria-hidden="true"></i> Chrome DevTools</li>
+                  <li><i class="fas fa-rotate" aria-hidden="true"></i> Agile</li>
+                  <li><i class="fas fa-handshake" aria-hidden="true"></i> Client Requirements</li>
+                  <li><i class="fas fa-chalkboard-user" aria-hidden="true"></i> Technical Mentoring</li>
+                  <li><i class="fab fa-figma" aria-hidden="true"></i> Figma to Production</li>
+                </ul>
               </div>
 
               <!-- Education Tab -->
@@ -389,7 +576,7 @@
                 <h3 class="tab-heading">Education</h3>
                 <p>
                   I hold a Bachelor's degree in Computer Science from Khushal
-                  Khan Khattak University, Karak, Pakistan, from 2019 to 2023,
+                  Khan Khattak University, Karak, Pakistan, from 2019 to 2024,
                   with a <strong>GPA of 3.75/4.0</strong>.
                 </p>
                 <h4>Coursework</h4>
@@ -423,86 +610,200 @@
       <!-- ============== Work Experience Section ============================ -->
       <section id="work-experience" class="work-experience">
         <div class="section-container">
-          <h2 class="section-title">Work Experience</h2>
-
-          <!-- Introduction to Journey -->
-          <p class="journey-introduction">
-            Since 2019, my journey has been a thrilling ride of continuous skill
-            improvement and exploration. Along the way, I've undertaken an array
-            of exciting projects, ranging from crafting a calculator, building a
-            YouTube clone, to creating a movie website powered by the IMDb API.
-            My skill set has evolved across various technologies, from the
-            fundamentals of HTML, CSS, and JavaScript to the robust and
-            versatile ReactJS framework.
-          </p>
+          <h2 class="section-title">Experience</h2>
 
           <div class="experience-content">
             <div class="experience-timeline">
               <div class="experience-item">
                 <div class="timeline-ring"></div>
-                <!-- Add this ring -->
-                <h4><i class="fas fa-code"></i> Software Engineer</h4>
-                <p>
-                  <i class="fas fa-building"></i> Mindgigs Software House •
-                  Peshawar, Pakistan • 09/2023 — 09/2024
-                </p>
-                <ul>
-                  <li>
-                    <i class="fa-solid fa-star list-icon"></i> Improved skills
-                    in ReactJS within the MERN stack, working on various
-                    projects.
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-star list-icon"></i> Developed
-                    applications using ReactJS, Bootstrap, Redux, RTK Query, and
-                    RESTful APIs.
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-star list-icon"></i> Conducted web
-                    development classes, teaching HTML, CSS, Bootstrap, and
-                    JavaScript.
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-star list-icon"></i> Worked on Loan
-                    Management, Asset Management, and Point of Sale systems.
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-star list-icon"></i> Developed
-                    features like customer creation, loan payment tracking, and
-                    report generation using the MERN stack.
-                  </li>
+                <div class="experience-header">
+                  <div class="exp-logo">
+                    <img
+                      src="./assets/logos/tech-emulsion-logo.jpg"
+                      alt=""
+                      width="200"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div>
+                    <h3>Software Engineer</h3>
+                    <p class="exp-meta">
+                      <span class="exp-company"
+                        ><i class="fas fa-building" aria-hidden="true"></i>
+                        Tech Emulsion</span
+                      >
+                      <span class="exp-dot" aria-hidden="true"></span>
+                      <span>Peshawar</span>
+                      <span class="exp-dot" aria-hidden="true"></span>
+                      <span class="exp-dates">Oct 2025 — Present</span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="exp-outcomes">
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Currently on <strong>Hire On The Spot</strong>, a hiring platform — Stripe and WooCommerce subscription billing, GoHighLevel automations, accessibility and performance work, and the end-to-end launch QA.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Lead developer on the <strong>Kids Learning App</strong> (Jan&ndash;Sep 2026), an AI platform generating personalised children&rsquo;s books, audiobooks and multilingual content — taken over as a non-working codebase and shipped in five months.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Solved <strong>80% of AI-generated character-consistency failures</strong> across story illustrations using Gemini image models.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Built an ElevenLabs audio pipeline — voice cloning, text-to-speech and audiobook generation tuned for natural narration.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Implemented <strong>AI observability and cost-tracking</strong> to monitor and control LLM API usage in production.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Analyzed <strong>1.4M+ auto repair order records</strong> to build profit and sales calculations a shop owner can audit line by line.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Built a multi-agent SEO content system on the Hermes runtime, and a five-workflow n8n LinkedIn automation with LLM-written outreach.</span>
+                    </li>
                 </ul>
+                <div class="exp-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Next.js</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                    <span class="tech-tag">Supabase</span>
+                    <span class="tech-tag">Gemini API</span>
+                    <span class="tech-tag">ElevenLabs API</span>
+                    <span class="tech-tag">MCP</span>
+                    <span class="tech-tag">n8n</span>
+                    <span class="tech-tag">Stripe</span>
+                    <span class="tech-tag">WordPress</span>
+                </div>
               </div>
 
               <div class="experience-item">
                 <div class="timeline-ring"></div>
-                <!-- Add this ring -->
-                <h4><i class="fas fa-code"></i> Frontend Web Developer</h4>
-                <p>
-                  <i class="fas fa-building"></i> Khushal Khan Khattak
-                  University • Karak • 2019-2023
-                </p>
-                <ul>
-                  <li>
-                    <i class="fa-solid fa-star list-icon"></i> Crafting
-                    user-friendly interfaces and responsive designs. Utilizing
-                    Figma since 2022 to transform design concepts into stunning
-                    prototypes and web designs. Exploring Node.js for API
-                    development, seamlessly integrated with ReactJS. Proudly
-                    developing Roadmap CodeCamp, a ReactJS platform that serves
-                    as a guiding light for beginners on their path to skill
-                    development and proficiency.
-                  </li>
+                <div class="experience-header">
+                  <div class="exp-logo">
+                    <img
+                      src="./assets/logos/iconaf-logo.jpg"
+                      alt=""
+                      width="204"
+                      height="192"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div>
+                    <h3>Lead Frontend Developer</h3>
+                    <p class="exp-meta">
+                      <span class="exp-company"
+                        ><i class="fas fa-building" aria-hidden="true"></i>
+                        ICONAF</span
+                      >
+                      <span class="exp-dot" aria-hidden="true"></span>
+                      <span>Islamabad</span>
+                      <span class="exp-dot" aria-hidden="true"></span>
+                      <span class="exp-dates">Nov 2024 — Oct 2025</span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="exp-outcomes">
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Led frontend development for the <strong>Health on Point</strong> pharmacy platform — 20+ product categories, 7+ medical services, prescription management and online video consultations.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Built a comprehensive admin panel for sales reports, inventory, staff and services using React + Redux Toolkit.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Integrated authentication, cart management, payments (Peach Payment) and real-time API synchronization.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Collaborated with the backend team (FastAPI) to optimize data flow and payment processing across the service boundary.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Took multiple projects from Figma to production with React, Next.js, Docker and CI/CD pipelines.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Mentored <strong>2 junior frontend developers</strong> on translating Figma designs into React applications.</span>
+                    </li>
                 </ul>
+                <div class="exp-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Next.js</span>
+                    <span class="tech-tag">Redux Toolkit</span>
+                    <span class="tech-tag">RTK Query</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">Peach Payment</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">CI/CD</span>
+                </div>
               </div>
-            </div>
 
-            <!-- Certificate -->
-            <div class="experience-certificate">
-              <img
-                src="./assets/images/Arshad_certificate_img.jpg"
-                alt="Certificate"
-              />
+              <div class="experience-item">
+                <div class="timeline-ring"></div>
+                <div class="experience-header">
+                  <div class="exp-logo">
+                    <img
+                      src="./assets/logos/mindgigs-logo.jpg"
+                      alt=""
+                      width="256"
+                      height="121"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div>
+                    <h3>Software Engineer</h3>
+                    <p class="exp-meta">
+                      <span class="exp-company"
+                        ><i class="fas fa-building" aria-hidden="true"></i>
+                        MindGigspk</span
+                      >
+                      <span class="exp-dot" aria-hidden="true"></span>
+                      <span>Peshawar</span>
+                      <span class="exp-dot" aria-hidden="true"></span>
+                      <span class="exp-dates">Sep 2023 — Sep 2024</span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="exp-outcomes">
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Developed <strong>4+ full-stack applications</strong> using React.js, Redux Toolkit, RTK Query, Bootstrap and REST APIs, with modular code and clean API integration.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Built responsive UIs for POS systems — including Faizan Auto, managing <strong>1,000+ products</strong> across sales and purchase modules — plus CRM platforms and admin dashboards.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Shipped a loan management system with full CRUD, payment history and report generation.</span>
+                    </li>
+                    <li>
+                      <i class="fas fa-circle-check" aria-hidden="true"></i>
+                      <span>Mentored <strong>5+ interns</strong> on HTML, CSS, JavaScript and React fundamentals.</span>
+                    </li>
+                </ul>
+                <div class="exp-tech">
+                    <span class="tech-tag">React.js</span>
+                    <span class="tech-tag">Redux Toolkit</span>
+                    <span class="tech-tag">RTK Query</span>
+                    <span class="tech-tag">Bootstrap</span>
+                    <span class="tech-tag">REST APIs</span>
+                    <span class="tech-tag">MongoDB</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -510,125 +811,305 @@
 
       <!-- ============== End! of Work Experience Section ============================ -->
 
+      <!-- ==============  Certifications ============================ -->
+      <!-- Completion dates come from each PDF's creation date. The thumbnails
+           are rendered from the PDFs themselves, so they cannot drift from
+           what the "View certificate" link opens. -->
+      <section id="certifications" class="certifications">
+        <div class="section-container">
+          <h2 class="section-title">Certifications</h2>
+          <p class="section-lead">
+            Anthropic Academy courses on the tools I build AI systems with.
+          </p>
+          <ul class="cert-grid">
+            <li class="cert-card">
+              <img
+                class="cert-thumb"
+                src="./assets/images/certificates/claude-code-in-action.webp"
+                alt="Anthropic certificate of completion: Claude Code in Action, awarded to Arshad Khan"
+                width="720"
+                height="546"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="cert-body">
+                <p class="cert-issuer">Anthropic</p>
+                <h3>Claude Code in Action</h3>
+                <p class="cert-date">Completed <time datetime="2026-04">Apr 2026</time></p>
+                <a
+                  class="cert-link"
+                  href="./assets/certificates/claude-code-in-action.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >View certificate
+                  <span class="visually-hidden">: Claude Code in Action (PDF)</span>
+                  <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i
+                ></a>
+              </div>
+            </li>
+            <li class="cert-card">
+              <img
+                class="cert-thumb"
+                src="./assets/images/certificates/claude-with-the-anthropic-api.webp"
+                alt="Anthropic certificate of completion: Claude with the Anthropic API, awarded to Arshad Khan"
+                width="720"
+                height="546"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="cert-body">
+                <p class="cert-issuer">Anthropic</p>
+                <h3>Claude with the Anthropic API</h3>
+                <p class="cert-date">Completed <time datetime="2026-07">Jul 2026</time></p>
+                <a
+                  class="cert-link"
+                  href="./assets/certificates/claude-with-the-anthropic-api.pdf"
+                  target="_blank"
+                  rel="noopener"
+                  >View certificate
+                  <span class="visually-hidden">: Claude with the Anthropic API (PDF)</span>
+                  <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i
+                ></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- ==============  End! of Certifications ============================ -->
+
+
+      <!-- ==============  How I Work Section ============================ -->
+      <section id="how-i-work" class="how-i-work">
+        <div class="section-container">
+          <h2 class="section-title">How I Work</h2>
+          <p class="section-lead">
+            Three things I would want to know about someone before hiring them —
+            answered with what actually happened, not adjectives.
+          </p>
+          <div class="about-visual-grid principles-grid">
+            <article class="about-visual-card principle-card">
+              <div class="visual-icon-large" aria-hidden="true">
+                <svg class="mark mark-lg" aria-hidden="true"><use href="#mk-own" /></svg>
+              </div>
+              <h3>I take accountability</h3>
+              <p class="principle-claim">
+                I own the outcome, not the ticket — including the parts that were
+                broken before I arrived.
+              </p>
+              <p class="principle-proof">
+                <span class="proof-label">What happened</span>
+                I took over an AI platform whose codebase did not work and shipped
+                it in five months. I manage client communication and requirements
+                directly, so a business need becomes a shipped feature without a
+                translator in the middle.
+              </p>
+            </article>
+
+            <article class="about-visual-card principle-card">
+              <div class="visual-icon-large" aria-hidden="true">
+                <svg class="mark mark-lg" aria-hidden="true"><use href="#mk-together" /></svg>
+              </div>
+              <h3>I work as part of a team</h3>
+              <p class="principle-claim">
+                Shipping is a team sport, and the fastest way to move is to make
+                the people around you faster too.
+              </p>
+              <p class="principle-proof">
+                <span class="proof-label">What happened</span>
+                I have mentored 2 junior frontend developers and 5+ interns on
+                React fundamentals and Figma-to-code workflows, and worked directly
+                with a FastAPI backend team to settle payment behaviour at the
+                service boundary rather than defending against it from my side.
+              </p>
+            </article>
+
+            <article class="about-visual-card principle-card">
+              <div class="visual-icon-large" aria-hidden="true">
+                <svg class="mark mark-lg" aria-hidden="true"><use href="#mk-detail" /></svg>
+              </div>
+              <h3>I pay attention to detail</h3>
+              <p class="principle-claim">
+                Details are where trust is won — especially in AI systems, where
+                plausible-looking output is the failure mode.
+              </p>
+              <p class="principle-proof">
+                <span class="proof-label">What happened</span>
+                I tracked down and solved 80% of AI character-consistency failures
+                across generated illustrations, and analysed 1.4M+ repair-order
+                records so that every profit figure on an owner&rsquo;s dashboard
+                can be audited rather than trusted.
+              </p>
+            </article>
+          </div>
+          <p class="team-link">
+            <a href="/team/">Meet the team I work with at Tech Emulsion
+              <i class="fas fa-arrow-right" aria-hidden="true"></i
+            ></a>
+          </p>
+        </div>
+      </section>
+      <!-- ==============  How I Work Section End! ============================ -->
+
       <!-- ==============  Portfolio  Section ============================ -->
       <section id="portfolio" class="portfolio">
         <div class="section-container">
-          <h2 class="section-title">Portfolio</h2>
-          <p>
-            Check out some of my latest Projects.
-            <a
-              href="./portfolio/portfolio.html"
-              target="_blank"
-              class="profolio-see-all"
-              >See All</a
+          <h2 class="section-title">Projects</h2>
+          <div style="text-align: center; margin-bottom: 30px">
+            <a href="./portfolio/portfolio.html" class="profolio-see-all"
+              >View All Projects →</a
             >
-          </p>
+          </div>
           <div class="portfolio-items">
-            <div class="portfolio-item">
-              <img
-                src="./portfolio/projects/images/roadmap-codecamp-project.png"
-                alt="Project 1"
-              />
-              <div class="project-details">
-                <h3>Roadmap Codecamp</h3>
-                <p>
-                  Roadmap CodeCamp: Interactive learning platform with diverse
-                  roadmaps, progress tracking, and engaging content for skill
-                  development.
-                </p>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/arshadkh507/roadmapcodecampDeployed"
-                    target="_blank"
-                    ><i class="fa-brands fa-github"></i
-                  ></a>
-                  <a
-                    href="https://roadmapcodecamp-frontend.netlify.app/"
-                    target="_blank"
-                  >
-                    <i class="fa fa-external-link" aria-hidden="true"></i>
-                  </a>
+            <div class="portfolio-item no-photo">
+              <a
+                class="project-card-link"
+                href="./projects/multi-agent-seo-content-system/"
+                aria-label="View case study: Multi-Agent SEO Content Generation System"
+              >
+                <div class="project-details">
+                  <div class="visual-icon-large" aria-hidden="true">
+                    <img
+                      class="project-card-logo"
+                      src="/assets/logos/projects/multi-agent-seo-content-system.svg"
+                      alt=""
+                      width="256"
+                      height="256"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3>Multi-Agent SEO Content Generation System</h3>
+                  <div class="project-achievements">
+                    <span><i class="fas fa-check" aria-hidden="true"></i> Hermes Runtime</span>
+                    <span><i class="fas fa-check" aria-hidden="true"></i> DataForSEO MCP</span>
+                    <span><i class="fas fa-check" aria-hidden="true"></i> Human Approval</span>
+                  </div>
+                  <div class="project-tech">
+                    <span class="tech-tag">Hermes</span>
+                    <span class="tech-tag">Multica</span>
+                    <span class="tech-tag">MCP</span>
+                    <span class="tech-tag">Supabase</span>
+                    <span class="tech-tag">Slack</span>
+                  </div>
+                  <span class="project-card-cta"
+                    >View case study <i class="fas fa-arrow-right" aria-hidden="true"></i
+                  ></span>
                 </div>
-              </div>
+              </a>
             </div>
 
-            <div class="portfolio-item">
-              <img
-                src="./portfolio/projects/images/image-gallery-project.png"
-                alt="Project 2"
-              />
-              <div class="project-details">
-                <h3>Image Gallery</h3>
-                <p>
-                  Responsive ReactJS Image Gallery with Pixabay API, Tailwind
-                  CSS, and dynamic UI features.
-                </p>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/arshadkh507/Image-gallery"
-                    target="_blank"
-                    ><i class="fa-brands fa-github"></i
-                  ></a>
-                  <a
-                    href="https://image-gallery-arshadkh507.netlify.app/"
-                    target="_blank"
-                  >
-                    <i class="fa fa-external-link" aria-hidden="true"></i>
-                  </a>
+            <div class="portfolio-item no-photo">
+              <a
+                class="project-card-link"
+                href="./projects/kids-learning-app/"
+                aria-label="View case study: Kids Learning App"
+              >
+                <div class="project-details">
+                  <div class="visual-icon-large" aria-hidden="true">
+                    <img
+                      class="project-card-logo"
+                      src="/assets/logos/projects/kids-learning-app.png"
+                      alt=""
+                      width="256"
+                      height="256"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3>Kids Learning App</h3>
+                  <div class="project-achievements">
+                    <span><i class="fas fa-check" aria-hidden="true"></i> AI Generation</span>
+                    <span><i class="fas fa-check" aria-hidden="true"></i> Lead Developer</span>
+                    <span><i class="fas fa-check" aria-hidden="true"></i> Stripe Billing</span>
+                  </div>
+                  <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Next.js</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                    <span class="tech-tag">Supabase</span>
+                  </div>
+                  <span class="project-card-cta"
+                    >View case study <i class="fas fa-arrow-right" aria-hidden="true"></i
+                  ></span>
                 </div>
-              </div>
+              </a>
             </div>
-            <div class="portfolio-item">
-              <img
-                src="./portfolio/projects/images/todo-app-react-project.jpg"
-                alt="todo app reacjs"
-              />
-              <div class="project-details">
-                <h3>Taskmate-Todo App</h3>
-                <p>
-                  TaskMate, a powerful ReactJS Todo App with key CRUD
-                  functionalities & LocalStorage integration for anytime access.
-                </p>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/arshadkh507/Todo-App-in-ReactJS"
-                    target="_blank"
-                    ><i class="fa-brands fa-github"></i
-                  ></a>
-                  <a
-                    href="https://arshadkh507-todo-app.netlify.app/"
-                    target="_blank"
-                  >
-                    <i class="fa fa-external-link" aria-hidden="true"></i>
-                  </a>
+
+            <div class="portfolio-item no-photo">
+              <a
+                class="project-card-link"
+                href="./projects/autocar-intelligence-platform/"
+                aria-label="View case study: AutoCar Intelligence Platform"
+              >
+                <div class="project-details">
+                  <div class="visual-icon-large" aria-hidden="true">
+                    <img
+                      class="project-card-logo"
+                      src="/assets/logos/projects/autocar-intelligence-platform.svg"
+                      alt=""
+                      width="256"
+                      height="256"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3>AutoCar Intelligence Platform</h3>
+                  <div class="project-achievements">
+                    <span><i class="fas fa-check" aria-hidden="true"></i> Multi-Shop Data</span>
+                    <span><i class="fas fa-check" aria-hidden="true"></i> Chrome Extension</span>
+                    <span><i class="fas fa-check" aria-hidden="true"></i> Real-Time Analytics</span>
+                  </div>
+                  <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Supabase</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Tekmetric API</span>
+                    <span class="tech-tag">Chrome Extension</span>
+                  </div>
+                  <span class="project-card-cta"
+                    >View case study <i class="fas fa-arrow-right" aria-hidden="true"></i
+                  ></span>
                 </div>
-              </div>
+              </a>
             </div>
-            <div class="portfolio-item">
-              <img
-                src="./portfolio/projects/images/lms-project.png"
-                alt="Loan Management System"
-              />
-              <div class="project-details">
-                <h3>Loan Management System</h3>
-                <p>
-                  A web-based loan management system for customer creation, loan
-                  payments, installment tracking, and report generation.
-                </p>
-                <div class="project-links">
-                  <a
-                    href="https://github.com/arshadkh507/Loan-Management-System/tree/master"
-                    target="_blank"
-                    ><i class="fa-brands fa-github"></i
-                  ></a>
-                  <a
-                    href="https://lms1-frontend-nu.vercel.app/"
-                    target="_blank"
-                  >
-                    <i class="fa fa-external-link" aria-hidden="true"></i>
-                  </a>
+
+            <div class="portfolio-item no-photo">
+              <a
+                class="project-card-link"
+                href="./projects/health-on-point-pharmacy/"
+                aria-label="View case study: Health on Point — Pharmacy Platform"
+              >
+                <div class="project-details">
+                  <div class="visual-icon-large" aria-hidden="true">
+                    <img
+                      class="project-card-logo"
+                      src="/assets/logos/projects/health-on-point-pharmacy.png"
+                      alt=""
+                      width="256"
+                      height="256"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <h3>Health on Point — Pharmacy Platform</h3>
+                  <div class="project-achievements">
+                    <span><i class="fas fa-check" aria-hidden="true"></i> 20+ Categories</span>
+                    <span><i class="fas fa-check" aria-hidden="true"></i> Zoom Consultations</span>
+                    <span><i class="fas fa-check" aria-hidden="true"></i> Docker &amp; CI/CD</span>
+                  </div>
+                  <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Redux Toolkit</span>
+                    <span class="tech-tag">RTK Query</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">Zoom SDK</span>
+                  </div>
+                  <span class="project-card-cta"
+                    >View case study <i class="fas fa-arrow-right" aria-hidden="true"></i
+                  ></span>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -636,86 +1117,424 @@
 
       <!-- ==============  Portfolio  Section End! ============================ -->
 
+      <!-- ==============  CTA Section ============================ -->
+      <section id="cta" class="cta-section">
+        <div class="section-container">
+          <div class="cta-content">
+            <h2>Let's Build Together</h2>
+            <div class="cta-buttons">
+              <a href="#contact" class="btn-cta-primary">
+                <i class="fas fa-envelope"></i>
+                Get In Touch
+              </a>
+              <a
+                href="./assets/Full-Stack-Software-Engineer-v1-july-2026.pdf"
+                target="_blank"
+                class="btn-cta-secondary"
+              >
+                <i class="fas fa-download"></i>
+                Download Resume
+              </a>
+            </div>
+            <div class="cta-stats">
+              <div class="cta-stat">
+                <span>1.4M+</span>
+                <p>Records Analyzed</p>
+              </div>
+              <div class="cta-stat">
+                <span>7+</span>
+                <p>Developers Mentored</p>
+              </div>
+              <div class="cta-stat">
+                <span>3 yrs</span>
+                <p>Shipping Production</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==============  CTA Section End! ============================ -->
+
+      <!-- ==============  FAQ ============================ -->
+      <!-- Answer-first Q&A for people and for AI answer engines. The FAQPage
+           JSON-LD in <head> is generated from the same text — edit both together. -->
+      <section id="faq" class="faq">
+        <div class="section-container">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary><h3>Who is Arshad Khan?</h3></summary>
+              <p>Arshad Khan is a Full Stack Software Engineer at Tech Emulsion in Peshawar, Pakistan, who builds AI and agent systems on a React, Next.js, Node and Supabase foundation. He has 3+ years of experience shipping production software.</p>
+            </details>
+            <details class="faq-item">
+              <summary><h3>What AI and agent systems has Arshad built?</h3></summary>
+              <p>He built a multi-agent SEO content system on the Hermes runtime with Multica orchestration and a human approval gate, and a five-workflow n8n LinkedIn automation that writes each connection note with an LLM. He also runs LLM observability and cost tracking in production. <a href="/projects/multi-agent-seo-content-system/">Multi-Agent SEO system</a> · <a href="/projects/linkedin-connection-automation/">LinkedIn automation</a></p>
+            </details>
+            <details class="faq-item">
+              <summary><h3>What is Arshad&#x27;s tech stack?</h3></summary>
+              <p>React, Next.js and TypeScript on the frontend; Node.js, Express, Supabase (PostgreSQL) and MongoDB on the backend; Gemini, OpenAI, Claude, ElevenLabs, MCP and n8n for AI work; Stripe for payments; Docker and GitHub Actions for delivery.</p>
+            </details>
+            <details class="faq-item">
+              <summary><h3>How much experience does Arshad have?</h3></summary>
+              <p>Arshad has 3+ years of professional experience: Software Engineer at Tech Emulsion since October 2025, Lead Frontend Developer at ICONAF from November 2024 to October 2025, and Software Engineer at MindGigspk from September 2023 to September 2024. He has mentored 2 junior developers and 5+ interns.</p>
+            </details>
+            <details class="faq-item">
+              <summary><h3>Is Arshad open to remote work?</h3></summary>
+              <p>Yes. Arshad is open to remote work worldwide, as well as hybrid, on-site and relocation roles. He is based in Peshawar, Pakistan (UTC+5).</p>
+            </details>
+            <details class="faq-item">
+              <summary><h3>What certifications does Arshad hold?</h3></summary>
+              <p>Arshad holds two Anthropic certificates: Claude Code in Action (April 2026) and Claude with the Anthropic API (July 2026). <a href="#certifications">View certifications</a></p>
+            </details>
+            <details class="faq-item">
+              <summary><h3>How can I contact Arshad Khan?</h3></summary>
+              <p>Email arshadkh507@gmail.com, message him on LinkedIn at linkedin.com/in/arshadkh507, or use the contact form on this page. <a href="#contact">Contact form</a></p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <!-- ==============  FAQ End! ============================ -->
+
       <!-- ==============  Contact Section ============================ -->
       <section id="contact" class="contact">
         <div class="section-container">
-          <div class="contact-info">
-            <h2 class="section-title">Contact Me</h2>
-            <p>
-              Feel free to reach out to me using the contact information below:
-            </p>
-            <div class="contact-details">
-              <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <p>
-                  <a href="tel:+923435439569" target="_blank">+92 3435439569</a>
-                </p>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
-                <p>Islamabad, Pakistan</p>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <p>
-                  <a href="mailto:arshadkh507@gmail.com" target="_blank"
-                    >arshadkh507@gmail.com</a
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="contact-whatsapp">
-              <i class="fab fa-whatsapp"></i>
-              <a href="https://wa.link/miycpm" target="_blank">WhatsApp me</a>
-            </div>
-          </div>
+          <h2 class="section-title">Get In Touch</h2>
 
-          <div class="contact-social-icons">
-            <a href="https://github.com/arshadkh507" target="_blank">
-              <i class="fab fa-github"></i
-            ></a>
-            <a href="https://www.linkedin.com/in/arshadkh507/" target="_blank"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <!-- <a
-              href="https://www.facebook.com/code.master.arshad/"
-              target="_blank"
-              ><i class="fab fa-facebook"></i
-            ></a> -->
+          <div class="contact-wrapper">
+            <div class="contact-info">
+              <h3>Reach me directly</h3>
+              <div class="contact-details">
+                <div class="contact-item">
+                  <i class="fas fa-envelope"></i>
+                  <div>
+                    <strong>Email</strong>
+                    <p>
+                      <a href="mailto:arshadkh507@gmail.com" target="_blank"
+                        >arshadkh507@gmail.com</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <i class="fas fa-phone"></i>
+                  <div>
+                    <strong>Phone</strong>
+                    <p>
+                      <a href="tel:+923435439569" target="_blank"
+                        >+92 3435439569</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div>
+                    <strong>Location</strong>
+                    <p>Peshawar, Pakistan</p>
+                    <p>Open to Remote • Hybrid • On-Site • Relocation</p>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                class="contact-whatsapp"
+                href="https://wa.link/miycpm"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                <span>Chat on WhatsApp</span>
+              </a>
+
+              <div class="contact-social-icons">
+                <a
+                  href="https://github.com/arshadkh507"
+                  target="_blank"
+                  aria-label="GitHub"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/arshadkh507/"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Formspree form xdeazaqr (replaced the deleted mqgvqjqj on
+                 2026-10-10). If a send ever fails, index.js still hands the
+                 visitor a mailto link carrying everything they typed. -->
+            <form
+              class="contact-form"
+              id="contactForm"
+              action="https://formspree.io/f/xdeazaqr"
+              method="POST"
+            >
+              <div class="form-group">
+                <label for="name">Name <span class="required">*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  aria-required="true"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  aria-required="true"
+                />
+              </div>
+              <div class="form-group">
+                <label for="subject"
+                  >Subject <span class="required">*</span></label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  aria-required="true"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message"
+                  >Message <span class="required">*</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  aria-required="true"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-submit">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+              <p class="form-note">
+                Or reach out directly via email or WhatsApp above.
+              </p>
+            </form>
           </div>
         </div>
       </section>
       <!-- ==============  Contact Section End! ============================ -->
 
       <!-- ==============  Footer  Section ============================ -->
-      <footer id="footer">
-        <div class="footer-container">
-          <div class="footer-left">
-            <h3>Arshad Khan</h3>
-            <p>Connect with me on social media:</p>
-            <div class="footer-social-icons">
-              <a href="https://github.com/arshadkh507" target="_blank">
-                <i class="fab fa-github"></i
-              ></a>
-              <a href="https://www.linkedin.com/in/arshadkh507/" target="_blank"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/code.master.arshad/"
-                target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </div>
-          </div>
-          <div class="footer-right">
-            <p>&copy; 2025 Arshad Khan. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <div data-include="footer"></div>
       <!-- ==============  Footer  Section End! ============================ -->
     </main>
 
-    <!-- index.js file -->
+    <!-- Scroll to Top Button -->
+    <button
+      id="scrollToTop"
+      class="scroll-to-top"
+      aria-label="Scroll to top"
+      title="Scroll to top"
+    >
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://arshadkh507.github.io/#website",
+      "url": "https://arshadkh507.github.io/",
+      "name": "Arshad Khan — Portfolio",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://arshadkh507.github.io/#person"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://arshadkh507.github.io/#profile",
+      "url": "https://arshadkh507.github.io/",
+      "name": "Arshad Khan — Full Stack Engineer, AI & Agent Systems",
+      "isPartOf": {
+        "@id": "https://arshadkh507.github.io/#website"
+      },
+      "mainEntity": {
+        "@id": "https://arshadkh507.github.io/#person"
+      },
+      "dateModified": "2026-10-10"
+    },
+    {
+      "@type": "Person",
+      "name": "Arshad Khan",
+      "jobTitle": "Full Stack Software Engineer",
+      "description": "Full Stack Software Engineer building AI and agent systems: multi-agent pipelines, LLM integration and observability, and workflow automation, on a React/Next.js/Node/Supabase foundation.",
+      "url": "https://arshadkh507.github.io/",
+      "sameAs": [
+        "https://github.com/arshadkh507",
+        "https://www.linkedin.com/in/arshadkh507/"
+      ],
+      "email": "arshadkh507@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Peshawar",
+        "addressCountry": "Pakistan"
+      },
+      "knowsAbout": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Redux Toolkit",
+        "Tailwind CSS",
+        "Node.js",
+        "MongoDB",
+        "Docker",
+        "CI/CD",
+        "Supabase",
+        "Gemini API",
+        "ElevenLabs API",
+        "AI Agents",
+        "Multi-Agent Systems",
+        "Large Language Models",
+        "Model Context Protocol",
+        "LLM Observability",
+        "Prompt Engineering",
+        "Workflow Automation",
+        "n8n",
+        "OpenRouter",
+        "Claude API",
+        "Claude Code",
+        "PostgreSQL",
+        "Stripe",
+        "WordPress",
+        "WooCommerce",
+        "GoHighLevel",
+        "Web Accessibility"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Claude Code in Action",
+          "credentialCategory": "Certificate of Completion",
+          "dateCreated": "2026-04",
+          "url": "https://arshadkh507.github.io/assets/certificates/claude-code-in-action.pdf",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Anthropic"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Claude with the Anthropic API",
+          "credentialCategory": "Certificate of Completion",
+          "dateCreated": "2026-07",
+          "url": "https://arshadkh507.github.io/assets/certificates/claude-with-the-anthropic-api.pdf",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Anthropic"
+          }
+        }
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Tech Emulsion",
+        "url": "https://techemulsion.com/"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Khushal Khan Khattak University"
+      },
+      "@id": "https://arshadkh507.github.io/#person",
+      "image": "https://arshadkh507.github.io/assets/images/arshad-khan-portrait.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://arshadkh507.github.io/#faq",
+      "url": "https://arshadkh507.github.io/#faq",
+      "isPartOf": {
+        "@id": "https://arshadkh507.github.io/#website"
+      },
+      "about": {
+        "@id": "https://arshadkh507.github.io/#person"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Arshad Khan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Arshad Khan is a Full Stack Software Engineer at Tech Emulsion in Peshawar, Pakistan, who builds AI and agent systems on a React, Next.js, Node and Supabase foundation. He has 3+ years of experience shipping production software."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What AI and agent systems has Arshad built?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "He built a multi-agent SEO content system on the Hermes runtime with Multica orchestration and a human approval gate, and a five-workflow n8n LinkedIn automation that writes each connection note with an LLM. He also runs LLM observability and cost tracking in production."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Arshad's tech stack?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "React, Next.js and TypeScript on the frontend; Node.js, Express, Supabase (PostgreSQL) and MongoDB on the backend; Gemini, OpenAI, Claude, ElevenLabs, MCP and n8n for AI work; Stripe for payments; Docker and GitHub Actions for delivery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much experience does Arshad have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Arshad has 3+ years of professional experience: Software Engineer at Tech Emulsion since October 2025, Lead Frontend Developer at ICONAF from November 2024 to October 2025, and Software Engineer at MindGigspk from September 2023 to September 2024. He has mentored 2 junior developers and 5+ interns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Arshad open to remote work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Arshad is open to remote work worldwide, as well as hybrid, on-site and relocation roles. He is based in Peshawar, Pakistan (UTC+5)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What certifications does Arshad hold?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Arshad holds two Anthropic certificates: Claude Code in Action (April 2026) and Claude with the Anthropic API (July 2026)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact Arshad Khan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Email arshadkh507@gmail.com, message him on LinkedIn at linkedin.com/in/arshadkh507, or use the contact form on this page."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+
+    <!-- Shared header/footer partials, then page behavior -->
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/theme-toggle.js"></script>
+    <script src="/assets/js/quick-nav.js"></script>
+    <script src="/assets/js/projects-data.js"></script>
     <script src="./assets/js/index.js"></script>
   </body>
 </html>

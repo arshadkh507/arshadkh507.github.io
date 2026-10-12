@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Multi-Agent SEO Content System mark">
+  <!-- A page drafted by three linked agents (research, keywords, writing) that ends in a check:
+       nothing publishes until a person approves it. -->
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10B981"/><stop offset="1" stop-color="#065F46"/></linearGradient></defs>
+  <rect width="256" height="256" rx="56" fill="url(#g)"/>
+  <path d="M74 40h76l42 42v122c0 7-5 12-12 12H74c-7 0-12-5-12-12V52c0-7 5-12 12-12z" fill="#fff"/>
+  <path d="M150 40v30c0 7 5 12 12 12h30z" fill="#A7F3D0"/>
+  <g stroke="#059669" stroke-width="7" stroke-linecap="round" fill="none">
+    <path d="M94 100l38 22-30 34"/>
+  </g>
+  <g fill="#059669">
+    <circle cx="94" cy="100" r="12"/>
+    <circle cx="132" cy="122" r="12"/>
+    <circle cx="102" cy="156" r="12"/>
+  </g>
+  <path d="M124 184l16 14 30-34" stroke="#059669" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

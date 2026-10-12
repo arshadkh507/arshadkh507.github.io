@@ -3,15 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio-Arshad codeMaster</title>
+    <!-- Resolve the theme before first paint so there's no flash of the wrong
+         theme. Dark is the default; light is opt-in and persisted. -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var theme =
+          saved ||
+          (matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="description" content="Case studies from Arshad Khan: multi-agent AI systems, LLM workflow automation and full-stack products built with React, Next.js, Node and Supabase." />
+    <meta name="keywords" content="Portfolio, Projects, AI Agents, Multi-Agent Systems, LLM, MCP, n8n, React.js, Next.js, MERN Stack, Node.js, Supabase, Web Development, Arshad Khan" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <title>Projects — AI Agent &amp; Full-Stack Case Studies | Arshad Khan</title>
+    <link rel="canonical" href="https://arshadkh507.github.io/portfolio/portfolio.html" />
     <link rel="stylesheet" href="../assets/css/index.css" />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Space Grotesk (headings) · JetBrains Mono (UI) · Fira Code (code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Fira+Code:wght@400;500&display=swap"
       rel="stylesheet"
-    /> -->
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -19,83 +38,131 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+      <meta property="og:type" content="website" />
+    <meta property="og:title" content="Projects — AI Agent &amp; Full-Stack Case Studies" />
+    <meta property="og:description" content="Case studies from Arshad Khan: multi-agent AI systems, LLM workflow automation and full-stack products built with React, Next.js, Node and Supabase." />
+    <meta property="og:url" content="https://arshadkh507.github.io/portfolio/portfolio.html" />
+    <meta property="og:image" content="https://arshadkh507.github.io/assets/images/og-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Arshad Khan — Full Stack Software Engineer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Projects — AI Agent &amp; Full-Stack Case Studies | Arshad Khan" />
+    <meta name="twitter:description" content="Case studies from Arshad Khan: multi-agent AI systems, LLM workflow automation and full-stack products built with React, Next.js, Node and Supabase." />
+    <meta name="twitter:image" content="https://arshadkh507.github.io/assets/images/og-card.png" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "url": "https://arshadkh507.github.io/portfolio/portfolio.html",
+      "name": "Projects — AI Agent & Full-Stack Case Studies",
+      "description": "Case studies from Arshad Khan: multi-agent AI systems, LLM workflow automation and full-stack products built with React, Next.js, Node and Supabase.",
+      "isPartOf": {
+        "@id": "https://arshadkh507.github.io/#website"
+      },
+      "author": {
+        "@id": "https://arshadkh507.github.io/#person"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://arshadkh507.github.io/projects/auto-repair-shop-management/",
+            "name": "Auto Repair Shop Management Platform"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://arshadkh507.github.io/projects/autocar-intelligence-platform/",
+            "name": "AutoCar Intelligence Platform"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://arshadkh507.github.io/projects/linkedin-connection-automation/",
+            "name": "LinkedIn Connection Automation"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "url": "https://arshadkh507.github.io/projects/multi-agent-seo-content-system/",
+            "name": "Multi-Agent SEO Content Generation System"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "url": "https://arshadkh507.github.io/projects/art-gola-artist-platform/",
+            "name": "Art Gola — Artist Platform"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "url": "https://arshadkh507.github.io/projects/health-on-point-pharmacy/",
+            "name": "Health on Point — Pharmacy Platform"
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "url": "https://arshadkh507.github.io/projects/faizan-auto-pos/",
+            "name": "Faizan Auto — POS System"
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "url": "https://arshadkh507.github.io/projects/hire-on-the-spot/",
+            "name": "Hire On The Spot — Hiring Platform"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arshadkh507.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects"
+        }
+      ]
+    }
+  ]
+}
+    </script>
   </head>
 
-  <body>
+  <body data-active-nav="portfolio">
+    <a class="skip-to-main" href="#projects">Skip to main content</a>
     <main class="portfolio-page">
       <!-- ==============  Header/ Top Navbar ============================ -->
-      <header id="header">
-        <nav class="navbar">
-          <div id="logo">
-            <span><code>&lt;</code>Arshad<code>/&gt;</code></span>
-          </div>
-          <ul>
-            <li>
-              <a href="../index.html">
-                <span class="icon"><i class="fas fa-home"></i></span>
-                <span class="text">Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="./about/about.html">
-                <span class="icon"><i class="fas fa-info-circle"></i></span>
-                <span class="text">About</span>
-              </a>
-            </li>
-
-            <li class="active">
-              <a href="#">
-                <span class="icon"><i class="fas fa-briefcase"></i></span>
-                <span class="text">Portfolio</span>
-              </a>
-            </li>
-            <li>
-              <a href="./resume/resume.html">
-                <span class="icon"><i class="far fa-file-alt"></i></span>
-                <span class="text">Resume</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="./blogs/blogs.html">
-                <span class="icon"><i class="far fa-newspaper"></i></span>
-                <span class="text">Blogs</span>
-              </a>
-            </li>
-            <li>
-              <a href="../index.html#contact">
-                <span class="icon"><i class="fas fa-envelope"></i></span>
-                <span class="text">Contact</span>
-              </a>
-            </li>
-          </ul>
-
-          <input type="checkbox" id="menu-toggle" aria-label="Toggle menu" />
-          <label for="menu-toggle" id="burger-menu">
-            <span id="burger-icon"><i class="fa-solid fa-bars"></i></span>
-          </label>
-        </nav>
-      </header>
+      <div data-include="header"></div>
       <!-- ======  End! of Header/ Top Navbar ======== -->
 
       <section class="complete-portfolio-container">
         <div class="portfolio-heading">
-          <h1>My Portfolio</h1>
+          <h1>My Complete Portfolio</h1>
           <p>
-            Welcome to my portfolio, where creativity meets innovation. I am
-            passionate about crafting delightful user experiences through web
-            development. Explore my projects below and discover the journey of
-            turning ideas into reality.
+            Every project here is a real system in production or active development. They span multi-agent AI systems, LLM workflow automation, and full-stack products — from generating and publishing illustrated children's books, to a content pipeline where specialised agents research and draft under human approval, to running an auto repair shop's daily operations. Each one shows how I take a business problem, architect a solution around it, and ship it.
           </p>
         </div>
 
         <!-- Tabs for different project categories -->
+        <h2 class="visually-hidden">All projects</h2>
         <nav id="project-tabs-nav">
-          <ul id="project-tabs">
-            <li data-tab="all" class="active">All</li>
-            <li data-tab="web-design">Web Design</li>
-            <li data-tab="react">React</li>
-            <li data-tab="mern-stack">MERN Stack</li>
+          <ul id="project-tabs" role="tablist" aria-label="Filter projects by category">
+            <li data-tab="all" class="active" role="tab" tabindex="0" aria-selected="true">All</li>
+            <li data-tab="ai-agents" role="tab" tabindex="0" aria-selected="false">AI &amp; Agents</li>
+            <li data-tab="full-stack" role="tab" tabindex="0" aria-selected="false">Full Stack</li>
+            <li data-tab="automation" role="tab" tabindex="0" aria-selected="false">Automation</li>
           </ul>
         </nav>
 
@@ -103,142 +170,355 @@
           <div class="section-container projects-container">
             <!-- Web Design Projects -->
             <div class="projects-list">
-              <div class="project-item mern-stack">
-                <img
-                  src="./projects/images/roadmap-codecamp-project.png"
-                  alt="Project 1"
-                />
-                <div class="portfolio-project-details">
-                  <h3>Roadmap Codecamp</h3>
-                  <p>
-                    Roadmap CodeCamp: Interactive learning platform with diverse
-                    roadmaps, progress tracking, and engaging content for skill
-                    development.
-                  </p>
-                  <div class="portfolio-project-links">
-                    <a
-                      href="https://github.com/arshadkh507/roadmapcodecampDeployed"
-                      target="_blank"
-                      ><i class="fa-brands fa-github"></i
-                    ></a>
-                    <a
-                      href="https://roadmapcodecamp-frontend.netlify.app/"
-                      target="_blank"
-                    >
-                      <i class="fa fa-external-link" aria-hidden="true"></i>
-                    </a>
+              <div class="project-item full-stack no-photo">
+                <a
+                  class="project-card-link"
+                  href="/projects/kids-learning-app/"
+                  aria-label="View case study: Kids Learning App"
+                >
+                  <div class="portfolio-project-details">
+                    <div class="visual-icon-large" aria-hidden="true">
+                      <img
+                        class="project-card-logo"
+                        src="/assets/logos/projects/kids-learning-app.png"
+                        alt=""
+                        width="256"
+                        height="256"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <h3>Kids Learning App</h3>
+                    <p>An AI platform for creating, editing and publishing personalised children's books.</p>
+                    <div class="project-achievements">
+                      <span><i class="fas fa-check" aria-hidden="true"></i> AI Generation</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Lead Developer</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Stripe Billing</span>
+                    </div>
+                    <div class="project-tech">
+                      <span class="tech-tag">React</span>
+                      <span class="tech-tag">Next.js</span>
+                      <span class="tech-tag">TypeScript</span>
+                      <span class="tech-tag">Tailwind CSS</span>
+                      <span class="tech-tag">Supabase</span>
+                    </div>
+                    <span class="project-card-cta"
+                      >View case study <i class="fas fa-arrow-right" aria-hidden="true"></i
+                    ></span>
                   </div>
-                </div>
+                </a>
               </div>
 
-              <div class="project-item web-design">
-                <img
-                  src="./projects/images/image-gallery-project.png"
-                  alt="Project 1"
-                />
-                <div class="portfolio-project-details">
-                  <h3>Image Gallery</h3>
-                  <p>
-                    Responsive ReactJS Image Gallery with Pixabay API, Tailwind
-                    CSS, and dynamic UI features.
-                  </p>
-                  <div class="portfolio-project-links">
-                    <a
-                      href="https://github.com/arshadkh507/Image-gallery"
-                      target="_blank"
-                      ><i class="fa-brands fa-github"></i
-                    ></a>
-                    <a
-                      href="https://image-gallery-arshadkh507.netlify.app/"
-                      target="_blank"
-                    >
-                      <i class="fa fa-external-link" aria-hidden="true"></i>
-                    </a>
+              <div class="project-item full-stack no-photo">
+                <a
+                  class="project-card-link"
+                  href="/projects/auto-repair-shop-management/"
+                  aria-label="View case study: Auto Repair Shop Management Platform"
+                >
+                  <div class="portfolio-project-details">
+                    <div class="visual-icon-large" aria-hidden="true">
+                      <img
+                        class="project-card-logo"
+                        src="/assets/logos/projects/auto-repair-shop-management.svg"
+                        alt=""
+                        width="256"
+                        height="256"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <h3>Auto Repair Shop Management Platform</h3>
+                    <p>A web application running an auto repair shop's day-to-day operations end to end.</p>
+                    <div class="project-achievements">
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Schema Design</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Work Orders</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Dashboard</span>
+                    </div>
+                    <div class="project-tech">
+                      <span class="tech-tag">React</span>
+                      <span class="tech-tag">Next.js</span>
+                      <span class="tech-tag">TypeScript</span>
+                      <span class="tech-tag">Tailwind CSS</span>
+                      <span class="tech-tag">REST APIs</span>
+                    </div>
+                    <span class="project-card-cta"
+                      >View case study <i class="fas fa-arrow-right" aria-hidden="true"></i
+                    ></span>
                   </div>
-                </div>
+                </a>
               </div>
 
-              <!-- React Projects -->
-              <div class="project-item react">
-                <img
-                  src="./projects/images/todo-app-react-project.jpg"
-                  alt="todo app reacjs"
-                />
-                <div class="portfolio-project-details">
-                  <h3>Taskmate-Todo App</h3>
-                  <p>
-                    TaskMate, a powerful ReactJS Todo App with key CRUD
-                    functionalities & LocalStorage integration for anytime
-                    access.
-                  </p>
-                  <div class="portfolio-project-links">
-                    <a
-                      href="https://github.com/arshadkh507/Todo-App-in-ReactJS"
-                      target="_blank"
-                      ><i class="fa-brands fa-github"></i
-                    ></a>
-                    <a
-                      href="https://arshadkh507-todo-app.netlify.app/"
-                      target="_blank"
-                    >
-                      <i class="fa fa-external-link" aria-hidden="true"></i>
-                    </a>
+              <div class="project-item full-stack no-photo">
+                <a
+                  class="project-card-link"
+                  href="/projects/autocar-intelligence-platform/"
+                  aria-label="View case study: AutoCar Intelligence Platform"
+                >
+                  <div class="portfolio-project-details">
+                    <div class="visual-icon-large" aria-hidden="true">
+                      <img
+                        class="project-card-logo"
+                        src="/assets/logos/projects/autocar-intelligence-platform.svg"
+                        alt=""
+                        width="256"
+                        height="256"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <h3>AutoCar Intelligence Platform</h3>
+                    <p>Operational intelligence giving multi-shop auto repair owners one source of truth.</p>
+                    <div class="project-achievements">
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Multi-Shop Data</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Chrome Extension</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Real-Time Analytics</span>
+                    </div>
+                    <div class="project-tech">
+                      <span class="tech-tag">React</span>
+                      <span class="tech-tag">Supabase</span>
+                      <span class="tech-tag">PostgreSQL</span>
+                      <span class="tech-tag">Tekmetric API</span>
+                      <span class="tech-tag">Chrome Extension</span>
+                    </div>
+                    <span class="project-card-cta"
+                      >View case study <i class="fas fa-arrow-right" aria-hidden="true"></i
+                    ></span>
                   </div>
-                </div>
+                </a>
               </div>
 
-              <!-- MERN Stack Projects -->
-              <div class="project-item mern-stack">
-                <img
-                  src="./projects/images/lms-project.png"
-                  alt="Loan-Management-System"
-                />
-                <div class="portfolio-project-details">
-                  <h3>Loan-Management-System</h3>
-                  <p>
-                    A web-based loan management system for customer creation,
-                    loan payments, installment tracking, and report generation.
-                  </p>
-                  <div class="portfolio-project-links">
-                    <a
-                      href="https://github.com/arshadkh507/Loan-Management-System/tree/master"
-                      target="_blank"
-                      ><i class="fa-brands fa-github"></i
-                    ></a>
-                    <a
-                      href="https://lms1-frontend-nu.vercel.app/"
-                      target="_blank"
-                    >
-                      <i class="fa fa-external-link" aria-hidden="true"></i>
-                    </a>
+              <div class="project-item automation no-photo">
+                <a
+                  class="project-card-link"
+                  href="/projects/linkedin-connection-automation/"
+                  aria-label="View case study: LinkedIn Connection Automation"
+                >
+                  <div class="portfolio-project-details">
+                    <div class="visual-icon-large" aria-hidden="true">
+                      <img
+                        class="project-card-logo"
+                        src="/assets/logos/projects/linkedin-connection-automation.svg"
+                        alt=""
+                        width="256"
+                        height="256"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <h3>LinkedIn Connection Automation</h3>
+                    <p>Five n8n workflows that scrape, enrich and personalise LinkedIn outreach end to end.</p>
+                    <div class="project-achievements">
+                      <span><i class="fas fa-check" aria-hidden="true"></i> 5 n8n Workflows</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Apify Scraping</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> LLM Personalisation</span>
+                    </div>
+                    <div class="project-tech">
+                      <span class="tech-tag">n8n</span>
+                      <span class="tech-tag">Apify Actors</span>
+                      <span class="tech-tag">Supabase</span>
+                      <span class="tech-tag">OpenRouter</span>
+                      <span class="tech-tag">Sales Navigator</span>
+                    </div>
+                    <span class="project-card-cta"
+                      >View case study <i class="fas fa-arrow-right" aria-hidden="true"></i
+                    ></span>
                   </div>
-                </div>
+                </a>
               </div>
 
-              <!-- MERN Stack Projects -->
-              <div class="project-item react">
-                <img src="./projects/images/ams-project.png" />
-                <div class="portfolio-project-details">
-                  <h3>Assets Management System</h3>
-                  <p>
-                    A system for efficient tracking and management of
-                    stationary, court registers, and assets, featuring stock
-                    management, vendor tracking, and detailed report generation.
-                  </p>
-                  <div class="portfolio-project-links">
-                    <a
-                      href="https://github.com/arshadkh507/Assets-Management-System/tree/master"
-                      target="_blank"
-                      ><i class="fa-brands fa-github"></i
-                    ></a>
-                    <a
-                      href="https://github.com/arshadkh507/Assets-Management-System/tree/master"
-                      target="_blank"
-                    >
-                      <i class="fa fa-external-link" aria-hidden="true"></i>
-                    </a>
+              <div class="project-item ai-agents no-photo">
+                <a
+                  class="project-card-link"
+                  href="/projects/multi-agent-seo-content-system/"
+                  aria-label="View case study: Multi-Agent SEO Content Generation System"
+                >
+                  <div class="portfolio-project-details">
+                    <div class="visual-icon-large" aria-hidden="true">
+                      <img
+                        class="project-card-logo"
+                        src="/assets/logos/projects/multi-agent-seo-content-system.svg"
+                        alt=""
+                        width="256"
+                        height="256"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <h3>Multi-Agent SEO Content Generation System</h3>
+                    <p>Specialised agents on a Hermes runtime that research, plan and draft publishable articles.</p>
+                    <div class="project-achievements">
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Hermes Runtime</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> DataForSEO MCP</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Human Approval</span>
+                    </div>
+                    <div class="project-tech">
+                      <span class="tech-tag">Hermes</span>
+                      <span class="tech-tag">Multica</span>
+                      <span class="tech-tag">MCP</span>
+                      <span class="tech-tag">Supabase</span>
+                      <span class="tech-tag">Slack</span>
+                    </div>
+                    <span class="project-card-cta"
+                      >View case study <i class="fas fa-arrow-right" aria-hidden="true"></i
+                    ></span>
                   </div>
-                </div>
+                </a>
+              </div>
+
+              <div class="project-item full-stack no-photo">
+                <a
+                  class="project-card-link"
+                  href="/projects/art-gola-artist-platform/"
+                  aria-label="View case study: Art Gola — Artist Platform"
+                >
+                  <div class="portfolio-project-details">
+                    <div class="visual-icon-large" aria-hidden="true">
+                      <img
+                        class="project-card-logo"
+                        src="/assets/logos/projects/art-gola-artist-platform.png"
+                        alt=""
+                        width="256"
+                        height="256"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <h3>Art Gola — Artist Platform</h3>
+                    <p>The complete artist journey: application, approval, onboarding, payment and publication.</p>
+                    <div class="project-achievements">
+                      <span><i class="fas fa-check" aria-hidden="true"></i> End-to-End Flow</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Payments</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Live QA</span>
+                    </div>
+                    <div class="project-tech">
+                      <span class="tech-tag">React</span>
+                      <span class="tech-tag">Next.js</span>
+                      <span class="tech-tag">TypeScript</span>
+                      <span class="tech-tag">Tailwind CSS</span>
+                      <span class="tech-tag">Supabase</span>
+                    </div>
+                    <span class="project-card-cta"
+                      >View case study <i class="fas fa-arrow-right" aria-hidden="true"></i
+                    ></span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="project-item full-stack no-photo">
+                <a
+                  class="project-card-link"
+                  href="/projects/health-on-point-pharmacy/"
+                  aria-label="View case study: Health on Point — Pharmacy Platform"
+                >
+                  <div class="portfolio-project-details">
+                    <div class="visual-icon-large" aria-hidden="true">
+                      <img
+                        class="project-card-logo"
+                        src="/assets/logos/projects/health-on-point-pharmacy.png"
+                        alt=""
+                        width="256"
+                        height="256"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <h3>Health on Point — Pharmacy Platform</h3>
+                    <p>A pharmacy e-commerce platform with prescriptions, telehealth consultations and a full admin panel.</p>
+                    <div class="project-achievements">
+                      <span><i class="fas fa-check" aria-hidden="true"></i> 20+ Categories</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Zoom Consultations</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Docker &amp; CI/CD</span>
+                    </div>
+                    <div class="project-tech">
+                      <span class="tech-tag">React</span>
+                      <span class="tech-tag">Redux Toolkit</span>
+                      <span class="tech-tag">RTK Query</span>
+                      <span class="tech-tag">FastAPI</span>
+                      <span class="tech-tag">Zoom SDK</span>
+                    </div>
+                    <span class="project-card-cta"
+                      >View case study <i class="fas fa-arrow-right" aria-hidden="true"></i
+                    ></span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="project-item full-stack no-photo">
+                <a
+                  class="project-card-link"
+                  href="/projects/faizan-auto-pos/"
+                  aria-label="View case study: Faizan Auto — POS System"
+                >
+                  <div class="portfolio-project-details">
+                    <div class="visual-icon-large" aria-hidden="true">
+                      <img
+                        class="project-card-logo"
+                        src="/assets/logos/projects/faizan-auto-pos.svg"
+                        alt=""
+                        width="256"
+                        height="256"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <h3>Faizan Auto — POS System</h3>
+                    <p>A point-of-sale and inventory system for an auto parts business, built on the MERN stack.</p>
+                    <div class="project-achievements">
+                      <span><i class="fas fa-check" aria-hidden="true"></i> 2,000+ Parts</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Sales &amp; Returns</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> P&amp;L Reporting</span>
+                    </div>
+                    <div class="project-tech">
+                      <span class="tech-tag">React.js</span>
+                      <span class="tech-tag">Redux Toolkit</span>
+                      <span class="tech-tag">Node.js</span>
+                      <span class="tech-tag">Express.js</span>
+                      <span class="tech-tag">MongoDB</span>
+                    </div>
+                    <span class="project-card-cta"
+                      >View case study <i class="fas fa-arrow-right" aria-hidden="true"></i
+                    ></span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="project-item full-stack no-photo">
+                <a
+                  class="project-card-link"
+                  href="/projects/hire-on-the-spot/"
+                  aria-label="View case study: Hire On The Spot — Hiring Platform"
+                >
+                  <div class="portfolio-project-details">
+                    <div class="visual-icon-large" aria-hidden="true">
+                      <img
+                        class="project-card-logo"
+                        src="/assets/logos/projects/hire-on-the-spot.png"
+                        alt=""
+                        width="256"
+                        height="256"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <h3>Hire On The Spot — Hiring Platform</h3>
+                    <p>Payments, automated communications and launch QA for a platform connecting employers with candidates.</p>
+                    <div class="project-achievements">
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Subscription Billing</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> GHL Automations</span>
+                      <span><i class="fas fa-check" aria-hidden="true"></i> Launch QA</span>
+                    </div>
+                    <div class="project-tech">
+                      <span class="tech-tag">WordPress</span>
+                      <span class="tech-tag">WooCommerce</span>
+                      <span class="tech-tag">Stripe</span>
+                      <span class="tech-tag">GoHighLevel</span>
+                      <span class="tech-tag">PHP</span>
+                    </div>
+                    <span class="project-card-cta"
+                      >View case study <i class="fas fa-arrow-right" aria-hidden="true"></i
+                    ></span>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -246,34 +526,25 @@
       </section>
 
       <!-- ==============  Footer  Section ============================ -->
-      <footer id="footer">
-        <div class="footer-container">
-          <div class="footer-left">
-            <h3>Arshad Khan</h3>
-            <p>Connect with me on social media:</p>
-            <div class="footer-social-icons">
-              <a href="https://github.com/arshadkh507" target="_blank">
-                <i class="fab fa-github"></i
-              ></a>
-              <a href="https://www.linkedin.com/in/arshadkh507/" target="_blank"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/code.master.arshad/"
-                target="_blank"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </div>
-          </div>
-          <div class="footer-right">
-            <p>&copy; 2023 Arshad Khan. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <div data-include="footer"></div>
       <!-- ==============  Footer  Section End! ============================ -->
     </main>
 
-    <!-- index.js file -->
+    <!-- Scroll to Top Button -->
+    <button 
+      id="scrollToTop" 
+      class="scroll-to-top" 
+      aria-label="Scroll to top"
+      title="Scroll to top"
+    >
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Shared header/footer partials, then page behavior -->
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/theme-toggle.js"></script>
+    <script src="/assets/js/quick-nav.js"></script>
+    <script src="/assets/js/projects-data.js"></script>
     <script src="../assets/js/index.js"></script>
     <script src="../assets/js/portfolio.js"></script>
   </body>

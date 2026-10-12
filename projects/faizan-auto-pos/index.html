@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Resolve the theme before first paint so there's no flash of the wrong
+         theme. Dark is the default; light is opt-in and persisted. -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var theme =
+          saved ||
+          (matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="description" content="A MERN point-of-sale system for an auto parts business: 2,000+ stock items, sales, purchases and returns, supplier ledgers and profit &amp; loss reports." />
+    <meta name="keywords" content="MERN Stack, React.js, Redux Toolkit, RTK Query, Node.js, Express, MongoDB, Bootstrap, POS, Point of Sale, Inventory, Arshad Khan, Case Study" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <title>Faizan Auto — POS System — Case Study | Arshad Khan</title>
+    <link rel="canonical" href="https://arshadkh507.github.io/projects/faizan-auto-pos/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="article:modified_time" content="2026-10-10" />
+    <meta property="article:author" content="Arshad Khan" />
+    <meta property="og:title" content="Faizan Auto — POS System — Case Study" />
+    <meta property="og:description" content="A MERN point-of-sale system for an auto parts business: 2,000+ stock items, sales, purchases and returns, supplier ledgers and profit &amp; loss reports." />
+    <meta property="og:url" content="https://arshadkh507.github.io/projects/faizan-auto-pos/" />
+    <meta property="og:image" content="https://arshadkh507.github.io/assets/images/og/faizan-auto-pos.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Faizan Auto — POS System — case study by Arshad Khan" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Faizan Auto — POS System — Case Study | Arshad Khan" />
+    <meta name="twitter:description" content="A MERN point-of-sale system for an auto parts business: 2,000+ stock items, sales, purchases and returns, supplier ledgers and profit &amp; loss reports." />
+    <meta name="twitter:image" content="https://arshadkh507.github.io/assets/images/og/faizan-auto-pos.jpg" />
+
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/project-detail.css" />
+    <!-- Space Grotesk (headings) · JetBrains Mono (UI) · Fira Code (code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "Faizan Auto — POS System",
+      "headline": "Faizan Auto — POS System — Case Study",
+      "description": "A MERN point-of-sale system for an auto parts business: 2,000+ stock items, sales, purchases and returns, supplier ledgers and profit & loss reports.",
+      "url": "https://arshadkh507.github.io/projects/faizan-auto-pos/",
+      "keywords": "MERN Stack, React.js, Redux Toolkit, RTK Query, Node.js, Express, MongoDB, Bootstrap, POS, Inventory",
+      "author": {
+        "@type": "Person",
+        "@id": "https://arshadkh507.github.io/#person",
+        "name": "Arshad Khan",
+        "url": "https://arshadkh507.github.io/"
+      },
+      "image": "https://arshadkh507.github.io/assets/images/og/faizan-auto-pos.jpg",
+      "abstract": "A MERN point-of-sale system for an auto parts business: 2,000+ stock items, sales, purchases and returns, supplier ledgers and profit & loss reports.",
+      "dateModified": "2026-10-10",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://arshadkh507.github.io/#website",
+        "url": "https://arshadkh507.github.io/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arshadkh507.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://arshadkh507.github.io/portfolio/portfolio.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Faizan Auto — POS System"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+
+  <body data-active-nav="portfolio">
+    <a class="skip-to-main" href="#project-main">Skip to main content</a>
+    <main>
+      <!-- ==============  Header / Top Navbar ============================ -->
+      <div data-include="header"></div>
+      <!-- ======  End! of Header / Top Navbar ======== -->
+
+      <nav class="project-breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/index.html">Home</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li><a href="/portfolio/portfolio.html">Portfolio</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li><span aria-current="page">Faizan Auto — POS System</span></li>
+        </ol>
+      </nav>
+
+      <div id="project-main">
+        <!-- ==============  Project Header ============================ -->
+        <section class="project-hero">
+          <div class="section-container">
+            <img
+              class="project-logo"
+              src="/assets/logos/projects/faizan-auto-pos.svg"
+              alt="Faizan Auto — POS System logo"
+              width="256"
+              height="256"
+            />
+            <p class="project-eyebrow">
+              Full Stack
+            </p>
+            <h1 class="project-title">Faizan Auto — POS System</h1>
+            <p class="project-tagline">A point-of-sale and inventory system for an auto parts business, built on the MERN stack.</p>
+            <dl class="project-meta">
+            <div>
+              <dt>Role</dt>
+              <dd>Frontend Developer (MERN)</dd>
+            </div>
+            <div>
+              <dt>Organisation</dt>
+              <dd>MindGigspk</dd>
+            </div>
+            <div>
+              <dt>Category</dt>
+              <dd>Full Stack</dd>
+            </div>
+            <div>
+              <dt>Timeline</dt>
+              <dd>Sep 2023 — Sep 2024</dd>
+            </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ==============  Gallery ============================ -->
+        <section class="project-section" aria-label="Screenshots">
+          <div class="section-container">
+        <div class="gallery" data-gallery aria-label="Faizan Auto POS screenshots">
+          <div class="gallery-viewport" data-gallery-viewport>
+            <ul class="gallery-track" data-gallery-track>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/faizan-auto-pos/01-pos.png"
+                  alt="Faizan Auto POS — dashboard showing current-day and lifetime sale, purchase and stock totals"
+                  width="1600"
+                  height="753"
+                  fetchpriority="high"
+                />
+                <figcaption>Dashboard: current-day trading separated from lifetime totals, so a slow morning never looks like a failing business.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/faizan-auto-pos/02-pos.png"
+                  alt="Faizan Auto POS — add sale screen with customer, product, pricing and payment fields"
+                  width="1600"
+                  height="753"
+                  loading="lazy"
+                />
+                <figcaption>Recording a sale: multiple line items, live stock quantity, and the split between amount paid and amount still owed.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/faizan-auto-pos/03-pos.png"
+                  alt="Faizan Auto POS — add product form with model, brand, item code, unit and alert quantity"
+                  width="1600"
+                  height="753"
+                  loading="lazy"
+                />
+                <figcaption>Adding a part. Every item carries the vehicle model it fits and an alert quantity that drives low-stock warnings.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/faizan-auto-pos/04-pos.png"
+                  alt="Faizan Auto POS — settings screen managing the vehicle model list"
+                  width="1600"
+                  height="753"
+                  loading="lazy"
+                />
+                <figcaption>Settings: vehicle models, payment types and expense categories are data the shop owner edits, not constants in the code.</figcaption>
+              </figure>
+            </li>
+            </ul>
+          </div>
+        </div>
+          </div>
+        </section>
+
+        <!-- ==============  Overview ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Overview</h2>
+            <div class="project-prose">
+              <p>A point-of-sale and inventory system for an auto parts retailer, covering the full trading cycle: buying stock from suppliers, selling it over the counter, handling returns in both directions, and reporting what the shop actually made.</p>
+              <p>An auto parts catalogue is the awkward part. A shop carries thousands of items that are only meaningful in relation to a vehicle — the same part number fits one model and not another — so the catalogue is keyed on <strong>model, brand, item code and unit</strong> rather than on a flat product name. By the time this screenshot was taken the system held <strong>2,169 stock items</strong>.</p>
+            </div>
+
+            <h2 style="margin-top: 32px">My Role</h2>
+            <div class="project-prose">
+              <p>I built the frontend as a junior MERN developer at MindGigspk, working under senior mentorship: the screens, the Redux Toolkit state and RTK Query data layer, form validation across the sale, purchase and product flows, and the report views. This was one of four full-stack applications I worked on there, and the one with the most modules.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Features ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Key Features</h2>
+            <p class="project-section-lead">What the system actually does.</p>
+            <dl class="feature-grid">
+              <div class="feature-item">
+                <dt>Sales and purchases</dt>
+                <dd>Multi-line sale and purchase entry with live stock quantity, per-line pricing, and partial payment tracked as paid versus remaining.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Returns in both directions</dt>
+                <dd>Sale returns and purchase returns as first-class flows, so stock and money both move back correctly instead of being corrected by hand.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Model-keyed catalogue</dt>
+                <dd>Parts are filed by vehicle model, brand, item code and unit — the way the counter staff actually look them up.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Low-stock alerts</dt>
+                <dd>Each item carries its own alert quantity, so the reorder threshold reflects how fast that specific part moves.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Supplier and customer ledgers</dt>
+                <dd>Both sides of the counter tracked, with outstanding balances carried against the right party.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Sale, purchase and P&amp;L reports</dt>
+                <dd>Separate reporting for sales, purchases, expenses and profit and loss, rather than one dashboard the owner has to interpret.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Owner-editable settings</dt>
+                <dd>Vehicle models, payment types and expense categories are managed in the UI, so the shop does not need a developer to add a category.</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ==============  Tech Stack ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Tech Stack</h2>
+            <p class="project-section-lead">What it's built with.</p>
+            <div class="stack-list">
+              <span class="tech-tag">React.js</span>
+              <span class="tech-tag">Redux Toolkit</span>
+              <span class="tech-tag">RTK Query</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Bootstrap</span>
+              <span class="tech-tag">REST APIs</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Challenges & Solutions ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Challenges &amp; Solutions</h2>
+            <p class="project-section-lead">
+              The problems that shaped the build, and what I did about them.
+            </p>
+            <div class="challenge-list">
+              <div class="challenge-item">
+                <h3>A parts catalogue is not a product list</h3>
+                <p>Thousands of items whose identity depends on the vehicle they fit. A flat name field makes the catalogue unsearchable the moment two brands make the same part.</p>
+                <p class="solution"><strong>Solution:</strong> Modelled the vehicle model as its own managed entity that products reference, rather than as free text on the product. The owner maintains the model list in settings, and every part is filed against it.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Stock has to stay true across four different flows</h3>
+                <p>A sale decrements stock, a purchase increments it, and both returns reverse their own direction. Any one of them getting it wrong silently corrupts the inventory count that the whole shop runs on.</p>
+                <p class="solution"><strong>Solution:</strong> Kept every stock movement tied to the document that caused it — sale, purchase, sale return, purchase return — so the current quantity is derived from a traceable history instead of being edited in place.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Counter staff are not data-entry clerks</h3>
+                <p>A sale gets recorded while a customer waits. A form that demands every field in a fixed order loses to a paper notebook.</p>
+                <p class="solution"><strong>Solution:</strong> Made the sale screen add line items without leaving the page, default what could be defaulted, and show stock quantity inline so the seller never has to check availability in another screen.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Results ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Results</h2>
+            <p class="project-section-lead">What shipped, and what changed because of it.</p>
+            <ul class="results-list">
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>A catalogue of 2,000+ parts managed in one system, filed by the vehicle model they fit.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Sales, purchases and both return directions all move stock through the same traceable path.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>The owner reads sales, purchases, expenses and profit and loss as separate reports instead of reconciling them by hand.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Models, payment types and expense categories are editable in the UI — no developer needed to add one.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ==============  Prev / Next ============================ -->
+        <section class="project-section" aria-label="More projects">
+          <div class="section-container">
+            <nav class="project-pager">
+              <a class="prev" href="/projects/health-on-point-pharmacy/">
+                <span class="dir">← Previous</span>
+                <span class="name">Health on Point — Pharmacy Platform</span>
+              </a>
+              <a class="next" href="/projects/hire-on-the-spot/">
+                <span class="dir">Next →</span>
+                <span class="name">Hire On The Spot — Hiring Platform</span>
+              </a>
+            </nav>
+          </div>
+        </section>
+
+        <!-- ==============  CTA ============================ -->
+        <section class="cta-section">
+          <div class="section-container">
+            <div class="cta-content">
+              <h2>Interested in work like this?</h2>
+              <div class="cta-buttons">
+                <a href="/index.html#contact" class="btn-cta-primary">
+                  <i class="fas fa-envelope" aria-hidden="true"></i> Get In Touch
+                </a>
+                <a href="/portfolio/portfolio.html" class="btn-cta-secondary">
+                  <i class="fas fa-briefcase" aria-hidden="true"></i> All Projects
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div data-include="footer"></div>
+    </main>
+
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/theme-toggle.js"></script>
+    <script src="/assets/js/quick-nav.js"></script>
+    <script src="/assets/js/projects-data.js"></script>
+    <script src="/assets/js/slider.js"></script>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+# Search engines and AI answer engines are welcome everywhere except the one
+# case study kept out of AI systems at the owner's request. Search crawlers
+# (Googlebot, Bingbot) are unaffected by the AI-specific groups below.
+
+User-agent: *
+Allow: /
+
+# AI search / answer engines (these decide whether the site is cited)
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Applebot
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /projects/kids-learning-app/
+Disallow: /assets/images/projects/kids-learning-app/
+Disallow: /assets/logos/projects/kids-learning-app.png
+
+# AI training crawlers
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: meta-externalagent
+Allow: /
+Disallow: /projects/kids-learning-app/
+Disallow: /assets/images/projects/kids-learning-app/
+Disallow: /assets/logos/projects/kids-learning-app.png
+
+Sitemap: https://arshadkh507.github.io/sitemap.xml

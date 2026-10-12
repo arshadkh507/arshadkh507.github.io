@@ -1,0 +1,43 @@
+# Arshad Khan — Full Stack Software Engineer building AI & agent systems
+
+> Arshad Khan is a Full Stack Software Engineer at Tech Emulsion in Peshawar, Pakistan, with 3+ years of professional experience. He builds AI and agent systems — multi-agent content pipelines, LLM integrations with observability and cost tracking, and workflow automation — on a React, Next.js, Node and Supabase foundation. He is open to remote, hybrid, on-site and relocation roles. This is his portfolio site: a static HTML/CSS/JS site hosted on GitHub Pages.
+
+## Key facts
+
+- Who: Arshad Khan, Full Stack Software Engineer specialising in AI / LLM / agent engineering.
+- Current role: Software Engineer at Tech Emulsion, Peshawar (Oct 2025 — present). Currently on Hire On The Spot, a hiring platform (Sep 2026 — present).
+- Previous roles: Lead Frontend Developer at ICONAF, Islamabad (Nov 2024 — Oct 2025); Software Engineer at MindGigspk, Peshawar (Sep 2023 — Sep 2024).
+- Experience: 3+ years shipping production software; mentored 2 junior developers and 5+ interns.
+- Education: BS Computer Science, Khushal Khan Khattak University (2019–2024), GPA 3.75/4.0.
+- Certifications: Claude Code in Action (Anthropic, Apr 2026); Claude with the Anthropic API (Anthropic, Jul 2026).
+- Location and availability: Peshawar, Pakistan; open to remote (worldwide), hybrid, on-site and relocation.
+- Target roles: AI / LLM / Agent Engineering, Full Stack (MERN), Frontend (React / Next.js), Backend (Node.js).
+- Contact: arshadkh507@gmail.com · https://www.linkedin.com/in/arshadkh507/ · https://github.com/arshadkh507
+
+## Core skills
+
+React.js, Next.js, TypeScript, JavaScript (ES6+), Redux Toolkit / RTK Query, Zustand, Tailwind CSS, ShadCN UI, Capacitor, Node.js, Express.js, MongoDB, PostgreSQL, Supabase (Edge Functions, Row Level Security), PHP, WordPress, Gemini API, OpenAI API, Claude API, Claude Code, ElevenLabs, OpenRouter, Model Context Protocol (MCP), n8n, Apify, multi-agent orchestration (Hermes, Multica), LLM observability and cost tracking, Stripe, WooCommerce, GoHighLevel, Docker, GitHub Actions (CI/CD), Cloudflare, accessibility (WCAG) and QA.
+
+## Case studies
+
+- [Multi-Agent SEO Content Generation System](https://arshadkh507.github.io/projects/multi-agent-seo-content-system/): Specialised AI agents on the Hermes runtime research keywords, analyse competitors and draft articles, with Multica orchestration, DataForSEO MCP and a Slack human-approval gate.
+- [LinkedIn Connection Automation](https://arshadkh507.github.io/projects/linkedin-connection-automation/): Five n8n workflows — Apify scraping of Sales Navigator leads, Supabase storage, OpenRouter-written connection notes, rate-limited sending.
+- [AutoCar Intelligence Platform](https://arshadkh507.github.io/projects/autocar-intelligence-platform/): Operational intelligence for a 9+ shop auto repair group; 1.4M+ repair-order records analysed; Tekmetric API plus a Chrome extension; audit-ready profit figures.
+- [Hire On The Spot — Hiring Platform](https://arshadkh507.github.io/projects/hire-on-the-spot/): Stripe and WooCommerce subscription billing, GoHighLevel automations, a five-minute cancellation grace window, accessibility and performance work, launch QA.
+- [Art Gola — Artist Platform](https://arshadkh507.github.io/projects/art-gola-artist-platform/): The full artist journey — application, approval, onboarding, payment and publication — for a live-event artist marketplace.
+- [Health on Point — Pharmacy Platform](https://arshadkh507.github.io/projects/health-on-point-pharmacy/): Pharmacy e-commerce with 20+ categories, prescription approval, Zoom video consultations and an admin panel (React, Redux Toolkit, FastAPI).
+- [Faizan Auto — POS System](https://arshadkh507.github.io/projects/faizan-auto-pos/): MERN point-of-sale and inventory system for an auto parts business; 2,000+ stock items, returns, ledgers and P&L reports.
+- [Auto Repair Shop Management Platform](https://arshadkh507.github.io/projects/auto-repair-shop-management/): Customers, vehicles, work orders and services for an auto repair shop, on a schema built around service history.
+
+All projects are proprietary client or employer work — no public repositories.
+
+## Pages
+
+- [Home](https://arshadkh507.github.io/): About, skills, education, experience, certifications, how he works, FAQ and contact.
+- [All projects](https://arshadkh507.github.io/portfolio/portfolio.html): Filterable listing (AI & Agents, Full Stack, Automation).
+- [Life at Tech Emulsion](https://arshadkh507.github.io/team/): Team photos — a team dinner and an evening out with colleagues.
+- [Resume (PDF)](https://arshadkh507.github.io/assets/Full-Stack-Software-Engineer-v1-july-2026.pdf)
+
+## Optional
+
+- [Full detail for LLMs](https://arshadkh507.github.io/llms-full.txt): Complete experience, education, skills and case-study write-ups in plain text.

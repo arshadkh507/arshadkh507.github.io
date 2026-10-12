@@ -1,0 +1,185 @@
+# Arshad Khan — Full Stack Software Engineer Portfolio (Full Detail)
+
+> This file is a fuller companion to /llms.txt, intended for LLM crawlers/agents that want complete content without parsing rendered HTML. Last updated: 2026-10-10.
+
+## About
+
+Arshad Khan is a Full Stack Software Engineer building AI and agent systems, with 3+ years of professional experience shipping production web applications: AI-powered platforms, multi-agent content pipelines, workflow automation, e-commerce and POS systems, and admin dashboards. Based in Peshawar, Pakistan. Open to remote (worldwide), hybrid, on-site, and relocation.
+
+Target roles: AI / LLM / Agent Engineering, Full Stack (MERN), Frontend (React / Next.js), Backend (Node.js).
+
+- Software Engineer @ Tech Emulsion, 3+ years total professional experience
+- AI in production: Gemini image models, ElevenLabs voice, LLM observability and cost tracking
+- Agent systems: multi-agent orchestration on Hermes/Multica, MCP tooling, n8n automation
+- Production apps: AI platforms, E-commerce, POS, operational dashboards
+- Team leadership: mentored 2 junior developers and 5+ interns
+- Full-stack: React, Next.js, Node, Supabase, Docker, CI/CD
+
+## Work Experience
+
+### Software Engineer — Tech Emulsion (Peshawar, Oct 2025 — Present)
+Currently on Hire On The Spot, a hiring platform: Stripe and WooCommerce subscription billing, GoHighLevel automations, accessibility and performance work, and end-to-end launch QA.
+- Solved 80% of AI-generated character-consistency failures across illustration sets using Gemini image models.
+- Built an ElevenLabs-based audio pipeline: voice cloning, text-to-speech and long-form narration.
+- Implemented AI observability and cost-tracking to monitor and control LLM API usage in production.
+- Analyzed 1.4M+ auto repair order records (AutoCar Intelligence Platform) to build accurate profit and sales calculations for a client dashboard.
+- Manages client communication and requirements directly, translating business needs into shipped features.
+- Built a LinkedIn connection automation as five n8n workflows (Apify scraping, Supabase storage, OpenRouter-written connection notes).
+- Built a multi-agent SEO content system on the Hermes runtime with Multica orchestration and observability, DataForSEO MCP for live SEO data, and Slack as the human approval gate.
+Tech: React, Next.js, Tailwind CSS, Supabase, Gemini API, ElevenLabs API, OpenRouter, n8n, Apify, MCP, Hermes, Multica, Stripe, WordPress, WooCommerce, GoHighLevel.
+
+### Lead Frontend Developer — ICONAF (Islamabad, Nov 2024 — Oct 2025)
+Led frontend development for a pharmacy e-commerce platform (Health on Point) featuring 20+ product categories, 7+ medical services, prescription management, and online video consultations. Built a comprehensive admin panel for sales reports, inventory, staff, and services using React + Redux Toolkit. Integrated authentication, cart management, payments (Peach Payment), and real-time API synchronization. Collaborated with the backend team (FastAPI) to optimize data flow and payment processes. Designed and developed multiple projects from Figma to production deployment using React, Next.js, Docker, CI/CD pipelines, and cPanel/server deployments. Mentored 2 junior frontend developers on translating Figma designs into React applications. Also delivered small-to-medium frontend projects for additional clients (Invent Group, Indalo Wealth).
+
+### Software Engineer — MindGigspk (Peshawar, Sep 2023 — Sep 2024)
+MERN stack development, POS systems, loan management systems, training. Developed 4+ full-stack applications using React.js, Redux Toolkit, RTK Query, Bootstrap, and REST APIs. Built responsive UIs for POS systems, CRM platforms, and admin dashboards. Mentored 5+ interns on HTML, CSS, JS, and React fundamentals.
+
+## Education
+
+Bachelor's degree in Computer Science, Khushal Khan Khattak University, Karak, Pakistan (2019–2024), GPA 3.75/4.0.
+
+Coursework: Introduction to Computer Programming, Calculus & Analytical Geometry, Statistics and Probability, Multivariate Calculus, Object-Oriented Programming, Data Structures and Algorithms, Database Systems, Differential Equations, Design and Analysis of Algorithms, Linear Algebra, Numerical Computing, Artificial Intelligence.
+
+Languages: C++, Java, Self-learned Python, JavaScript.
+
+Intermediate (Pre-Engineering), 2017–2019, score 895/1100.
+IELTS: 6.5 bands overall (Writing/Speaking 6, Listening/Reading 6.5).
+
+## Skills
+
+**Frontend:** React.js, Next.js, TypeScript, JavaScript (ES6+), Redux Toolkit, RTK Query, Zustand, Context API, Tailwind CSS, Material UI, ShadCN UI, Bootstrap, HTML5, CSS3, Capacitor, React Hook Form, Zod
+
+**Backend & Data:** Node.js, Express.js, MongoDB, PostgreSQL, Supabase, REST APIs, Edge Functions, Row Level Security, PHP, WordPress, FastAPI (collaboration)
+
+**AI & LLM:** Gemini API, OpenAI API, Claude API, ElevenLabs, AI Gateway, LLM cost tracking, AI observability, text-to-speech, voice cloning, prompt design
+
+**AI Agents & Automation:** Claude Code, Model Context Protocol (MCP), DataForSEO MCP, n8n, Hermes agent runtime, Multica orchestration and observability, OpenRouter, Apify actors, multi-agent pipeline design
+
+**Payments & Integrations:** Stripe, WooCommerce, Peach Payments, Zoom SDK, Tekmetric API, GoHighLevel CRM, Lulu Print API
+
+**Cloud & DevOps:** Git, GitHub, Docker, GitHub Actions, CI/CD, Cloudflare, DigitalOcean, Cloudways, cPanel, DNS, SSL, SSH, DMARC
+
+**Engineering Practices:** Code review, QA and test planning, accessibility (WCAG), performance and Lighthouse, Chrome DevTools, Agile, client requirements, technical mentoring, Figma to production
+
+## Certifications
+
+- **Claude Code in Action** — Anthropic (Anthropic Education), certificate of completion, Apr 2026. PDF: https://arshadkh507.github.io/assets/certificates/claude-code-in-action.pdf
+- **Claude with the Anthropic API** — Anthropic (Anthropic Education), certificate of completion, Jul 2026. PDF: https://arshadkh507.github.io/assets/certificates/claude-with-the-anthropic-api.pdf
+
+## Projects
+
+Each project below has a full case study page at https://arshadkh507.github.io/projects/<slug>/.
+
+### Auto Repair Shop Management Platform
+*Full Stack Developer*
+
+A management application covering the operational core of an auto repair shop: customers, their vehicles, the repair jobs booked against those vehicles, the services offered, and the business workflows connecting them.
+
+**Key features:** Database schema design; Customer and vehicle management; Repair and work-order workflows; Service and job management; Operational dashboard; Backend and API integration.
+**Challenges solved:** Modelled vehicles as first-class records with their own service history, linked to customers rather than owned by them, so history survives a change of owner. Built work orders as state machines with defined transitions, so added services and revised estimates are recorded as changes rather than overwriting the original.
+**Results:** Shop operations — customers, vehicles, jobs and services — run from one application rather than separate records. Service history stays attached to the vehicle across ownership changes.
+- Stack: React, Next.js, TypeScript, Tailwind CSS, REST APIs, PostgreSQL
+- Case study: https://arshadkh507.github.io/projects/auto-repair-shop-management/
+- Proprietary — no public repo
+
+### AutoCar Intelligence Platform
+*Frontend / Full Stack Developer · Nov 2025 — Jan 2026*
+
+A centralised operational intelligence platform for owners running several auto repair shops. Before it, answering "how did we do this month?" meant logging into each shop's system separately and reconciling the numbers by hand.
+
+**Key features:** Multi-shop data aggregation; Historical snapshots; Auditable calculations; Aging work-in-progress tracking; Hybrid data pipeline.
+**Challenges solved:** Built a normalisation layer that maps each shop's field variants onto one canonical schema before any aggregation happens. Paired the API with a Chrome extension that captures the missing metrics from the authenticated session, feeding both into the same pipeline. Made the sales and profit calculations deterministic and inspectable rather than opaque aggregates, so every figure can be audited.
+**Results:** Multi-shop performance readable from one dashboard instead of separate per-shop logins. Month-over-month and year-over-year comparison available from historical snapshots. High-dollar repair orders without deposits surfaced automatically rather than found by chance.
+- Stack: React, Supabase, PostgreSQL, Tekmetric API, Chrome Extension
+- Case study: https://arshadkh507.github.io/projects/autocar-intelligence-platform/
+- Proprietary — no public repo
+
+### LinkedIn Connection Automation
+*Automation Engineer · 2 weeks*
+
+An outbound pipeline built for an agency CEO who was sourcing prospects by hand: pull leads out of LinkedIn Sales Navigator, enrich them with real profile detail, store them, write a connection note that references the person, and send the request. Built as five separate n8n workflows, each owning one job and handing off through the database.
+
+**Key features:** Lead scraping from LinkedIn Sales Navigator via Apify actors; profile enrichment; Supabase storage with deduplication; LLM-generated connection notes through OpenRouter; rate-limited connection sending with outcomes written back.
+**Challenges solved:** Split one monolithic flow into five workflows communicating only through Supabase, so a rate limit at the enrichment stage costs one stage rather than the whole run. Constrained the note-generation prompt to cite one concrete detail from the person's actual profile, holding anything that could not clear that bar. Kept sending rate-limited and every generated note reviewable before send, because the pipeline ran against the client's own account.
+**Results:** Manual lead sourcing now runs unattended from a saved Sales Navigator search. Every request goes out with a note written against that person's real profile, not a template. Because state lives in Supabase, any stage can be re-run without re-scraping.
+- Stack: n8n, Apify Actors, Supabase, OpenRouter, LinkedIn Sales Navigator
+- Case study: https://arshadkh507.github.io/projects/linkedin-connection-automation/
+- Proprietary — no public repo
+
+### Multi-Agent SEO Content Generation System
+*AI Engineer · for a marketing content agency*
+
+A content automation system for a marketing content agency that needed to publish articles capable of ranking, at a volume no writer could sustain by hand. The work is split across specialised agents — research, keyword analysis, content generation — running on the Hermes agent runtime, with Multica providing orchestration and observability over what each agent actually did. Live SEO data reaches the agents through the DataForSEO MCP server, generated articles and workflow outputs persist in Supabase, and Slack is where a human starts a run and approves what comes out of it.
+
+**Key features:** Hermes agent runtime; Multica orchestration and observability; specialised research / keyword / content-generation agents; DataForSEO MCP integration for live SEO data; durable article and workflow storage on Supabase; Slack as trigger and human approval gate.
+**Challenges solved:** Split the work across specialised agents with narrow briefs rather than one model asked to research, plan and write at once. Made human approval a required stage rather than an optional review, so automation ends at the draft and a person decides what ships. Persisted agent outputs durably in Supabase and used Multica's observability so a long run's progress is visible per agent rather than inferred from the final output.
+**Results:** Keyword research through to draft article runs as one automated pipeline. Content generation triggers from Slack without anyone opening the tooling. Nothing publishes without passing an explicit human approval gate.
+- Stack: Hermes, Multica, MCP, DataForSEO MCP, Supabase, Slack
+- Case study: https://arshadkh507.github.io/projects/multi-agent-seo-content-system/
+- Proprietary — no public repo
+
+### Art Gola — Artist Platform
+*Full Stack Developer · Tech Emulsion*
+
+A platform for artists that manages the whole journey rather than one step of it — an artist applies, is reviewed and approved, is onboarded, pays, builds a profile, and is published. Each stage has to hand cleanly to the next without an administrator stitching them together manually.
+
+**Key features:** End-to-end application flow; Form validation and testing; Approval and onboarding; Checkout and payment; Profile creation and editing; Website-import workflow; Cloudflare Turnstile; QA and issue tracking.
+**Challenges solved:** Used Cloudflare Turnstile, which validates without demanding puzzle-solving from a real applicant. Built a website-import workflow that pulls their existing work across, so onboarding starts from their real material. Modelled the journey as explicit stages with defined transitions, so an artist is always in a known state that can be reported on.
+**Results:** Artists move from application to publication through one continuous flow. Existing artist websites import rather than being re-entered by hand. Currently in active development, with QA running against live production.
+- Stack: React, Next.js, TypeScript, Tailwind CSS, Supabase, Cloudflare Turnstile, Payments
+- Case study: https://arshadkh507.github.io/projects/art-gola-artist-platform/
+- Proprietary — no public repo
+
+### Health on Point — Pharmacy Platform
+*Lead Frontend Developer · ICONAF · Nov 2024 — Jun 2025*
+
+A pharmacy platform that is three products sharing one codebase: a storefront across 20+ product categories, a healthcare layer covering 7+ medical services with prescription management and online video consultations, and an admin panel the pharmacy runs its day-to-day operations from.
+
+**Key features:** 20+ product categories; prescription upload, review and approval; 7+ bookable medical services; Zoom SDK video consultations; cart, checkout and Peach Payment; admin panel for sales reports, inventory, staff, services and email campaigns; Docker + GitHub Actions deployment.
+**Challenges solved:** Modelled prescription approval as part of the line item's own state rather than the order's, so a basket can hold approved and pending items together and checkout knows which portion it may charge for. Standardised every server interaction on RTK Query with tag-based invalidation, so an admin write invalidates the reads that depend on it. Agreed the payment contract and its failure handling directly with the FastAPI backend team rather than each side defending against the other's edge cases.
+**Results:** Shipped a storefront spanning 20+ product categories and 7+ medical services on one platform. Prescription orders and video consultations run inside the same system the pharmacy sells from. Deployment moved to Docker images shipped by GitHub Actions.
+- Stack: React, Redux Toolkit, RTK Query, Tailwind CSS, FastAPI, Peach Payment, Zoom SDK, Docker, GitHub Actions
+- Case study: https://arshadkh507.github.io/projects/health-on-point-pharmacy/
+- Proprietary — no public repo
+
+### Faizan Auto — POS System
+*Frontend Developer (MERN) — MindGigspk — Sep 2023 — Sep 2024*
+
+A point-of-sale and inventory system for an auto parts retailer, covering the full trading cycle: buying stock from suppliers, selling over the counter, handling returns in both directions, and reporting what the shop made. An auto parts catalogue is keyed on vehicle model, brand, item code and unit rather than a flat product name, because the same part number fits one model and not another. Held 2,169 stock items.
+
+**Key features:** multi-line sale and purchase entry with live stock quantity and partial payment; sale returns and purchase returns as first-class flows; model-keyed parts catalogue; per-item low-stock alert quantity; supplier and customer ledgers with outstanding balances; separate sale, purchase, expense and profit & loss reports; owner-editable vehicle models, payment types and expense categories.
+**Challenges solved:** Modelled the vehicle model as its own managed entity that products reference, rather than free text on the product, so the catalogue stays searchable across brands. Tied every stock movement to the document that caused it (sale, purchase, sale return, purchase return) so quantity is derived from a traceable history instead of edited in place. Built the sale screen to add line items without leaving the page and to show stock inline, because a sale is recorded while a customer waits.
+**Results:** 2,000+ parts managed in one system. All four stock-moving flows share one traceable path. The owner reads sales, purchases, expenses and P&L as separate reports instead of reconciling by hand.
+- Stack: React.js, Redux Toolkit, RTK Query, Node.js, Express.js, MongoDB, Bootstrap
+- Case study: https://arshadkh507.github.io/projects/faizan-auto-pos/
+- Proprietary — no public repo
+
+### Hire On The Spot — Hiring Platform
+*Software Engineer — Integrations & QA · Tech Emulsion · Sep 2026 — Present*
+
+Hire On The Spot is an AI-powered hiring platform connecting employers with candidates — job listings, applications, interview scheduling and employer subscription plans. I contribute to development, integrations, production readiness and quality assurance, focused on reliable payment workflows, automated communications, accessibility, performance and launch stability.
+
+**Key contributions:** Stripe and WooCommerce subscription workflows (plan management, payment failures, cancellations, refunds, free trials, discount codes); GoHighLevel integration for billing, application, interview and account communications; a five-minute cancellation grace window so a reactivated subscription triggers no cancellation notice; investigation of the JobFront XML feed (job imports, ownership, visibility); end-to-end QA of payment, hiring, interview and email workflows; accessibility (keyboard navigation, screen readers, zoom, audit results); performance and production-readiness checks; a structured launch audit coordinated with the client and integration stakeholders.
+**Results:** Subscription billing covers failures, cancellations, refunds, trials and discount codes, not only the successful payment. Billing, application, interview and account emails are driven automatically through GoHighLevel. Critical workflows verified end to end ahead of launch.
+
+- Stack: WordPress, WooCommerce, Stripe, GoHighLevel, PHP, XML integrations, REST APIs, Chrome DevTools, Lighthouse, accessibility testing tools, Claude Code
+- Case study: https://arshadkh507.github.io/projects/hire-on-the-spot/
+- Proprietary — no public repo
+
+## Contact
+
+- Email: arshadkh507@gmail.com
+- Phone: +92 3435439569
+- Location: Peshawar, Pakistan
+- Open to: Remote (worldwide), Hybrid, On-site, and Relocation
+- WhatsApp: https://wa.link/miycpm
+- GitHub: https://github.com/arshadkh507
+- LinkedIn: https://www.linkedin.com/in/arshadkh507/
+
+## Site structure
+
+- `/` — home (About, Skills, Education, Experience, featured Projects, Contact)
+- `/portfolio/portfolio.html` — full filterable project listing
+- `/team/` — Life at Tech Emulsion: team photos (team dinner, an evening out with colleagues)
+- `/404.html` — custom not-found page
+- `/robots.txt`, `/sitemap.xml` — standard crawler files

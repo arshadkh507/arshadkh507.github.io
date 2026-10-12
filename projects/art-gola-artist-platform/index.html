@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Resolve the theme before first paint so there's no flash of the wrong
+         theme. Dark is the default; light is opt-in and persisted. -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var theme =
+          saved ||
+          (matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="description" content="Art Gola, a live-event artist marketplace: the full artist journey from application and approval to onboarding, payment and a published profile." />
+    <meta name="keywords" content="React, Next.js, TypeScript, Tailwind CSS, Supabase, Cloudflare Turnstile, Payments, Arshad Khan, Case Study" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <title>Art Gola Artist Platform — Case Study | Arshad Khan</title>
+    <link rel="canonical" href="https://arshadkh507.github.io/projects/art-gola-artist-platform/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="article:modified_time" content="2026-10-10" />
+    <meta property="article:author" content="Arshad Khan" />
+    <meta property="og:title" content="Art Gola Artist Platform — Case Study" />
+    <meta property="og:description" content="Art Gola, a live-event artist marketplace: the full artist journey from application and approval to onboarding, payment and a published profile." />
+    <meta property="og:url" content="https://arshadkh507.github.io/projects/art-gola-artist-platform/" />
+    <meta property="og:image" content="https://arshadkh507.github.io/assets/images/og/art-gola-artist-platform.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Art Gola — Artist Platform — case study by Arshad Khan" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Art Gola Artist Platform — Case Study | Arshad Khan" />
+    <meta name="twitter:description" content="Art Gola, a live-event artist marketplace: the full artist journey from application and approval to onboarding, payment and a published profile." />
+    <meta name="twitter:image" content="https://arshadkh507.github.io/assets/images/og/art-gola-artist-platform.jpg" />
+
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/project-detail.css" />
+    <!-- Space Grotesk (headings) · JetBrains Mono (UI) · Fira Code (code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "Art Gola — Artist Platform",
+      "headline": "Art Gola Artist Platform — Case Study",
+      "description": "Art Gola, a live-event artist marketplace: the full artist journey from application and approval to onboarding, payment and a published profile.",
+      "url": "https://arshadkh507.github.io/projects/art-gola-artist-platform/",
+      "keywords": "React, Next.js, TypeScript, Tailwind CSS, Supabase, Cloudflare Turnstile, Payments",
+      "author": {
+        "@type": "Person",
+        "@id": "https://arshadkh507.github.io/#person",
+        "name": "Arshad Khan",
+        "url": "https://arshadkh507.github.io/"
+      },
+      "image": "https://arshadkh507.github.io/assets/images/og/art-gola-artist-platform.jpg",
+      "abstract": "Art Gola, a live-event artist marketplace: the full artist journey from application and approval to onboarding, payment and a published profile.",
+      "dateModified": "2026-10-10",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://arshadkh507.github.io/#website",
+        "url": "https://arshadkh507.github.io/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arshadkh507.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://arshadkh507.github.io/portfolio/portfolio.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Art Gola — Artist Platform"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+
+  <body data-active-nav="portfolio">
+    <a class="skip-to-main" href="#project-main">Skip to main content</a>
+    <main>
+      <!-- ==============  Header / Top Navbar ============================ -->
+      <div data-include="header"></div>
+      <!-- ======  End! of Header / Top Navbar ======== -->
+
+      <nav class="project-breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/index.html">Home</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li><a href="/portfolio/portfolio.html">Portfolio</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li><span aria-current="page">Art Gola — Artist Platform</span></li>
+        </ol>
+      </nav>
+
+      <div id="project-main">
+        <!-- ==============  Project Header ============================ -->
+        <section class="project-hero">
+          <div class="section-container">
+            <img
+              class="project-logo"
+              src="/assets/logos/projects/art-gola-artist-platform.png"
+              alt="Art Gola — Artist Platform logo"
+              width="256"
+              height="256"
+            />
+            <p class="project-eyebrow">
+              Full Stack
+            </p>
+            <h1 class="project-title">Art Gola — Artist Platform</h1>
+            <p class="project-tagline">The complete artist journey: application, approval, onboarding, payment and publication.</p>
+            <dl class="project-meta">
+            <div>
+              <dt>Role</dt>
+              <dd>Full Stack Developer</dd>
+            </div>
+            <div>
+              <dt>Organisation</dt>
+              <dd>Tech Emulsion</dd>
+            </div>
+            <div>
+              <dt>Category</dt>
+              <dd>Full Stack</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd><span class="project-status">Active</span></dd>
+            </div>
+            <div>
+              <dt>Live site</dt>
+              <dd><a href="https://artgola.com/" target="_blank" rel="noopener">artgola.com</a></dd>
+            </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ==============  Gallery ============================ -->
+        <section class="project-section" aria-label="Screenshots">
+          <div class="section-container">
+        <div class="gallery" data-gallery aria-label="Art Gola — Artist Platform screenshots">
+          <div class="gallery-viewport" data-gallery-viewport>
+            <ul class="gallery-track" data-gallery-track>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/art-gola-artist-platform/01-home.webp"
+                  alt="Art Gola — homepage with a search bar for finding live event artists by location, date and art service"
+                  width="1600"
+                  height="900"
+                  fetchpriority="high"
+                />
+                <figcaption>The public homepage: couples and planners search for live event artists by location, date and art service.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/art-gola-artist-platform/02-artist-search.webp"
+                  alt="Art Gola — artist search results with style, medium, experience and price filters beside a map of artists"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+                <figcaption>Artist search, filtered by style, medium, experience and price, with results on a map and as portfolio cards.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/art-gola-artist-platform/03-artist-application.webp"
+                  alt="Art Gola — Join Art Gola page explaining the review process and membership pricing, with an Apply Now button"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+                <figcaption>Where the artist journey starts: apply, get reviewed, and pay only once the application is approved.</figcaption>
+              </figure>
+            </li>
+            </ul>
+          </div>
+        </div>
+          </div>
+        </section>
+
+        <!-- ==============  Overview ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Overview</h2>
+            <div class="project-prose">
+              <p>A platform for artists that manages the whole journey rather than one step of it — an artist applies, is reviewed and approved, is onboarded, pays, builds a profile, and is published. Each stage has to hand cleanly to the next without an administrator stitching them together manually.</p>
+            </div>
+
+            <h2 style="margin-top: 32px">My Role</h2>
+            <div class="project-prose">
+              <p>I work across the flow end to end, including the application form and its validation, the approval and onboarding path, checkout, profile creation and editing, and the website-import workflow — alongside comprehensive QA and live production testing.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Features ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Key Features</h2>
+            <p class="project-section-lead">What the system actually does.</p>
+            <dl class="feature-grid">
+              <div class="feature-item">
+                <dt>End-to-end application flow</dt>
+                <dd>One continuous path from first application through to publication.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Form validation and testing</dt>
+                <dd>Validation on the application form, exercised by deliberate testing rather than assumed.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Approval and onboarding</dt>
+                <dd>Reviewers approve applicants, and approval moves them into onboarding automatically.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Checkout and payment</dt>
+                <dd>Payment as a stage of the journey rather than a separate disconnected step.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Profile creation and editing</dt>
+                <dd>Artists build and maintain their own published profile.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Website-import workflow</dt>
+                <dd>Imports an artist's existing site so they are not re-entering work by hand.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Cloudflare Turnstile</dt>
+                <dd>Bot protection on the public application form.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>QA and issue tracking</dt>
+                <dd>Comprehensive QA with tracked issues, including testing against live production.</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ==============  Tech Stack ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Tech Stack</h2>
+            <p class="project-section-lead">What it's built with.</p>
+            <div class="stack-list">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">Cloudflare Turnstile</span>
+              <span class="tech-tag">Payments</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Challenges & Solutions ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Challenges &amp; Solutions</h2>
+            <p class="project-section-lead">
+              The problems that shaped the build, and what I did about them.
+            </p>
+            <div class="challenge-list">
+              <div class="challenge-item">
+                <h3>Challenge</h3>
+                <p>A public application form is an obvious spam target, but a heavy challenge deters the genuine artists it exists to attract.</p>
+                <p class="solution"><strong>Solution:</strong> Used Cloudflare Turnstile, which validates without demanding puzzle-solving from a real applicant.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Challenge</h3>
+                <p>Artists arrive with an existing website and will not retype their catalogue into a new form.</p>
+                <p class="solution"><strong>Solution:</strong> Built a website-import workflow that pulls their existing work across, so onboarding starts from their real material.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Challenge</h3>
+                <p>A journey spanning application, approval, payment and publication has many states, and an artist stuck between two of them is invisible.</p>
+                <p class="solution"><strong>Solution:</strong> Modelled the journey as explicit stages with defined transitions, so an artist is always in a known state that can be reported on.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Results ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Results</h2>
+            <p class="project-section-lead">What shipped, and what changed because of it.</p>
+            <!-- TODO (Arshad): add concrete metrics here where you have them —
+                 user counts, time saved, revenue, load times. Qualitative
+                 outcomes only for now, so nothing here overstates the result. -->
+            <ul class="results-list">
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Artists move from application to publication through one continuous flow.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Existing artist websites import rather than being re-entered by hand.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Currently in active development, with QA running against live production.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ==============  Prev / Next ============================ -->
+        <section class="project-section" aria-label="More projects">
+          <div class="section-container">
+            <nav class="project-pager">
+              <a class="prev" href="/projects/multi-agent-seo-content-system/">
+                <span class="dir">← Previous</span>
+                <span class="name">Multi-Agent SEO Content Generation System</span>
+              </a>
+              <a class="next" href="/projects/health-on-point-pharmacy/">
+                <span class="dir">Next →</span>
+                <span class="name">Health on Point — Pharmacy Platform</span>
+              </a>
+            </nav>
+          </div>
+        </section>
+
+        <!-- ==============  CTA ============================ -->
+        <section class="cta-section">
+          <div class="section-container">
+            <div class="cta-content">
+              <h2>Interested in work like this?</h2>
+              <div class="cta-buttons">
+                <a href="/index.html#contact" class="btn-cta-primary">
+                  <i class="fas fa-envelope" aria-hidden="true"></i> Get In Touch
+                </a>
+                <a href="/portfolio/portfolio.html" class="btn-cta-secondary">
+                  <i class="fas fa-briefcase" aria-hidden="true"></i> All Projects
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div data-include="footer"></div>
+    </main>
+
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/theme-toggle.js"></script>
+    <script src="/assets/js/quick-nav.js"></script>
+    <script src="/assets/js/projects-data.js"></script>
+    <script src="/assets/js/slider.js"></script>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>

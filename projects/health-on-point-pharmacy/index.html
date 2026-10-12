@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Resolve the theme before first paint so there's no flash of the wrong
+         theme. Dark is the default; light is opt-in and persisted. -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var theme =
+          saved ||
+          (matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="description" content="A pharmacy e-commerce platform with 20+ product categories, prescription management, Zoom-based video consultations and a full admin panel." />
+    <meta name="keywords" content="React, Redux Toolkit, RTK Query, Tailwind CSS, FastAPI, Peach Payment, Zoom SDK, Docker, CI/CD, E-commerce, Healthcare, Arshad Khan, Case Study" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <title>Health on Point Pharmacy Platform — Case Study | Arshad Khan</title>
+    <link rel="canonical" href="https://arshadkh507.github.io/projects/health-on-point-pharmacy/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="article:modified_time" content="2026-10-10" />
+    <meta property="article:author" content="Arshad Khan" />
+    <meta property="og:title" content="Health on Point Pharmacy Platform — Case Study" />
+    <meta property="og:description" content="A pharmacy e-commerce platform with 20+ product categories, prescription management, Zoom-based video consultations and a full admin panel." />
+    <meta property="og:url" content="https://arshadkh507.github.io/projects/health-on-point-pharmacy/" />
+    <meta property="og:image" content="https://arshadkh507.github.io/assets/images/og/health-on-point-pharmacy.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Health on Point — Pharmacy Platform — case study by Arshad Khan" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Health on Point Pharmacy Platform — Case Study | Arshad Khan" />
+    <meta name="twitter:description" content="A pharmacy e-commerce platform with 20+ product categories, prescription management, Zoom-based video consultations and a full admin panel." />
+    <meta name="twitter:image" content="https://arshadkh507.github.io/assets/images/og/health-on-point-pharmacy.jpg" />
+
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/project-detail.css" />
+    <!-- Space Grotesk (headings) · JetBrains Mono (UI) · Fira Code (code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "Health on Point — Pharmacy Platform",
+      "headline": "Health on Point Pharmacy Platform — Case Study",
+      "description": "A pharmacy e-commerce platform with 20+ product categories, prescription management, Zoom-based video consultations and a full admin panel.",
+      "url": "https://arshadkh507.github.io/projects/health-on-point-pharmacy/",
+      "keywords": "React, Redux Toolkit, RTK Query, Tailwind CSS, FastAPI, Peach Payment, Zoom SDK, Docker, CI/CD, E-commerce, Healthcare",
+      "author": {
+        "@type": "Person",
+        "@id": "https://arshadkh507.github.io/#person",
+        "name": "Arshad Khan",
+        "url": "https://arshadkh507.github.io/"
+      },
+      "image": "https://arshadkh507.github.io/assets/images/og/health-on-point-pharmacy.jpg",
+      "abstract": "A pharmacy e-commerce platform with 20+ product categories, prescription management, Zoom-based video consultations and a full admin panel.",
+      "dateModified": "2026-10-10",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://arshadkh507.github.io/#website",
+        "url": "https://arshadkh507.github.io/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arshadkh507.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://arshadkh507.github.io/portfolio/portfolio.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Health on Point — Pharmacy Platform"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+
+  <body data-active-nav="portfolio">
+    <a class="skip-to-main" href="#project-main">Skip to main content</a>
+    <main>
+      <!-- ==============  Header / Top Navbar ============================ -->
+      <div data-include="header"></div>
+      <!-- ======  End! of Header / Top Navbar ======== -->
+
+      <nav class="project-breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/index.html">Home</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li><a href="/portfolio/portfolio.html">Portfolio</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li><span aria-current="page">Health on Point — Pharmacy Platform</span></li>
+        </ol>
+      </nav>
+
+      <div id="project-main">
+        <!-- ==============  Project Header ============================ -->
+        <section class="project-hero">
+          <div class="section-container">
+            <img
+              class="project-logo"
+              src="/assets/logos/projects/health-on-point-pharmacy.png"
+              alt="Health on Point — Pharmacy Platform logo"
+              width="256"
+              height="256"
+            />
+            <p class="project-eyebrow">
+              Full Stack
+            </p>
+            <h1 class="project-title">Health on Point — Pharmacy Platform</h1>
+            <p class="project-tagline">A pharmacy e-commerce platform with prescriptions, telehealth consultations and a full admin panel.</p>
+            <dl class="project-meta">
+            <div>
+              <dt>Role</dt>
+              <dd>Lead Frontend Developer</dd>
+            </div>
+            <div>
+              <dt>Organisation</dt>
+              <dd>ICONAF</dd>
+            </div>
+            <div>
+              <dt>Category</dt>
+              <dd>Full Stack</dd>
+            </div>
+            <div>
+              <dt>Timeline</dt>
+              <dd>Nov 2024 — Jun 2025</dd>
+            </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ==============  Gallery ============================ -->
+        <section class="project-section" aria-label="Screenshots">
+          <div class="section-container">
+        <div class="gallery" data-gallery aria-label="Health on Point — Pharmacy Platform screenshots">
+          <div class="gallery-viewport" data-gallery-viewport>
+            <ul class="gallery-track" data-gallery-track>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/health-on-point-pharmacy/05-dashboard.png"
+                  alt="Health on Point admin — admin dashboard"
+                  width="1600"
+                  height="752"
+                  fetchpriority="high"
+                />
+                <figcaption>Admin dashboard: orders, bookings, prescriptions and product counts in one view. Revenue figure redacted.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/health-on-point-pharmacy/01-prescriptions.png"
+                  alt="Health on Point admin — prescription queue — each upload moves through submitted, approved and paid before an order can complete"
+                  width="1600"
+                  height="752"
+                  loading="lazy"
+                />
+                <figcaption>Prescription queue — each upload moves through submitted, approved and paid before an order can complete. Patient names and emails redacted.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/health-on-point-pharmacy/02-orders.png"
+                  alt="Health on Point admin — order management with shipping status and fulfilment state per line"
+                  width="1600"
+                  height="750"
+                  loading="lazy"
+                />
+                <figcaption>Order management with shipping status and fulfilment state per line. Customer names redacted.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/health-on-point-pharmacy/03-bookings.png"
+                  alt="Health on Point admin — service bookings for in-person and video consultations, with reschedule and cancellation states"
+                  width="1600"
+                  height="741"
+                  loading="lazy"
+                />
+                <figcaption>Service bookings for in-person and video consultations, with reschedule and cancellation states. Client names redacted.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/health-on-point-pharmacy/04-contacts.png"
+                  alt="Health on Point admin — contact inquiries split by type, routed to staff for reply"
+                  width="1600"
+                  height="757"
+                  loading="lazy"
+                />
+                <figcaption>Contact inquiries split by type, routed to staff for reply. Names, emails and phone numbers redacted.</figcaption>
+              </figure>
+            </li>
+            </ul>
+          </div>
+        </div>
+          </div>
+        </section>
+
+        <!-- ==============  Overview ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Overview</h2>
+            <div class="project-prose">
+              <p>A pharmacy platform that is three products sharing one codebase: a storefront selling across 20+ product categories, a healthcare layer covering 7+ medical services with prescription management and online video consultations, and an admin panel the pharmacy runs its day-to-day operations from.</p>
+              <p>The complication is that a pharmacy is not a normal store. A prescription item cannot be added to a basket and checked out like a bottle of shampoo — it has to be uploaded, reviewed and approved before the order can complete, which means the cart, the checkout and the order state machine all have to model an item that is pending someone's judgement.</p>
+            </div>
+
+            <h2 style="margin-top: 32px">My Role</h2>
+            <div class="project-prose">
+              <p>Lead Frontend Developer. I led frontend development for the platform and the admin panel, integrated authentication, cart, payments and the real-time API sync between them, and worked with the FastAPI backend team to settle the data flow and payment handling. I also took the build from Figma through to production deployment with Docker and CI/CD, and mentored two junior frontend developers on the same codebase.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Features ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Key Features</h2>
+            <p class="project-section-lead">What the system actually does.</p>
+            <dl class="feature-grid">
+              <div class="feature-item">
+                <dt>20+ product categories</dt>
+                <dd>A full pharmacy catalogue with browsing, search and filtering across every category the pharmacy stocks.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Prescription management</dt>
+                <dd>Customers upload a prescription against an order; the item stays pending until it is reviewed, so a restricted product can never checkout unapproved.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>7+ medical services</dt>
+                <dd>Bookable healthcare services sitting alongside the storefront rather than on a separate site.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Online video consultations</dt>
+                <dd>Patient-to-practitioner video appointments implemented with the Zoom SDK, booked and joined from inside the platform.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Cart, checkout and payments</dt>
+                <dd>Authentication, cart management and card payment through Peach Payment, with order state kept in sync with the backend in real time.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Admin panel</dt>
+                <dd>Sales reports, inventory, staff and service management, and promotional email campaigns — built with React and Redux Toolkit.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Containerised deployment</dt>
+                <dd>Docker images built and shipped through GitHub Actions CI/CD to the production server.</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ==============  Tech Stack ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Tech Stack</h2>
+            <p class="project-section-lead">What it's built with.</p>
+            <div class="stack-list">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Redux Toolkit</span>
+              <span class="tech-tag">RTK Query</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Peach Payment</span>
+              <span class="tech-tag">Zoom SDK</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">GitHub Actions</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Challenges & Solutions ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Challenges &amp; Solutions</h2>
+            <p class="project-section-lead">
+              The problems that shaped the build, and what I did about them.
+            </p>
+            <div class="challenge-list">
+              <div class="challenge-item">
+                <h3>A prescription item breaks the normal cart model</h3>
+                <p>Standard e-commerce assumes any item in the basket can be paid for immediately. A prescription item cannot — it needs upload, review and approval first, and mixing both kinds in one order means checkout has to handle a partially-blocked basket.</p>
+                <p class="solution"><strong>Solution:</strong> Modelled approval as part of the line item's own state rather than the order's, so the cart can hold approved and pending items together and checkout knows precisely which portion it is allowed to take payment for.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Three surfaces, one source of truth</h3>
+                <p>Storefront, consultations and admin panel all read and write the same inventory and order data. Stale state in any one of them shows a customer a product the pharmacy has already sold.</p>
+                <p class="solution"><strong>Solution:</strong> Standardised every server interaction on RTK Query with tag-based invalidation, so a write in the admin panel invalidates the reads that depend on it instead of each screen managing its own refresh.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Payment correctness is a two-team problem</h3>
+                <p>The payment flow spans the React frontend and a FastAPI backend, and the failure modes that matter — a charge that succeeds while the order fails to record — sit exactly on the boundary between them.</p>
+                <p class="solution"><strong>Solution:</strong> Worked directly with the backend team to agree the contract and the failure handling at that boundary, rather than each side defending against the other's edge cases independently.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Results ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Results</h2>
+            <p class="project-section-lead">What shipped, and what changed because of it.</p>
+            <ul class="results-list">
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Shipped a pharmacy storefront spanning 20+ product categories and 7+ medical services on a single platform.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Prescription orders and video consultations run inside the same system the pharmacy already sells from, rather than through separate tools.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>The pharmacy runs sales reporting, inventory, staff and campaigns from one admin panel.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Deployment moved to Docker images shipped by GitHub Actions, so releases are repeatable rather than hand-copied.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ==============  Prev / Next ============================ -->
+        <section class="project-section" aria-label="More projects">
+          <div class="section-container">
+            <nav class="project-pager">
+              <a class="prev" href="/projects/art-gola-artist-platform/">
+                <span class="dir">← Previous</span>
+                <span class="name">Art Gola — Artist Platform</span>
+              </a>
+              <a class="next" href="/projects/faizan-auto-pos/">
+                <span class="dir">Next →</span>
+                <span class="name">Faizan Auto — POS System</span>
+              </a>
+            </nav>
+          </div>
+        </section>
+
+        <!-- ==============  CTA ============================ -->
+        <section class="cta-section">
+          <div class="section-container">
+            <div class="cta-content">
+              <h2>Interested in work like this?</h2>
+              <div class="cta-buttons">
+                <a href="/index.html#contact" class="btn-cta-primary">
+                  <i class="fas fa-envelope" aria-hidden="true"></i> Get In Touch
+                </a>
+                <a href="/portfolio/portfolio.html" class="btn-cta-secondary">
+                  <i class="fas fa-briefcase" aria-hidden="true"></i> All Projects
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div data-include="footer"></div>
+    </main>
+
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/theme-toggle.js"></script>
+    <script src="/assets/js/quick-nav.js"></script>
+    <script src="/assets/js/projects-data.js"></script>
+    <script src="/assets/js/slider.js"></script>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>

@@ -44,3 +44,15 @@ package-lock.json
 .secret
 config.js
 credentials.json
+
+# Local Claude Code settings (per-machine, not part of the site)
+.claude/settings.local.json
+
+# Separate LinkedIn banner app — kept local until it is ready to ship
+/LinkedIn Banner/
+
+# Stray git-hook copies created when core.hooksPath pointed at dev/null
+/dev/
+
+# Playwright MCP scratch output
+/.playwright-mcp/

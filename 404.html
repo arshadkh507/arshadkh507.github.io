@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Resolve the theme before first paint so there's no flash of the wrong
+         theme. Dark is the default; light is opt-in and persisted. -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var theme =
+          saved ||
+          (matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <title>404 - Page Not Found | Arshad Khan</title>
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .not-found {
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 20px;
+      }
+      .not-found h1 {
+        font-size: clamp(4rem, 12vw, 8rem);
+        color: var(--primary-color);
+        margin: 0;
+        line-height: 1;
+      }
+      .not-found p {
+        font-size: 1.25rem;
+        margin: 16px 0 32px;
+        color: var(--light-gray-color);
+      }
+      .not-found .btn-home {
+        display: inline-block;
+        padding: 14px 28px;
+        border: 1px solid var(--primary-color);
+        border-radius: 8px;
+        color: var(--on-background-color);
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+      .not-found .btn-home:hover {
+        background-color: var(--primary-color);
+        color: #fff;
+      }
+    </style>
+      <meta property="og:type" content="website" />
+    <meta property="og:title" content="404 - Page Not Found | Arshad Khan" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://arshadkh507.github.io/404.html" />
+    <meta property="og:image" content="https://arshadkh507.github.io/assets/images/og-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Arshad Khan — Full Stack Software Engineer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="404 - Page Not Found | Arshad Khan" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://arshadkh507.github.io/assets/images/og-card.png" />
+  </head>
+
+  <body>
+    <a class="skip-to-main" href="#main-404">Skip to main content</a>
+    <main>
+      <div data-include="header"></div>
+
+      <section class="not-found" id="main-404">
+        <h1>404</h1>
+        <p>This page doesn't exist — maybe it moved, or the link's out of date.</p>
+        <a class="btn-home" href="/index.html">Back to Home</a>
+      </section>
+
+      <div data-include="footer"></div>
+    </main>
+
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/theme-toggle.js"></script>
+    <script src="/assets/js/quick-nav.js"></script>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Faizan Auto mark">
+  <!-- FA monogram outlined from Saira ExtraBold Italic (OFL), tracked tight so the A leans into
+       the F, with speed lines trailing it: an auto parts business that moves stock fast. -->
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E11D48"/><stop offset="1" stop-color="#881337"/></linearGradient></defs>
+  <rect width="256" height="256" rx="56" fill="url(#g)"/>
+  <g stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".85">
+    <path d="M46 102h22"/>
+    <path d="M34 124h34"/>
+    <path d="M46 146h22"/>
+  </g>
+  <path transform="translate(77.1 80.0)" fill="#fff" d="M0.8809554743035322 88.0 19.58916275357746 0.0H80.75278865606266L76.62117893799069 19.231778615044817H41.74585645613318L37.778290242951805 37.54677146940366H67.85347723602888L63.815985820078325 56.81233875907125H33.74079882700124L27.075140592809817 88.0ZM56.20189684292582 88.0 101.401445832328 0.0H137.700180033037L145.42298483639266 88.0H119.95520518198185L118.76055606080291 72.83204959260566H90.09714359954714L82.55777761279904 88.0ZM98.66446110729598 54.3266764416563H117.9182891293454L115.76551160934687 21.748881753558905H114.7157148425175Z"/>
+</svg>

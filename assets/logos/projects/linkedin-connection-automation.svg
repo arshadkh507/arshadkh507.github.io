@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="LinkedIn Connection Automation mark">
+  <!-- Four stage dots launching a paper plane: the system's five n8n workflows — scrape, enrich,
+       store, write — ending in a send. Indigo, deliberately not LinkedIn's own blue. -->
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#312E81"/></linearGradient></defs>
+  <rect width="256" height="256" rx="56" fill="url(#g)"/>
+  <g fill="#fff">
+    <circle cx="48" cy="204" r="8" opacity=".55"/>
+    <circle cx="72" cy="180" r="9" opacity=".7"/>
+    <circle cx="96" cy="158" r="10" opacity=".85"/>
+    <circle cx="120" cy="138" r="11"/>
+    <path d="M136 124L212 52l-34 136-22-46z"/>
+    <path d="M212 52l-56 90-6 40 28-40z" opacity=".7"/>
+  </g>
+</svg>

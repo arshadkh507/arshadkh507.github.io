@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Resolve the theme before first paint so there's no flash of the wrong
+         theme. Dark is the default; light is opt-in and persisted. -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var theme =
+          saved ||
+          (matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="description" content="Five n8n workflows that scrape LinkedIn Sales Navigator leads, store them in Supabase, and send connection requests with an LLM-written note." />
+    <meta name="keywords" content="n8n, Apify, Supabase, OpenRouter, LLM, LinkedIn Sales Navigator, Workflow Automation, Arshad Khan, Case Study" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <title>LinkedIn Connection Automation — Case Study | Arshad Khan</title>
+    <link rel="canonical" href="https://arshadkh507.github.io/projects/linkedin-connection-automation/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="article:modified_time" content="2026-10-10" />
+    <meta property="article:author" content="Arshad Khan" />
+    <meta property="og:title" content="LinkedIn Connection Automation — Case Study" />
+    <meta property="og:description" content="Five n8n workflows that scrape LinkedIn Sales Navigator leads, store them in Supabase, and send connection requests with an LLM-written note." />
+    <meta property="og:url" content="https://arshadkh507.github.io/projects/linkedin-connection-automation/" />
+    <meta property="og:image" content="https://arshadkh507.github.io/assets/images/og/linkedin-connection-automation.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="LinkedIn Connection Automation — case study by Arshad Khan" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LinkedIn Connection Automation — Case Study | Arshad Khan" />
+    <meta name="twitter:description" content="Five n8n workflows that scrape LinkedIn Sales Navigator leads, store them in Supabase, and send connection requests with an LLM-written note." />
+    <meta name="twitter:image" content="https://arshadkh507.github.io/assets/images/og/linkedin-connection-automation.jpg" />
+
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/project-detail.css" />
+    <!-- Space Grotesk (headings) · JetBrains Mono (UI) · Fira Code (code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "name": "LinkedIn Connection Automation",
+      "headline": "LinkedIn Connection Automation — Case Study",
+      "description": "Five n8n workflows that scrape LinkedIn Sales Navigator leads, store them in Supabase, and send connection requests with an LLM-written note.",
+      "url": "https://arshadkh507.github.io/projects/linkedin-connection-automation/",
+      "keywords": "n8n, Apify, Supabase, OpenRouter, LLM, LinkedIn Sales Navigator, Workflow Automation",
+      "author": {
+        "@type": "Person",
+        "@id": "https://arshadkh507.github.io/#person",
+        "name": "Arshad Khan",
+        "url": "https://arshadkh507.github.io/"
+      },
+      "image": "https://arshadkh507.github.io/assets/images/og/linkedin-connection-automation.jpg",
+      "abstract": "Five n8n workflows that scrape LinkedIn Sales Navigator leads, store them in Supabase, and send connection requests with an LLM-written note.",
+      "dateModified": "2026-10-10",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://arshadkh507.github.io/#website",
+        "url": "https://arshadkh507.github.io/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://arshadkh507.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://arshadkh507.github.io/portfolio/portfolio.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "LinkedIn Connection Automation"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+
+  <body data-active-nav="portfolio">
+    <a class="skip-to-main" href="#project-main">Skip to main content</a>
+    <main>
+      <!-- ==============  Header / Top Navbar ============================ -->
+      <div data-include="header"></div>
+      <!-- ======  End! of Header / Top Navbar ======== -->
+
+      <nav class="project-breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/index.html">Home</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li><a href="/portfolio/portfolio.html">Portfolio</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li><span aria-current="page">LinkedIn Connection Automation</span></li>
+        </ol>
+      </nav>
+
+      <div id="project-main">
+        <!-- ==============  Project Header ============================ -->
+        <section class="project-hero">
+          <div class="section-container">
+            <img
+              class="project-logo"
+              src="/assets/logos/projects/linkedin-connection-automation.svg"
+              alt="LinkedIn Connection Automation logo"
+              width="256"
+              height="256"
+            />
+            <p class="project-eyebrow">
+              Automation
+            </p>
+            <h1 class="project-title">LinkedIn Connection Automation</h1>
+            <p class="project-tagline">Five n8n workflows that scrape, enrich and personalise LinkedIn outreach end to end.</p>
+            <dl class="project-meta">
+            <div>
+              <dt>Role</dt>
+              <dd>Automation Engineer</dd>
+            </div>
+            <div>
+              <dt>Category</dt>
+              <dd>Automation</dd>
+            </div>
+            <div>
+              <dt>Timeline</dt>
+              <dd>2 weeks</dd>
+            </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- No gallery: this system runs as back-end n8n workflows with no
+             screens worth showing, so the page also skips slider.js. To add one
+             later, copy the gallery section and script tag from any sibling page. -->
+
+        <!-- ==============  Overview ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Overview</h2>
+            <div class="project-prose">
+              <p>An outbound pipeline built for an agency CEO who was sourcing prospects by hand: pull leads out of LinkedIn Sales Navigator, enrich them with real profile detail, store them, write a connection note that actually references the person, and send the request.</p>
+              <p>Rather than one large flow that does everything, the system is <strong>five separate n8n workflows</strong>, each owning a single job and handing off through the database. That split is the design decision the whole build rests on — a scrape can fail without taking the sending stage down with it, and any stage can be re-run against the rows already in Supabase without re-scraping anything.</p>
+            </div>
+
+            <h2 style="margin-top: 32px">My Role</h2>
+            <div class="project-prose">
+              <p>Sole builder. I designed the workflow split, chose and wired the Apify actors, modelled the lead schema in Supabase, wrote the prompt and routing for note generation through OpenRouter, and ran the pipeline against the client's own Sales Navigator account under their supervision.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Features ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Key Features</h2>
+            <p class="project-section-lead">Five workflows, one job each.</p>
+            <dl class="feature-grid">
+              <div class="feature-item">
+                <dt>1 · Lead scraping</dt>
+                <dd>An Apify actor runs a saved LinkedIn Sales Navigator search and returns the matching leads as structured rows rather than a page of HTML.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>2 · Profile enrichment</dt>
+                <dd>A second actor takes each lead and pulls the fuller profile — headline, current role, company, recent activity — so the note has something specific to work with.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>3 · Storage and deduplication</dt>
+                <dd>Everything lands in Supabase keyed on the profile, so re-running a search doesn't create duplicates and every lead carries its own status through the pipeline.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>4 · LLM note generation</dt>
+                <dd>OpenRouter generates the connection note per lead from the enriched profile, kept inside LinkedIn's character limit and written to reference something real about the person.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>5 · Connection sending</dt>
+                <dd>The final workflow sends the request with its generated note and writes the outcome back to the row, so state lives in the database rather than in a workflow's memory.</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ==============  Tech Stack ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Tech Stack</h2>
+            <p class="project-section-lead">What it's built with.</p>
+            <div class="stack-list">
+              <span class="tech-tag">n8n</span>
+              <span class="tech-tag">Apify Actors</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">OpenRouter</span>
+              <span class="tech-tag">LinkedIn Sales Navigator</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Challenges & Solutions ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Challenges &amp; Solutions</h2>
+            <p class="project-section-lead">
+              The problems that shaped the build, and what I did about them.
+            </p>
+            <div class="challenge-list">
+              <div class="challenge-item">
+                <h3>A single flow makes every failure total</h3>
+                <p>Scraping, enriching, generating and sending in one workflow means a rate limit at step two throws away the work already done and leaves no record of how far it got.</p>
+                <p class="solution"><strong>Solution:</strong> Split into five workflows that communicate only through Supabase. Each lead carries a status column, so a stage picks up exactly the rows that are ready for it and a failure costs one stage, not the run.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Generic notes are worse than no note</h3>
+                <p>A templated "I'd like to add you to my network" reads as automated and costs the sender more reputation than it wins replies.</p>
+                <p class="solution"><strong>Solution:</strong> Fed the enriched profile — not just the name — into the model through OpenRouter, and constrained the prompt to cite one concrete detail from the person's actual profile. Notes that couldn't clear that bar were held rather than sent.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Automating someone else's account is a trust problem</h3>
+                <p>The pipeline ran against the client's own Sales Navigator account, where a volume mistake carries a real cost to their professional profile.</p>
+                <p class="solution"><strong>Solution:</strong> Kept sending rate-limited and human-visible. Every generated note is stored and reviewable before the sending workflow picks it up, so the client could see exactly what was going out under their name.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Results ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Results</h2>
+            <p class="project-section-lead">What shipped, and what changed because of it.</p>
+            <!-- TODO (Arshad): add concrete metrics here where you have them —
+                 leads processed, connection acceptance rate, hours saved per week. -->
+            <ul class="results-list">
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Lead sourcing that was being done by hand now runs unattended from a saved Sales Navigator search.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Every connection request goes out with a note written against that person's real profile, not a template.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Because state lives in Supabase, any stage can be re-run or resumed without re-scraping — a failed run costs minutes, not the whole batch.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ==============  Prev / Next ============================ -->
+        <section class="project-section" aria-label="More projects">
+          <div class="section-container">
+            <nav class="project-pager">
+              <a class="prev" href="/projects/autocar-intelligence-platform/">
+                <span class="dir">← Previous</span>
+                <span class="name">AutoCar Intelligence Platform</span>
+              </a>
+              <a class="next" href="/projects/multi-agent-seo-content-system/">
+                <span class="dir">Next →</span>
+                <span class="name">Multi-Agent SEO Content Generation System</span>
+              </a>
+            </nav>
+          </div>
+        </section>
+
+        <!-- ==============  CTA ============================ -->
+        <section class="cta-section">
+          <div class="section-container">
+            <div class="cta-content">
+              <h2>Interested in work like this?</h2>
+              <div class="cta-buttons">
+                <a href="/index.html#contact" class="btn-cta-primary">
+                  <i class="fas fa-envelope" aria-hidden="true"></i> Get In Touch
+                </a>
+                <a href="/portfolio/portfolio.html" class="btn-cta-secondary">
+                  <i class="fas fa-briefcase" aria-hidden="true"></i> All Projects
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div data-include="footer"></div>
+    </main>
+
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/theme-toggle.js"></script>
+    <script src="/assets/js/quick-nav.js"></script>
+    <script src="/assets/js/projects-data.js"></script>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>

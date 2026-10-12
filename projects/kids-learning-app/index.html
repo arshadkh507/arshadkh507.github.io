@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Resolve the theme before first paint so there's no flash of the wrong
+         theme. Dark is the default; light is opt-in and persisted. -->
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        var theme =
+          saved ||
+          (matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <meta name="description" content="An AI platform for creating, editing and publishing personalised children's books." />
+    <meta name="keywords" content="React, Next.js, TypeScript, Tailwind CSS, Supabase, PostgreSQL, Stripe, AI / LLM APIs, Cloudflare, Arshad Khan, Case Study" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <title>Kids Learning App — Case Study | Arshad Khan</title>
+    <link rel="canonical" href="https://arshadkh507.github.io/projects/kids-learning-app/" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Kids Learning App — Case Study" />
+    <meta property="og:description" content="An AI platform for creating, editing and publishing personalised children's books." />
+    <meta property="og:url" content="https://arshadkh507.github.io/projects/kids-learning-app/" />
+    <meta property="og:image" content="https://arshadkh507.github.io/assets/images/og-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Arshad Khan — Full Stack Software Engineer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kids Learning App — Case Study | Arshad Khan" />
+    <meta name="twitter:description" content="An AI platform for creating, editing and publishing personalised children's books." />
+    <meta name="twitter:image" content="https://arshadkh507.github.io/assets/images/og-card.png" />
+
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/project-detail.css" />
+    <!-- Space Grotesk (headings) · JetBrains Mono (UI) · Fira Code (code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@graph": [
+            {
+                  "@type": "CreativeWork",
+                  "name": "Kids Learning App",
+                  "headline": "Kids Learning App — Case Study",
+                  "description": "An AI platform for creating, editing and publishing personalised children's books.",
+                  "url": "https://arshadkh507.github.io/projects/kids-learning-app/",
+                  "keywords": "React, Next.js, TypeScript, Tailwind CSS, Supabase, PostgreSQL, Stripe, AI / LLM APIs, Cloudflare",
+                  "author": {
+                        "@type": "Person",
+                        "name": "Arshad Khan",
+                        "url": "https://arshadkh507.github.io/",
+                        "jobTitle": "Full Stack Software Engineer"
+                  }
+            },
+            {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                        {
+                              "@type": "ListItem",
+                              "position": 1,
+                              "name": "Home",
+                              "item": "https://arshadkh507.github.io/"
+                        },
+                        {
+                              "@type": "ListItem",
+                              "position": 2,
+                              "name": "Portfolio",
+                              "item": "https://arshadkh507.github.io/portfolio/portfolio.html"
+                        },
+                        {
+                              "@type": "ListItem",
+                              "position": 3,
+                              "name": "Kids Learning App"
+                        }
+                  ]
+            }
+      ]
+}
+    </script>
+  </head>
+
+  <body data-active-nav="portfolio">
+    <a class="skip-to-main" href="#project-main">Skip to main content</a>
+    <main>
+      <!-- ==============  Header / Top Navbar ============================ -->
+      <div data-include="header"></div>
+      <!-- ======  End! of Header / Top Navbar ======== -->
+
+      <nav class="project-breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/index.html">Home</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li><a href="/portfolio/portfolio.html">Portfolio</a></li>
+          <li class="sep" aria-hidden="true">/</li>
+          <li><span aria-current="page">Kids Learning App</span></li>
+        </ol>
+      </nav>
+
+      <div id="project-main">
+        <!-- ==============  Project Header ============================ -->
+        <section class="project-hero">
+          <div class="section-container">
+            <img
+              class="project-logo"
+              src="/assets/logos/projects/kids-learning-app.png"
+              alt="Kids Learning App logo"
+              width="256"
+              height="256"
+            />
+            <p class="project-eyebrow">
+              Full Stack
+            </p>
+            <h1 class="project-title">Kids Learning App</h1>
+            <p class="project-tagline">An AI platform for creating, editing and publishing personalised children's books.</p>
+            <dl class="project-meta">
+            <div>
+              <dt>Role</dt>
+              <dd>Lead Developer</dd>
+            </div>
+            <div>
+              <dt>Organisation</dt>
+              <dd>Tech Emulsion</dd>
+            </div>
+            <div>
+              <dt>Timeline</dt>
+              <dd>Jan 2026 — Sep 2026</dd>
+            </div>
+            <div>
+              <dt>Category</dt>
+              <dd>Full Stack</dd>
+            </div>
+            <div>
+              <dt>Status</dt>
+              <dd>Completed</dd>
+            </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ==============  Gallery ============================ -->
+        <section class="project-section" aria-label="Screenshots">
+          <div class="section-container">
+        <div class="gallery" data-gallery aria-label="Kids Learning App screenshots">
+          <div class="gallery-viewport" data-gallery-viewport>
+            <ul class="gallery-track" data-gallery-track>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/kids-learning-app/01-library.webp"
+                  alt="Kids Learning App — public book library showing illustrated covers with age band, language count and audio badges"
+                  width="1600"
+                  height="900"
+                  fetchpriority="high"
+                />
+                <figcaption>The public library. Each title carries its age band, how many languages it reads in, and whether narration is ready.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/kids-learning-app/02-book-page.webp"
+                  alt="Kids Learning App — a book detail page with the cover, age range, page count and translation credits"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+                <figcaption>A book page. Credits name the illustrations as made with the platform&rsquo;s own tools, alongside translations into four languages.</figcaption>
+              </figure>
+            </li>
+            <li class="gallery-slide" data-gallery-slide>
+              <figure>
+                <img
+                  src="/assets/images/projects/kids-learning-app/03-pricing.webp"
+                  alt="Kids Learning App — pricing page comparing Free, Studio Pass, Standard, Pro and Organisation plans with monthly credits"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                />
+                <figcaption>Credit-based plans. Credits pay for generation work — drawing, scanning, narration — while reading a book you own never spends any.</figcaption>
+              </figure>
+            </li>
+            </ul>
+          </div>
+        </div>
+          </div>
+        </section>
+
+        <!-- ==============  Overview ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Overview</h2>
+            <div class="project-prose">
+              <p>A platform that turns a short prompt from a parent or teacher into a finished, illustrated children's book — written, illustrated, narrated and ready to print. I worked across the whole surface of it: the frontend, the AI generation workflows, backend integrations, authentication, billing, PDF export, multilingual support, SEO, and the Creator Studio where authors edit what the model produced.</p>
+            </div>
+
+            <h2 style="margin-top: 32px">My Role</h2>
+            <div class="project-prose">
+              <p>I took over an existing codebase that did not work and led it to a shipping platform in five months. That meant owning the generation pipeline end to end rather than a single layer — prompt design and model selection at one end, Stripe invoices and print fulfilment at the other.</p>
+            </div>
+
+            <h2 style="margin-top: 32px">The Generation Pipeline</h2>
+            <div class="project-prose">
+              <p>Turning one prompt into a finished book is not a single model call. It runs as <strong>13 distinct phases</strong>, each with its own inputs, failure modes and retry behaviour, so a failure late in the run does not discard the work already done:</p>
+            </div>
+            <ol class="pipeline-phases">
+              <li>Interpret the prompt into a story brief — age band, theme, reading level, language.</li>
+              <li>Generate the narrative outline and page breaks.</li>
+              <li>Draft the per-page story text against that outline.</li>
+              <li>Build the character sheet — the canonical description every illustration must match.</li>
+              <li>Derive per-page illustration prompts from the text and the character sheet.</li>
+              <li>Generate illustrations with Gemini image models.</li>
+              <li>Check each illustration for character consistency and regenerate the ones that drift.</li>
+              <li>Compose page layouts, placing text against art.</li>
+              <li>Generate the cover.</li>
+              <li>Translate for multilingual editions.</li>
+              <li>Narrate with ElevenLabs — text-to-speech or the author’s own cloned voice.</li>
+              <li>Assemble the audiobook and stitch it to the page timings.</li>
+              <li>Export the print-ready PDF for Lulu print-on-demand fulfilment.</li>
+            </ol>
+            <div class="project-prose">
+              <p>Credits are consumed per phase rather than per book, which is what makes a partial failure recoverable without charging the customer twice for the same work.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Features ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Key Features</h2>
+            <p class="project-section-lead">What the system actually does.</p>
+            <dl class="feature-grid">
+              <div class="feature-item">
+                <dt>AI story and image generation</dt>
+                <dd>Prompt-to-book pipeline covering narrative structure, page breaks and illustration briefs.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Character consistency</dt>
+                <dd>Image-generation workflows that keep a character recognisably the same person across every illustration in a book.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Creator Studio</dt>
+                <dd>A book editing experience where authors revise generated text and imagery without regenerating the whole book.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>PDF export and self-publishing</dt>
+                <dd>Print-ready export plus a self-publishing path for physical fulfilment.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Credits, subscriptions and Stripe</dt>
+                <dd>A credit system with subscriptions, one-time purchases and top-ups, plus consumption logic across every generation feature.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Multilingual support</dt>
+                <dd>Full i18n across the application and the generated books themselves.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>SEO and dynamic sitemap</dt>
+                <dd>Server-rendered metadata and a sitemap that tracks published books.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>Supabase Edge Functions</dt>
+                <dd>Database workflows and serverless functions driving the long-running generation jobs.</dd>
+              </div>
+              <div class="feature-item">
+                <dt>AI agent integration</dt>
+                <dd>Claude-based agents and automated workflows inside the product's own tooling.</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <!-- ==============  Tech Stack ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Tech Stack</h2>
+            <p class="project-section-lead">What it's built with.</p>
+            <div class="stack-list">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">Tailwind CSS</span>
+              <span class="tech-tag">Supabase</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Stripe</span>
+              <span class="tech-tag">AI / LLM APIs</span>
+              <span class="tech-tag">Cloudflare</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Challenges & Solutions ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Challenges &amp; Solutions</h2>
+            <p class="project-section-lead">
+              The problems that shaped the build, and what I did about them.
+            </p>
+            <div class="challenge-list">
+              <div class="challenge-item">
+                <h3>Challenge</h3>
+                <p>Diffusion models redraw a character differently on every call, so a book's protagonist changed face from page to page — the single most visible quality failure in the product.</p>
+                <p class="solution"><strong>Solution:</strong> Built a character-consistency workflow that conditions each illustration on a locked reference for that character, so the same protagonist carries across all pages of a book.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Challenge</h3>
+                <p>Book generation is long-running and multi-stage, but a browser request cannot stay open for it, and a failure at stage 11 must not discard the first ten stages of work.</p>
+                <p class="solution"><strong>Solution:</strong> Moved generation into a staged pipeline on Supabase Edge Functions with durable per-stage state, so work resumes from the last completed stage instead of restarting.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Challenge</h3>
+                <p>Three payment models — subscriptions, one-time purchases and credit top-ups — all had to draw down against the same generation features without double-charging.</p>
+                <p class="solution"><strong>Solution:</strong> Designed a single credit ledger as the one place generation cost is accounted for, with Stripe events feeding it rather than each feature reasoning about billing independently.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==============  Results ============================ -->
+        <section class="project-section">
+          <div class="section-container">
+            <h2>Results</h2>
+            <p class="project-section-lead">What shipped, and what changed because of it.</p>
+            <!-- TODO (Arshad): add concrete metrics here where you have them —
+                 user counts, time saved, revenue, load times. Qualitative
+                 outcomes only for now, so nothing here overstates the result. -->
+            <ul class="results-list">
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Took over a non-working codebase and shipped a functioning platform in roughly five months.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Resolved around 80% of AI-generated character-consistency failures across story illustrations.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Delivered a 13-phase book generation pipeline spanning story creation, illustration and audio narration.</span></li>
+              <li><i class="fas fa-circle-check" aria-hidden="true"></i><span>Shipped platform admin, organisation admin and author marketplace surfaces.</span></li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ==============  Prev / Next ============================ -->
+        <section class="project-section" aria-label="More projects">
+          <div class="section-container">
+            <nav class="project-pager">
+              <a class="prev" href="/projects/hire-on-the-spot/">
+                <span class="dir">← Previous</span>
+                <span class="name">Hire On The Spot — Hiring Platform</span>
+              </a>
+              <a class="next" href="/projects/auto-repair-shop-management/">
+                <span class="dir">Next →</span>
+                <span class="name">Auto Repair Shop Management Platform</span>
+              </a>
+            </nav>
+          </div>
+        </section>
+
+        <!-- ==============  CTA ============================ -->
+        <section class="cta-section">
+          <div class="section-container">
+            <div class="cta-content">
+              <h2>Interested in work like this?</h2>
+              <div class="cta-buttons">
+                <a href="/index.html#contact" class="btn-cta-primary">
+                  <i class="fas fa-envelope" aria-hidden="true"></i> Get In Touch
+                </a>
+                <a href="/portfolio/portfolio.html" class="btn-cta-secondary">
+                  <i class="fas fa-briefcase" aria-hidden="true"></i> All Projects
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div data-include="footer"></div>
+    </main>
+
+    <script src="/assets/js/include.js"></script>
+    <script src="/assets/js/theme-toggle.js"></script>
+    <script src="/assets/js/quick-nav.js"></script>
+    <script src="/assets/js/projects-data.js"></script>
+    <script src="/assets/js/slider.js"></script>
+    <script src="/assets/js/index.js"></script>
+  </body>
+</html>

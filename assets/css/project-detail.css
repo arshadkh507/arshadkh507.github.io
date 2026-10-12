@@ -1,0 +1,555 @@
+/* Project detail pages.
+ * Loaded only by projects/<slug>/index.html, after index.css — every value
+ * here comes from the role tokens defined there (design-system.md §7), so
+ * these pages theme with the rest of the site and never branch on theme. */
+
+/* ---- Breadcrumb ---------------------------------------------------------- */
+.project-breadcrumb {
+  width: min(var(--container-max), 100% - 2 * var(--container-gutter));
+  margin: 24px auto 0;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+.project-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+.project-breadcrumb a {
+  /* 19px tall before this; inline-block plus padding clears the 24px minimum
+     without changing where the trail sits. */
+  display: inline-block;
+  min-height: 24px;
+  padding: 2px 0;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid transparent;
+  transition: color var(--duration-fast, 0.15s) ease,
+    border-color var(--duration-fast, 0.15s) ease;
+}
+.project-breadcrumb a:hover,
+.project-breadcrumb a:focus-visible {
+  color: var(--accent-link);
+  border-bottom-color: var(--accent-link);
+}
+.project-breadcrumb .sep {
+  color: var(--color-text-muted);
+}
+.project-breadcrumb [aria-current="page"] {
+  color: var(--color-text-primary);
+}
+
+/* ---- Header -------------------------------------------------------------- */
+.project-hero .section-container {
+  display: block;
+}
+.project-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  margin-bottom: 14px;
+}
+.project-title {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: var(--color-text-primary);
+  text-wrap: balance;
+  margin-bottom: 14px;
+}
+.project-tagline {
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: var(--color-text-secondary);
+  max-width: var(--container-narrow);
+  line-height: 1.6;
+}
+
+/* Role / timeline / status, as a definition list because that is what it is. */
+.project-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 18px 28px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+.project-meta div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+/* --color-text-muted measures ~3.1:1 on the surface, which fails AA for text
+   this small. Labels use the secondary tone instead (~7.4:1). */
+.project-meta dt {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+.project-meta dd {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+.project-meta dd a {
+  display: inline-block;
+  min-height: 24px;
+  color: var(--accent-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Project logo tile — the client's real mark where it is public, otherwise
+   a designed one (assets/logos/projects/). Tiles carry their own ground, so
+   they sit as-is in both themes rather than being tinted. */
+.project-logo {
+  display: block;
+  width: var(--space-16);
+  height: auto;
+  margin-bottom: var(--space-4);
+  border-radius: 22%;
+  box-shadow: 0 0 0 1px var(--color-border);
+}
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--accent-secondary);
+}
+.project-status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-secondary);
+}
+
+/* ---- Gallery ------------------------------------------------------------- */
+/* Base state = no JS: a plain vertical list of figures. Everything that turns
+   it into a slider is scoped under .is-enhanced, which slider.js adds. */
+.gallery-track {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.gallery-slide figure {
+  margin: 0;
+}
+.gallery-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+}
+.gallery-slide figcaption {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.gallery.is-enhanced .gallery-viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.gallery.is-enhanced .gallery-track {
+  flex-direction: row;
+  gap: 0;
+  transition: transform var(--duration-slow, 0.45s)
+    var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1));
+  will-change: transform;
+}
+.gallery.is-enhanced.is-reduced-motion .gallery-track {
+  transition: none;
+}
+.gallery.is-enhanced .gallery-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+.gallery.is-enhanced .gallery-slide img {
+  border-radius: 12px;
+  aspect-ratio: 16 / 9;
+  /* contain, not cover: these are product screenshots, and a real capture is
+     rarely exactly 16/9. Cover was silently cropping the app's left sidebar
+     and right edge out of frame — the parts that show what the thing does. */
+  object-fit: contain;
+  background: var(--color-bg-surface);
+}
+.gallery.is-enhanced .gallery-slide figcaption {
+  padding: 0 12px;
+}
+
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 50%;
+  background: var(--color-overlay);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  font-size: 1rem;
+  backdrop-filter: blur(6px);
+  transition: background-color var(--duration-fast, 0.15s) ease,
+    border-color var(--duration-fast, 0.15s) ease;
+}
+.gallery-arrow:hover,
+.gallery-arrow:focus-visible {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--text-on-accent);
+}
+.gallery-arrow-prev {
+  left: 14px;
+}
+.gallery-arrow-next {
+  right: 14px;
+}
+
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 18px;
+}
+/* The visible dot stays 10px; the button around it is 24x24 so it can
+   actually be tapped (WCAG 2.2 target size, AA). background-clip keeps the
+   fill inside the content box, so the padding is hit area and nothing more. */
+/* The button is a transparent 24x24 hit area (WCAG 2.2 target size, AA); the
+   dot people actually see is the ::before, still 10px. Padding the button
+   directly would have dragged its border out to 24px and turned each dot into
+   a large ring. */
+.gallery-dot {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.gallery-dot::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-strong);
+  background: transparent;
+  transition: background-color var(--duration-fast, 0.15s) ease,
+    border-color var(--duration-fast, 0.15s) ease,
+    transform var(--duration-fast, 0.15s) ease;
+}
+.gallery-dot.is-current::before {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  transform: scale(1.25);
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-dot::before {
+    transition: none;
+  }
+}
+/* Visible to screen readers only — the dots already convey position visually. */
+.gallery-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- Body sections ------------------------------------------------------- */
+.project-section .section-container > h2 {
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+.project-section-lead {
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+  font-size: 0.92rem;
+}
+.project-prose p {
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  max-width: var(--container-content);
+  margin-bottom: 16px;
+}
+.project-prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* Features: a description list, since each item is a term plus its explanation. */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+.feature-item {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-bg-elevated);
+}
+.feature-item dt {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 7px;
+}
+.feature-item dt::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--accent-secondary);
+}
+.feature-item dd {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Challenge/solution pairs. The stripe is the hierarchy here — no card. */
+.challenge-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.challenge-item {
+  border-left: 3px solid var(--accent-highlight);
+  padding: 4px 0 4px 20px;
+}
+.challenge-item h3 {
+  font-size: 0.74rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent-highlight);
+  margin-bottom: 8px;
+}
+.challenge-item p {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: var(--container-content);
+}
+.challenge-item .solution {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--color-border);
+}
+.challenge-item .solution strong {
+  color: var(--accent-secondary);
+  font-weight: 600;
+}
+
+/* Ordered pipeline stages. The step number IS the content here — a book that
+   fails at phase 11 has to be resumable at phase 11 — so the counter is drawn
+   explicitly rather than left to the list marker, which can't be styled to
+   match the mono/accent treatment used for labels elsewhere. */
+.pipeline-phases {
+  list-style: none;
+  counter-reset: phase;
+  display: grid;
+  gap: 10px;
+  margin: 20px 0 24px;
+  padding: 0;
+  max-width: var(--container-content);
+}
+.pipeline-phases li {
+  counter-increment: phase;
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+.pipeline-phases li::before {
+  content: counter(phase, decimal-leading-zero);
+  flex: 0 0 auto;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  min-width: 2.2ch;
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.results-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  max-width: var(--container-content);
+}
+.results-list i {
+  color: var(--accent-secondary);
+  margin-top: 5px;
+  flex: 0 0 auto;
+}
+
+/* ---- Prev / next --------------------------------------------------------- */
+.project-pager {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.project-pager a {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-bg-elevated);
+  transition: border-color var(--duration-fast, 0.15s) ease,
+    transform var(--duration-fast, 0.15s) ease;
+}
+.project-pager a:hover,
+.project-pager a:focus-visible {
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+.project-pager .dir {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+.project-pager .name {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+.project-pager .next {
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .project-pager {
+    grid-template-columns: 1fr;
+  }
+  .project-pager .next {
+    text-align: left;
+  }
+  .gallery-arrow {
+    width: 38px;
+    height: 38px;
+  }
+  .gallery-arrow-prev {
+    left: 8px;
+  }
+  .gallery-arrow-next {
+    right: 8px;
+  }
+}
+
+/* ---- Photo wall (team page) ---------------------------------------------- */
+/* CSS columns rather than a grid: the photos mix portrait and landscape, and
+   columns let each keep its own aspect ratio — a grid would crop people out of
+   the group shots. Breakpoints follow design-system.md §6. */
+.photo-wall {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 1;
+  column-gap: var(--space-5);
+}
+@media screen and (min-width: 480px) {
+  .photo-wall { columns: 2; }
+}
+@media screen and (min-width: 992px) {
+  .photo-wall { columns: 3; }
+}
+.photo-wall li {
+  break-inside: avoid;
+  margin-bottom: var(--space-5);
+}
+.photo-wall figure {
+  margin: 0;
+}
+.photo-wall a {
+  display: block;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+.photo-wall a:focus-visible,
+.photo-lead a:focus-visible {
+  outline: 2px solid var(--accent-link);
+  outline-offset: 3px;
+}
+/* height: auto is required — the width/height attributes reserve space
+   against CLS and would otherwise pin the rendered height. */
+.photo-wall img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform var(--duration-slow) var(--ease-standard);
+}
+.photo-wall a:hover img {
+  transform: scale(1.03);
+}
+@media (prefers-reduced-motion: reduce) {
+  .photo-wall img { transition: none; }
+  .photo-wall a:hover img { transform: none; }
+}
+.photo-wall figcaption {
+  margin-top: var(--space-2);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+/* The lead photo of a set runs the full content width above the wall. */
+.photo-lead {
+  margin: 0 0 var(--space-5);
+}
+.photo-lead a {
+  display: block;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+.photo-lead img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.photo-lead figcaption {
+  margin-top: var(--space-2);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}

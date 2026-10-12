@@ -1,0 +1,101 @@
+<header id="header" role="banner">
+  <nav class="navbar">
+    <div id="logo">
+      <span><code>&lt;</code>Arshad<code>/&gt;</code></span>
+    </div>
+
+    <ul id="primary-nav" role="menubar">
+      <li data-nav="home" role="none">
+        <a href="/index.html" role="menuitem">
+          <span class="icon" aria-hidden="true"><i class="fas fa-home"></i></span>
+          <span class="text">Home</span>
+        </a>
+      </li>
+      <li data-nav="about" role="none">
+        <a href="/index.html#about" role="menuitem">
+          <span class="icon" aria-hidden="true"><i class="fas fa-info-circle"></i></span>
+          <span class="text">About</span>
+        </a>
+      </li>
+      <li data-nav="portfolio" role="none">
+        <a href="/portfolio/portfolio.html" role="menuitem">
+          <span class="icon" aria-hidden="true"><i class="fas fa-folder-open"></i></span>
+          <span class="text">Portfolio</span>
+        </a>
+      </li>
+      <li data-nav="experience" role="none">
+        <a href="/index.html#work-experience" role="menuitem">
+          <span class="icon" aria-hidden="true"><i class="fas fa-briefcase"></i></span>
+          <span class="text">Experience</span>
+        </a>
+      </li>
+      <li data-nav="contact" role="none">
+        <a href="/index.html#contact" role="menuitem">
+          <span class="icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+          <span class="text">Contact</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- A real <button>, not a checkbox label: a label is not keyboard-focusable,
+         so the menu could only be opened by touch or mouse. -->
+    <button
+      type="button"
+      id="burger-menu"
+      aria-controls="primary-nav"
+      aria-expanded="false"
+      aria-label="Open menu"
+    >
+      <span id="burger-icon" aria-hidden="true"><i class="fas fa-bars"></i></span>
+    </button>
+
+    <button
+      type="button"
+      id="theme-toggle"
+      class="theme-toggle-btn"
+      aria-label="Switch to light theme"
+      aria-pressed="false"
+    >
+      <span class="theme-toggle-thumb" aria-hidden="true">☀</span>
+    </button>
+  </nav>
+</header>
+
+<!-- Quick navigation. Appears once the header has scrolled out of view, so the
+     nav is always reachable without scrolling back up. Mirrors the header's
+     destinations exactly. Hidden until quick-nav.js decides otherwise, so it
+     never flashes on load and stays absent when JS is off. -->
+<nav id="quick-nav" class="quick-nav" aria-label="Quick navigation" hidden>
+  <ul>
+    <li>
+      <a href="/index.html" data-nav="home" data-label="Home">
+        <i class="fas fa-home" aria-hidden="true"></i>
+        <span class="qn-label">Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="/index.html#about" data-nav="about" data-label="About">
+        <i class="fas fa-info-circle" aria-hidden="true"></i>
+        <span class="qn-label">About</span>
+      </a>
+    </li>
+    <li>
+      <a href="/portfolio/portfolio.html" data-nav="portfolio" data-label="Portfolio">
+        <i class="fas fa-folder-open" aria-hidden="true"></i>
+        <span class="qn-label">Portfolio</span>
+      </a>
+    </li>
+    <li>
+      <a href="/index.html#work-experience" data-nav="experience" data-label="Experience">
+        <i class="fas fa-briefcase" aria-hidden="true"></i>
+        <span class="qn-label">Experience</span>
+      </a>
+    </li>
+    <li>
+      <a href="/index.html#contact" data-nav="contact" data-label="Contact">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <span class="qn-label">Contact</span>
+      </a>
+    </li>
+  </ul>
+</nav>
