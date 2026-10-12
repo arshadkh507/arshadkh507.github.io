@@ -18,13 +18,6 @@ window.PROJECTS = [
     "url": "/projects/kids-learning-app/"
   },
   {
-    "slug": "auto-repair-shop-management",
-    "title": "Auto Repair Shop Management Platform",
-    "tagline": "A web application running an auto repair shop's day-to-day operations end to end.",
-    "category": "full-stack",
-    "url": "/projects/auto-repair-shop-management/"
-  },
-  {
     "slug": "autocar-intelligence-platform",
     "title": "AutoCar Intelligence Platform",
     "tagline": "Operational intelligence giving multi-shop auto repair owners one source of truth.",

@@ -183,7 +183,11 @@ html {
 body {
   margin: 0;
   padding: 0;
+  /* clip, not hidden: with html also hiding overflow, `hidden` here turns body
+     into its own (never-scrolling) scroll container, which silently breaks
+     every position: sticky on the page. clip trims overflow without that. */
   overflow-x: hidden;
+  overflow-x: clip;
   min-height: 100vh;
   background-color: var(--color-bg-canvas);
   background-image: var(--bg-image);
@@ -1068,23 +1072,38 @@ li.active a {
   /* justify-content: space-between; */
 }
 
+/* The portrait fills its column (was capped at 250×350, leaving it adrift in
+   empty space) and stays in view beside the long Skills tab. */
 .about-image {
-  text-align: center;
   flex-basis: 40%;
-  align-self: center;
-  transition: all 0.6s;
+  align-self: flex-start;
+  position: sticky;
+  top: var(--space-6);
+  padding-right: var(--space-8);
+  box-sizing: border-box;
 }
 .about-image img {
-  /* border: 8px solid #fff; */
-  border-radius: 10px;
+  display: block;
   width: 100%;
-  max-width: 250px;
-  height: 350px;
+  max-width: 440px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  margin: 0 auto;
   object-fit: cover;
-  transition: transform 0.3s ease-in-out;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  transition: transform var(--duration-slow) var(--ease-standard);
 }
 .about-image img:hover {
-  transform: scale(1.1);
+  transform: scale(1.02);
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-image img,
+  .about-image img:hover {
+    transition: none;
+    transform: none;
+  }
 }
 .about-right {
   flex-basis: 60%;
@@ -1403,11 +1422,11 @@ li.active a {
   .about-image {
     flex: none;
     order: 1;
-    max-width: 250px;
+    position: static;
+    width: 100%;
+    max-width: 320px;
     margin: 0 auto;
-  }
-  .about-image img {
-    height: auto;
+    padding-right: 0;
   }
   .about-tabs ul {
     margin-top: 20px;

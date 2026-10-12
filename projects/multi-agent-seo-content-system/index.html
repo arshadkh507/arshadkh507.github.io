@@ -160,63 +160,51 @@
           </div>
         </section>
 
-        <!-- ==============  Gallery ============================ -->
-        <section class="project-section" aria-label="Screenshots">
+        <!-- ==============  Architecture ============================ -->
+        <!-- Built as HTML, not an image: crisp at any size, follows the theme, and
+             every agent's role is text that search engines and AI answer engines
+             can read. Source: the system's own architecture diagram. -->
+        <section class="project-section" aria-labelledby="architecture">
           <div class="section-container">
-        <div class="gallery" data-gallery aria-label="Multi-Agent SEO Content Generation System screenshots">
-          <div class="gallery-viewport" data-gallery-viewport>
-            <ul class="gallery-track" data-gallery-track>
-            <li class="gallery-slide" data-gallery-slide>
-              <figure>
-                <img
-                  src="/assets/images/projects/_placeholder/01.svg"
-                  alt="Multi-Agent SEO Content Generation System — screenshot 1"
-                  width="1600"
-                  height="900"
-                  fetchpriority="high"
-                />
-                <figcaption>Placeholder — replace with a real screenshot</figcaption>
-              </figure>
-            </li>
-            <li class="gallery-slide" data-gallery-slide>
-              <figure>
-                <img
-                  src="/assets/images/projects/_placeholder/02.svg"
-                  alt="Multi-Agent SEO Content Generation System — screenshot 2"
-                  width="1600"
-                  height="900"
-                  loading="lazy"
-                />
-                <figcaption>Placeholder — replace with a real screenshot</figcaption>
-              </figure>
-            </li>
-            <li class="gallery-slide" data-gallery-slide>
-              <figure>
-                <img
-                  src="/assets/images/projects/_placeholder/03.svg"
-                  alt="Multi-Agent SEO Content Generation System — screenshot 3"
-                  width="1600"
-                  height="900"
-                  loading="lazy"
-                />
-                <figcaption>Placeholder — replace with a real screenshot</figcaption>
-              </figure>
-            </li>
-            <li class="gallery-slide" data-gallery-slide>
-              <figure>
-                <img
-                  src="/assets/images/projects/_placeholder/04.svg"
-                  alt="Multi-Agent SEO Content Generation System — screenshot 4"
-                  width="1600"
-                  height="900"
-                  loading="lazy"
-                />
-                <figcaption>Placeholder — replace with a real screenshot</figcaption>
-              </figure>
-            </li>
-            </ul>
-          </div>
-        </div>
+            <h2 id="architecture">How the agents work together</h2>
+            <p class="project-section-lead">
+              One Slack message in, a QA-checked article out. Only the manager talks to
+              Slack; the specialists are dispatched by the board.
+            </p>
+            <figure class="arch">
+              <div class="arch-flow">
+                <div class="arch-node arch-human"><span class="arch-icon" aria-hidden="true"><i class="fab fa-slack"></i></span><div class="arch-text"><p class="arch-title">Human</p><ul class="arch-notes"><li>Slack message: topic + target site</li></ul></div></div>
+                <p class="arch-link"><span>sends the brief</span></p>
+                <div class="arch-node arch-manager"><span class="arch-icon" aria-hidden="true"><i class="fas fa-user-tie"></i></span><div class="arch-text"><p class="arch-title">Manager — the only Slack-connected agent</p><ul class="arch-notes"><li>SEO Content Manager</li><li>Plans, chains tasks and reports back</li><li>Does no research or writing itself</li></ul></div></div>
+                <p class="arch-link"><span>creates &amp; chains 6 tasks up front</span></p>
+                <div class="arch-node arch-board"><span class="arch-icon" aria-hidden="true"><i class="fas fa-table-columns"></i></span><div class="arch-text"><p class="arch-title">Kanban board</p><ul class="arch-notes"><li>Shared task queue and source of truth</li><li><code>seo-content</code> board</li></ul></div></div>
+                <p class="arch-link"><span>auto-dispatches</span></p>
+                <div class="arch-group">
+                  <p class="arch-group-title">Specialist worker agents <span>— dispatched by the board, never talk to Slack directly</span></p>
+                  <div class="arch-node arch-worker"><span class="arch-icon" aria-hidden="true"><i class="fas fa-magnifying-glass"></i></span><div class="arch-text"><p class="arch-title"><span class="arch-num">1</span>Research Agent</p><ul class="arch-notes"><li>Competitor + SERP research</li></ul></div></div>
+                  <p class="arch-link"><span>waits on research</span></p>
+                  <div class="arch-row">
+                    <div class="arch-node arch-worker"><span class="arch-icon" aria-hidden="true"><i class="fas fa-key"></i></span><div class="arch-text"><p class="arch-title"><span class="arch-num">2</span>Keyword Agent</p><ul class="arch-notes"><li>Clustering, prioritisation, cannibalisation check</li></ul></div></div>
+                    <div class="arch-node arch-worker"><span class="arch-icon" aria-hidden="true"><i class="fas fa-file-lines"></i></span><div class="arch-text"><p class="arch-title"><span class="arch-num">2</span>Content Brief Agent</p><ul class="arch-notes"><li>Structured writing brief</li></ul></div></div>
+                  </div>
+                  <p class="arch-link"><span>waits on research + keywords</span></p>
+                  <div class="arch-node arch-worker"><span class="arch-icon" aria-hidden="true"><i class="fas fa-pen-nib"></i></span><div class="arch-text"><p class="arch-title"><span class="arch-num">3</span>Content Writer Agent</p><ul class="arch-notes"><li>Drafts strictly from the brief</li><li>Saves the file — auto-delivered</li></ul></div></div>
+                  <p class="arch-link"><span>waits on draft — runs in parallel</span></p>
+                  <div class="arch-row">
+                    <div class="arch-node arch-worker"><span class="arch-icon" aria-hidden="true"><i class="fas fa-shield-halved"></i></span><div class="arch-text"><p class="arch-title"><span class="arch-num">4</span>SEO QA Agent</p><ul class="arch-notes"><li>Structure and search-intent check</li></ul></div></div>
+                    <div class="arch-node arch-worker"><span class="arch-icon" aria-hidden="true"><i class="fas fa-clipboard-check"></i></span><div class="arch-text"><p class="arch-title"><span class="arch-num">5</span>Fact-check QA Agent</p><ul class="arch-notes"><li>Claim and citation verification</li></ul></div></div>
+                  </div>
+                </div>
+                <p class="arch-link"><span>results collected</span></p>
+                <div class="arch-node arch-cron"><span class="arch-icon" aria-hidden="true"><i class="fas fa-clock"></i></span><div class="arch-text"><p class="arch-title">Scheduled check-in</p><ul class="arch-notes"><li>Cron, every 5 minutes</li><li>Posts the QA verdicts back to Slack</li></ul></div></div>
+              </div>
+              <figcaption>
+                Architecture of the multi-agent SEO system: a Slack request goes to a manager
+                agent, which chains six tasks on a kanban board; research, keyword, brief,
+                writer and two QA agents run as their dependencies complete, and a five-minute
+                scheduled check-in reports the QA verdicts back to Slack.
+              </figcaption>
+            </figure>
           </div>
         </section>
 
@@ -378,7 +366,6 @@
     <script src="/assets/js/theme-toggle.js"></script>
     <script src="/assets/js/quick-nav.js"></script>
     <script src="/assets/js/projects-data.js"></script>
-    <script src="/assets/js/slider.js"></script>
     <script src="/assets/js/index.js"></script>
   </body>
 </html>

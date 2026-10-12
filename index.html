@@ -1273,6 +1273,16 @@
               action="https://formspree.io/f/xdeazaqr"
               method="POST"
             >
+              <!-- Honeypot: Formspree silently drops any submission that fills
+                   this. Hidden from people and assistive tech, left for bots. -->
+              <input
+                type="text"
+                name="_gotcha"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+                style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden"
+              />
               <div class="form-group">
                 <label for="name">Name <span class="required">*</span></label>
                 <input

@@ -65,7 +65,8 @@ Updated 2026-10-10. Real screenshots:
 
 No gallery at all: `linkedin-connection-automation` and `hire-on-the-spot` — the section and the
 `slider.js` tag are omitted. Still on `assets/images/projects/_placeholder/`:
-`auto-repair-shop-management`, `multi-agent-seo-content-system`.
+none — the Multi-Agent SEO page shows an HTML architecture diagram instead of screenshots, and
+`auto-repair-shop-management` is now a redirect stub to AutoCar (merged 2026-10-12).
 
 Every project also needs a logo tile at `assets/logos/projects/<slug>.svg` (or `.png`): 256×256,
 with its own background so it works in both themes. It is used on the cards and in the page header.

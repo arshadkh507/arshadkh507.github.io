@@ -46,7 +46,7 @@ arshadkh507.github.io/
 ├── projects/                       # done — detail pages, served at the clean URL /projects/<slug>/
 │   ├── README.md                   # how to replace placeholder screenshots + add a project
 │   ├── kids-learning-app/index.html
-│   ├── auto-repair-shop-management/index.html
+│   ├── auto-repair-shop-management/index.html   # redirect stub → autocar-intelligence-platform (merged 2026-10-12)
 │   ├── autocar-intelligence-platform/index.html
 │   ├── linkedin-connection-automation/index.html
 │   ├── multi-agent-seo-content-system/index.html
@@ -125,3 +125,11 @@ Net: seven detail pages → eight.
 
 Net: eight detail pages → nine. Placeholder galleries remaining: auto-repair-shop-management,
 multi-agent-seo-content-system.
+
+## Changed 2026-10-12
+
+- `projects/auto-repair-shop-management/` merged into `projects/autocar-intelligence-platform/`;
+  the old folder now holds only a redirect stub. Its logo tile and social card were deleted.
+- Multi-Agent SEO page: gallery replaced by an HTML architecture diagram (no images needed).
+
+Net: nine case studies → eight. No placeholder galleries remain.

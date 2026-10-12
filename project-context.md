@@ -210,6 +210,23 @@ Not in current scope — design decisions now should not actively block these la
   answer-first FAQ (native `<details>`) with a matching `FAQPage` in the JSON-LD graph, generated
   from the same text; case studies carry `article:modified_time`, `dateModified`, `abstract` and a
   `Person` author `@id` that ties every page to the one homepage entity.
+- **Auto Repair merged into AutoCar (2026-10-12):** "Auto Repair Shop Management" and "AutoCar
+  Intelligence" were the same project. AutoCar stays (it matches the screenshots and Tech
+  Emulsion's public case study); `/projects/auto-repair-shop-management/` is now a redirect stub
+  (instant meta refresh + JS + canonical + noindex — Google treats an instant meta refresh as a
+  permanent redirect). Removed from the manifest, projects list, sitemap and llms files; its logo
+  and social card were deleted. Eight case studies remain; the pager ring is
+  Kids → AutoCar → LinkedIn → SEO → Art Gola → HOP → Faizan → HOTS.
+- **SEO system architecture (2026-10-12):** the placeholder slider on the Multi-Agent SEO page
+  was replaced by an HTML/CSS architecture diagram (Slack → manager agent → kanban board → five
+  specialist agents in dependency order → 5-minute cron reporting QA verdicts back), rebuilt from
+  the system's own diagram so it is theme-aware, responsive and crawlable.
+- **About portrait + sticky (2026-10-12):** the portrait fills its 40% column (up to 440px, 3:4)
+  and is `position: sticky` beside the long Skills tab. Sticky only works because `body` uses
+  `overflow-x: clip` — with `hidden` on both html and body, body became a never-scrolling scroll
+  container and silently disabled every sticky element on the page.
+- **Contact form confirmed working (2026-10-12)** on Formspree `xdeazaqr` (test email received).
+  A hidden `_gotcha` honeypot field now drops bot submissions.
 - **Folder structure:** see `folder-structure.md` for the full layout. Retires all dead/orphaned pages identified in the initial audit (react.html duplicates, dsa.html, projects.html placeholder, unused CSS/JS).
 
 ---

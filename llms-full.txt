@@ -70,18 +70,6 @@ IELTS: 6.5 bands overall (Writing/Speaking 6, Listening/Reading 6.5).
 
 Each project below has a full case study page at https://arshadkh507.github.io/projects/<slug>/.
 
-### Auto Repair Shop Management Platform
-*Full Stack Developer*
-
-A management application covering the operational core of an auto repair shop: customers, their vehicles, the repair jobs booked against those vehicles, the services offered, and the business workflows connecting them.
-
-**Key features:** Database schema design; Customer and vehicle management; Repair and work-order workflows; Service and job management; Operational dashboard; Backend and API integration.
-**Challenges solved:** Modelled vehicles as first-class records with their own service history, linked to customers rather than owned by them, so history survives a change of owner. Built work orders as state machines with defined transitions, so added services and revised estimates are recorded as changes rather than overwriting the original.
-**Results:** Shop operations — customers, vehicles, jobs and services — run from one application rather than separate records. Service history stays attached to the vehicle across ownership changes.
-- Stack: React, Next.js, TypeScript, Tailwind CSS, REST APIs, PostgreSQL
-- Case study: https://arshadkh507.github.io/projects/auto-repair-shop-management/
-- Proprietary — no public repo
-
 ### AutoCar Intelligence Platform
 *Frontend / Full Stack Developer · Nov 2025 — Jan 2026*
 
